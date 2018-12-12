@@ -14,18 +14,20 @@
 
 
 
-    <meta name="description" content="12$ scp -r hanzo@10.122.22.115:/home/hanzo/Workspace/MicroServices/esp-framework .$ scp hanzo@10.122.22.115:/home/hanzo/Workspace/MicroServices/esp-framework/esp-gateway/target/gateway-0.0.1-SNAPSHOT.">
+    <meta name="description" content="Docker部署Spring Boot应用，以测试Spring Cloud相关组件。">
 <meta name="keywords" content="Docker">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Docker Deploy Test">
 <meta property="og:url" content="http://yoursite.com/documents/Technology/Docker/docker-deploy-test.html">
 <meta property="og:site_name" content="HANZO">
-<meta property="og:description" content="12$ scp -r hanzo@10.122.22.115:/home/hanzo/Workspace/MicroServices/esp-framework .$ scp hanzo@10.122.22.115:/home/hanzo/Workspace/MicroServices/esp-framework/esp-gateway/target/gateway-0.0.1-SNAPSHOT.">
+<meta property="og:description" content="Docker部署Spring Boot应用，以测试Spring Cloud相关组件。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-12-12T04:33:31.257Z">
+<meta property="og:image" content="http://yoursite.com/images/test.jpg">
+<meta property="og:updated_time" content="2018-12-12T09:48:35.012Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Docker Deploy Test">
-<meta name="twitter:description" content="12$ scp -r hanzo@10.122.22.115:/home/hanzo/Workspace/MicroServices/esp-framework .$ scp hanzo@10.122.22.115:/home/hanzo/Workspace/MicroServices/esp-framework/esp-gateway/target/gateway-0.0.1-SNAPSHOT.">
+<meta name="twitter:description" content="Docker部署Spring Boot应用，以测试Spring Cloud相关组件。">
+<meta name="twitter:image" content="http://yoursite.com/images/test.jpg">
 
 
 
@@ -42,7 +44,7 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
 
 <link rel="stylesheet" href="/css/style.css">
 
@@ -153,16 +155,16 @@
         <span class="column is-narrow">
             
             
-            2 minutes read (About 370 words)
+            3 minutes read (About 390 words)
         </span>
         
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ scp -r hanzo@10.122.22.115:/home/hanzo/Workspace/MicroServices/esp-framework .</span><br><span class="line">$ scp hanzo@10.122.22.115:/home/hanzo/Workspace/MicroServices/esp-framework/esp-gateway/target/gateway-0.0.1-SNAPSHOT.jar .</span><br></pre></td></tr></table></figure>
+        <p><img src="/images/test.jpg" alt=""><br>Docker部署Spring Boot应用，以测试Spring Cloud相关组件。</p>
 <a id="more"></a>
-<h2 id="Runing-Mode"><a href="#Runing-Mode" class="headerlink" title="Runing Mode"></a>Runing Mode</h2><!-- more -->
-<ul>
+<figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ scp -r hanzo@10.122.22.115:/home/hanzo/Workspace/MicroServices/esp-framework .</span><br><span class="line">$ scp hanzo@10.122.22.115:/home/hanzo/Workspace/MicroServices/esp-framework/esp-gateway/target/gateway-0.0.1-SNAPSHOT.jar .</span><br></pre></td></tr></table></figure>
+<h2 id="Runing-Mode"><a href="#Runing-Mode" class="headerlink" title="Runing Mode"></a>Runing Mode</h2><ul>
 <li><p><code>maven</code></p>
 <figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mvn spring-boot:run \</span><br><span class="line">  -DCFG_CONFIG_HOST=10.122.22.115 \</span><br><span class="line">  -Deureka.client.serviceUrl.defaultZone=http://10.122.22.115:8761/eureka</span><br></pre></td></tr></table></figure>
 </li>
