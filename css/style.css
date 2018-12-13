@@ -19,10 +19,12 @@ a.tag.article-tag {
 .navbar-main {
   border-bottom: 1px solid #dbdbdb;
   transition: 0.1s ease-in;
-  background-color: #292c34; }
+  background-color: #292C34; }
   .navbar-main .navbar-logo {
     font-size: 1.5rem;
     font-weight: 600; }
+  .navbar-main a.navbar-logo:active {
+    background-color: #292C34; }
   .navbar-main .navbar-item {
     text-align: center;
     color: #FFFFFF;
@@ -32,11 +34,11 @@ a.tag.article-tag {
   .navbar-main .toc .navbar-dropdown {
     max-height: 500px;
     overflow-y: auto;
-    background-color: #292C34; }
+    background-color: #3B404A; }
   .navbar-main .navbar-brand .navbar-burger {
     color: #FFFFFF; }
   .navbar-main .navbar-menu.is-active {
-    background-color: #2a2d34; }
+    background-color: #3B404A; }
 
 .article + .article {
   padding-top: 2rem;
