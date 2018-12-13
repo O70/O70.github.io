@@ -23,7 +23,10 @@ a.tag.article-tag {
   .navbar-main .navbar-logo {
     font-size: 1.5rem;
     font-weight: 600; }
-  .navbar-main a.navbar-logo:active {
+  .navbar-main a.navbar-logo:active,
+  .navbar-main a.navbar-logo:hover,
+  .navbar-main a.navbar-logo:link,
+  .navbar-main a.navbar-logo:visited {
     background-color: #292C34; }
   .navbar-main .navbar-item {
     text-align: center;
