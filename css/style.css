@@ -33,6 +33,10 @@ a.tag.article-tag {
     max-height: 500px;
     overflow-y: auto;
     background-color: #292C34; }
+  .navbar-main .navbar-brand .navbar-burger {
+    color: #FFFFFF; }
+  .navbar-main .navbar-menu.is-active {
+    background-color: #292C34; }
 
 .article + .article {
   padding-top: 2rem;
