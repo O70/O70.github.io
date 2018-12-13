@@ -33,14 +33,19 @@ a.tag.article-tag {
     color: #FFFFFF;
     font-weight: bold; }
   .navbar-main a.navbar-item.is-active {
-    color: #3273DC; }
+    color: #5E8BEB;
+    background-color: #3B404A; }
   .navbar-main .toc .navbar-dropdown {
     max-height: 500px;
     overflow-y: auto;
     background-color: #3B404A; }
+  .navbar-main a.navbar-item:hover,
+  .navbar-main .toc .navbar-dropdown a.navbar-item:hover {
+    color: #5E8BEB; }
   .navbar-main .navbar-brand .navbar-burger {
     color: #FFFFFF; }
-  .navbar-main .navbar-menu.is-active {
+  .navbar-main .navbar-menu.is-active,
+  .navbar-main .navbar-menu.is-active .navbar-item:hover {
     background-color: #3B404A; }
 
 .article + .article {
