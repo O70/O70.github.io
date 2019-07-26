@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>Vue Dockerfile - HANZO</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+
+
+<meta name="description" content="鬼王, HANZO, THRAEX">
+
+
+
+<meta name="keywords" content="鬼王, O70, HANZO, THRAEX">
+
+
+
+    <meta name="description" content="Project: vue-laboratory nginx.template12345678910111213141516171819202122232425262728293031323334353637383940414243# user  root;worker_processes  1;error_log  logs/error.log;error_log  logs/error.log">
+<meta name="keywords" content="鬼王, O70, HANZO, THRAEX">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue Dockerfile">
+<meta property="og:url" content="http://yoursite.com/documents/others/vue-dockerfile.html">
+<meta property="og:site_name" content="HANZO">
+<meta property="og:description" content="Project: vue-laboratory nginx.template12345678910111213141516171819202122232425262728293031323334353637383940414243# user  root;worker_processes  1;error_log  logs/error.log;error_log  logs/error.log">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-07-26T04:02:09.398Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Vue Dockerfile">
+<meta name="twitter:description" content="Project: vue-laboratory nginx.template12345678910111213141516171819202122232425262728293031323334353637383940414243# user  root;worker_processes  1;error_log  logs/error.log;error_log  logs/error.log">
+
+
+
+
+
+<link rel="icon" href="/images/favicon.ico">
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
+
+<link rel="stylesheet" href="/css/style.css">
+
+<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+
+</head>
+<body>
+    
+<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item navbar-logo" href="/">
+                
+                    
+                    HANZO
+                    
+                
+            </a>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="navbar-menu navbar-start">
+            
+            <a class="navbar-item " href="/categories/Technology">Technology</a>
+            
+            <a class="navbar-item " href="/categories/Life">Life</a>
+            
+            <a class="navbar-item " href="/archives">Archives</a>
+            
+            <a class="navbar-item " href="/about">About</a>
+            
+            <a class="navbar-item " href="/main">Main</a>
+            
+        </div>
+        
+        <div class="navbar-menu navbar-end">
+            
+            <a class="navbar-item search" title="Search" href="javascript:;">
+                <i class="fas fa-search"></i>
+            </a>
+            
+            
+            
+            <a class="navbar-item" title="GitHub" href="https://github.com/O70">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+               
+            
+        </div>
+    </div>
+</nav>
+
+    <section class="section">
+    <div class="container">
+    <article class="article content gallery" itemscope="" itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            Vue Dockerfile
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-07-15T06:33:00.000Z" itemprop="datePublished">Jul 15 2019</time>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            2 minutes read (About 272 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <p><strong>Project: <code>vue-laboratory</code></strong></p>
+<h2 id="nginx-template"><a href="#nginx-template" class="headerlink" title="nginx.template"></a>nginx.template</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"># user  root;</span><br><span class="line">worker_processes  1;</span><br><span class="line"></span><br><span class="line">error_log  logs/error.log;</span><br><span class="line">error_log  logs/error.log  notice;</span><br><span class="line">error_log  logs/error.log  info;</span><br><span class="line"></span><br><span class="line">pid        logs/nginx.pid;</span><br><span class="line"></span><br><span class="line">events &#123;</span><br><span class="line">    worker_connections  1024;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">http &#123;</span><br><span class="line">    include       /etc/nginx/mime.types;</span><br><span class="line">    default_type  application/octet-stream;</span><br><span class="line"></span><br><span class="line">    log_format  main  &apos;$remote_addr - $remote_user [$time_local] &quot;$request&quot; &apos;</span><br><span class="line">                      &apos;$status $body_bytes_sent &quot;$http_referer&quot; &apos;</span><br><span class="line">                      &apos;&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot;&apos;;</span><br><span class="line"></span><br><span class="line">    access_log  logs/access.log  main;</span><br><span class="line"></span><br><span class="line">    sendfile        on;</span><br><span class="line">    #tcp_nopush     on;</span><br><span class="line"></span><br><span class="line">    keepalive_timeout  65;</span><br><span class="line">    server &#123;</span><br><span class="line">        listen       80;</span><br><span class="line">        server_name  localhost;</span><br><span class="line"></span><br><span class="line">        location / &#123;</span><br><span class="line">            root   /usr/share/nginx/ui;</span><br><span class="line">            try_files $uri $uri/ /index.html;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">      location /api &#123;</span><br><span class="line">         proxy_pass http://$ESP_GATEWAY_HOST/api;</span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Dockerfile"><a href="#Dockerfile" class="headerlink" title="Dockerfile"></a>Dockerfile</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">FROM nginx:latest</span><br><span class="line">MAINTAINER 鬼王</span><br><span class="line"></span><br><span class="line">WORKDIR /usr/share/nginx/ui</span><br><span class="line">WORKDIR /etc/nginx/logs</span><br><span class="line"></span><br><span class="line">COPY ./dist/ /usr/share/nginx/ui/</span><br><span class="line"></span><br><span class="line">RUN chmod -R 777 /usr/share/nginx/ui/</span><br><span class="line"></span><br><span class="line">RUN rm -rf /etc/nginx/conf.d/*</span><br><span class="line"></span><br><span class="line">COPY nginx.template /etc/nginx/nginx.template</span><br><span class="line"></span><br><span class="line">ENV ESP_GATEWAY_HOST 10.10.0.154:8765</span><br><span class="line"></span><br><span class="line">CMD envsubst &apos;$ESP_GATEWAY_HOST&apos; &lt; /etc/nginx/nginx.template &gt; /etc/nginx/nginx.conf &amp;&amp; nginx -g &apos;daemon off;&apos;</span><br><span class="line"></span><br><span class="line">EXPOSE 80</span><br></pre></td></tr></table></figure>
+<h2 id="Commands"><a href="#Commands" class="headerlink" title="Commands"></a>Commands</h2><figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">#!! $ npm install --registry=https://registry.npm.taobao.org</span></span><br><span class="line"></span><br><span class="line"> <span class="hljs-built_in">export</span> ESP_GATEWAY_HOST=https://www.baidus.com</span><br><span class="line">$ npm run build</span><br><span class="line">$ <span class="hljs-built_in">export</span> -n ESP_GATEWAY_HOST</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">#!! or</span></span><br><span class="line"><span class="hljs-comment">#!! "build:esp": "ESP_GATEWAY_HOST=https://www.baidus.com node build/build.js ; export -n ESP_GATEWAY_HOST"</span></span><br><span class="line"></span><br><span class="line">$ docker build -t guiwang/<span class="hljs-built_in">test</span>-ui .</span><br><span class="line"></span><br><span class="line">$ docker run -d --name <span class="hljs-built_in">test</span>-ui -p 8081:80 guiwang/<span class="hljs-built_in">test</span>-ui</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">#!! 以下方式环境变量无效</span></span><br><span class="line">$ docker run -d --name <span class="hljs-built_in">test</span>-ui2 -p 8082:80 -e ESP_GATEWAY_HOST=www.baidu.com guiwang/<span class="hljs-built_in">test</span>-ui</span><br><span class="line"></span><br><span class="line">$ docker rm -v $(docker stop <span class="hljs-built_in">test</span>-ui)</span><br><span class="line">$ docker rmi guiwang/<span class="hljs-built_in">test</span>-ui:latest</span><br></pre></td></tr></table></figure>
+
+    
+    </div>
+    
+    
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop  article-nav-prev">
+            
+            <a href="/documents/others/jvm-tool.html">JVM Tool</a>
+            
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
+            
+            <a href="/documents/others/printer.html">Printer</a>
+            
+        </span>
+    </div>
+    
+</article>
+
+
+
+
+
+    </div>
+</section>
+    <footer class="footer">
+    <div class="container">
+        <div class="columns content">
+            <div class="column is-narrow has-text-centered">
+                Copyright &copy; 2019 鬼王&nbsp;
+                <!-- Powered by <a href="https://github.com/O70" target="_blank">O70</a> -->
+            </div>
+            <div class="column is-hidden-mobile"></div>
+
+            
+            <div class="column is-narrow">
+                <div class="columns is-mobile is-multiline is-centered">
+                
+                    
+                <a class="column is-narrow has-text-black" title="京ICP备19029828号" href="http://www.miitbeian.gov.cn">
+                    
+                    京ICP备19029828号
+                    
+                </a>
+                
+                    
+                <a class="column is-narrow has-text-black" title="GitHub" href="https://github.com/O70">
+                    
+                    GitHub
+                    
+                </a>
+                
+                </div>
+            </div>
+            
+            
+
+        </div>
+    </div>
+</footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+
+<!-- test if the browser is outdated -->
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // plugin function, place inside DOM ready function
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        })
+    });
+</script>
+
+<script>
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
+    }
+    moment.locale("en-AU");
+</script>
+
+
+
+<script src="/js/script.js"></script>
+
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-mask"></div>
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js"></script>
+    
+</body>
+</html>

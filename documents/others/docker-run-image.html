@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>Docker Run Image - HANZO</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+
+
+<meta name="description" content="鬼王, HANZO, THRAEX">
+
+
+
+<meta name="keywords" content="鬼王, O70, HANZO, THRAEX">
+
+
+
+    <meta name="description" content="Docker Run ImageMySQL查看MySQL版本：123456789$ docker inspect mysql...&quot;Env&quot;: [    &quot;PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin&quot;,    &quot;GOSU_VERSION=1.7&quot;,    &quot;MYSQL_MAJOR=5.7&quot;,    &quot;MYSQL">
+<meta name="keywords" content="鬼王, O70, HANZO, THRAEX">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Docker Run Image">
+<meta property="og:url" content="http://yoursite.com/documents/others/docker-run-image.html">
+<meta property="og:site_name" content="HANZO">
+<meta property="og:description" content="Docker Run ImageMySQL查看MySQL版本：123456789$ docker inspect mysql...&quot;Env&quot;: [    &quot;PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin&quot;,    &quot;GOSU_VERSION=1.7&quot;,    &quot;MYSQL_MAJOR=5.7&quot;,    &quot;MYSQL">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-07-26T04:02:09.398Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Docker Run Image">
+<meta name="twitter:description" content="Docker Run ImageMySQL查看MySQL版本：123456789$ docker inspect mysql...&quot;Env&quot;: [    &quot;PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin&quot;,    &quot;GOSU_VERSION=1.7&quot;,    &quot;MYSQL_MAJOR=5.7&quot;,    &quot;MYSQL">
+
+
+
+
+
+<link rel="icon" href="/images/favicon.ico">
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
+
+<link rel="stylesheet" href="/css/style.css">
+
+<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+
+</head>
+<body>
+    
+<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item navbar-logo" href="/">
+                
+                    
+                    HANZO
+                    
+                
+            </a>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="navbar-menu navbar-start">
+            
+            <a class="navbar-item " href="/categories/Technology">Technology</a>
+            
+            <a class="navbar-item " href="/categories/Life">Life</a>
+            
+            <a class="navbar-item " href="/archives">Archives</a>
+            
+            <a class="navbar-item " href="/about">About</a>
+            
+            <a class="navbar-item " href="/main">Main</a>
+            
+        </div>
+        
+        <div class="navbar-menu navbar-end">
+            
+            <a class="navbar-item search" title="Search" href="javascript:;">
+                <i class="fas fa-search"></i>
+            </a>
+            
+            
+            
+            <a class="navbar-item" title="GitHub" href="https://github.com/O70">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+               
+            
+        </div>
+    </div>
+</nav>
+
+    <section class="section">
+    <div class="container">
+    <article class="article content gallery" itemscope="" itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            Docker Run Image
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2018-10-21T01:00:00.000Z" itemprop="datePublished">Oct 21 2018</time>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            6 minutes read (About 849 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h1 id="Docker-Run-Image"><a href="#Docker-Run-Image" class="headerlink" title="Docker Run Image"></a>Docker Run Image</h1><h2 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h2><p>查看MySQL版本：<br><figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ docker inspect mysql</span><br><span class="line">...</span><br><span class="line"><span class="hljs-string">"Env"</span>: [</span><br><span class="line">    <span class="hljs-string">"PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"</span>,</span><br><span class="line">    <span class="hljs-string">"GOSU_VERSION=1.7"</span>,</span><br><span class="line">    <span class="hljs-string">"MYSQL_MAJOR=5.7"</span>,</span><br><span class="line">    <span class="hljs-string">"MYSQL_VERSION=5.7.21-1debian9"</span></span><br><span class="line">],</span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
+<p>運行鏡像：<br><figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ docker run -d \</span><br><span class="line">  --name c-mysql \</span><br><span class="line">  -p 3306:3306 \</span><br><span class="line">  -v <span class="hljs-variable">$PWD</span>/Dockers/mysql/conf:/etc/mysql/conf.d \</span><br><span class="line">  -v <span class="hljs-variable">$PWD</span>/Dockers/mysql/data:/var/lib/mysql \</span><br><span class="line">  -v <span class="hljs-variable">$PWD</span>/Dockers/mysql/logs:/<span class="hljs-built_in">log</span> \</span><br><span class="line">  -e MYSQL_ROOT_PASSWORD=hanzo \</span><br><span class="line">  mysql:latest</span><br></pre></td></tr></table></figure></p>
+<p>進入容器:</p>
+<figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker <span class="hljs-built_in">exec</span> -it c-mysql bash</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment"># mysql -u root -p</span></span><br><span class="line"><span class="hljs-keyword">select</span> <span class="hljs-keyword">version</span>();</span><br><span class="line"><span class="hljs-keyword">show</span> <span class="hljs-keyword">databases</span></span><br></pre></td></tr></table></figure>
+<p>MySQL查看用戶信息：<br><figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">desc mysql.user;</span><br><span class="line"><span class="hljs-keyword">select</span> Host, <span class="hljs-keyword">User</span> <span class="hljs-keyword">from</span> mysql.user;</span><br><span class="line"><span class="hljs-keyword">show</span> <span class="hljs-keyword">grants</span> <span class="hljs-keyword">for</span> <span class="hljs-string">'root'</span>@<span class="hljs-string">'%'</span>;</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://www.cnblogs.com/zeroone/articles/2298942.html" target="_blank" rel="noopener">創建用戶</a>：<br><figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">#!! CREATE USER 'username'@'host' IDENTIFIED BY 'password';</span></span><br><span class="line">CREATE USER <span class="hljs-string">'hanzo'</span>@<span class="hljs-string">'%'</span> IDENTIFIED BY <span class="hljs-string">'hanzo70'</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">#!! GRANT privileges ON databasename.tablename TO 'username'@'host'</span></span><br><span class="line">GRANT ALL ON *.* TO <span class="hljs-string">'hanzo'</span>@<span class="hljs-string">'%'</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">#!! SET PASSWORD FOR 'username'@'host' = PASSWORD('newpassword');</span></span><br><span class="line"><span class="hljs-comment">#!! 如果是当前登陆用户用SET PASSWORD = PASSWORD("newpassword");</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">#!! REVOKE privilege ON databasename.tablename FROM 'username'@'host';</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">#!! DROP USER 'username'@'host';</span></span><br></pre></td></tr></table></figure></p>
+<p>e.g.:<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># update container env for MYSQL_ROOT_PASSWORD</span><br><span class="line">export MYSQL_ROOT_PASSWORD=&quot;&lt;PREFIX&gt;-hanzo&quot;</span><br><span class="line"></span><br><span class="line"># update root password</span><br><span class="line">mysql -u root -p</span><br><span class="line">SET PASSWORD = PASSWORD(&quot;&lt;PREFIX&gt;-hanzo&quot;);</span><br><span class="line"></span><br><span class="line"># update hanzo password</span><br><span class="line">set password for &apos;hanzo&apos;@&apos;%&apos; = password(&quot;&lt;PREFIX&gt;-hanzo70&quot;);</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SHOW CREATE TABLE TABLE_NAME;</span><br><span class="line">ALTER DATABASE DB_NAME DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;</span><br><span class="line">ALTER TABLE TABLE_NAME DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;</span><br></pre></td></tr></table></figure>
+<p>随机抽取一条数据:<br><figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">FROM</span> tbl_goods</span><br><span class="line"><span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">id</span> &gt;= (<span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">FLOOR</span>(<span class="hljs-keyword">RAND</span>() * (<span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">MAX</span>(<span class="hljs-keyword">id</span>) <span class="hljs-keyword">FROM</span> tbl_goods)))</span><br><span class="line"><span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> <span class="hljs-keyword">id</span> <span class="hljs-keyword">LIMIT</span> <span class="hljs-number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">update</span> tbl_goods_snapshot s <span class="hljs-keyword">set</span> s.gid = (</span><br><span class="line">    <span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">id</span> <span class="hljs-keyword">FROM</span> tbl_goods <span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> <span class="hljs-keyword">RAND</span>() <span class="hljs-keyword">LIMIT</span> <span class="hljs-number">1</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure></p>
+<p><strong>mysqldump</strong>：<br> <figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ docker run --rm -it mysql mysqldump -h 10.27.213.67 -uroot -phanzo h-admin &gt; h-admin.sql</span><br><span class="line"></span><br><span class="line">$ docker <span class="hljs-built_in">exec</span> -it mysql mysqldump -uroot -phanzo h-admin &gt; h_admin.sql</span><br></pre></td></tr></table></figure></p>
+ <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">docker cp riped-admin.sql container_name</span><br><span class="line">create database riped-admin</span><br><span class="line">use riped-admin</span><br><span class="line">source riped-admin.sql</span><br></pre></td></tr></table></figure>
+<h2 id="Zipkin"><a href="#Zipkin" class="headerlink" title="Zipkin"></a>Zipkin</h2><p>Create Database and Table:<br><figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">DROP</span> <span class="hljs-keyword">DATABASE</span> <span class="hljs-keyword">IF</span> <span class="hljs-keyword">EXISTS</span> zipkin;</span><br><span class="line"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">DATABASE</span> zipkin;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> <span class="hljs-keyword">IF</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">EXISTS</span> zipkin_spans (</span><br><span class="line">  <span class="hljs-string">`trace_id_high`</span> <span class="hljs-built_in">BIGINT</span> <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span> <span class="hljs-keyword">DEFAULT</span> <span class="hljs-number">0</span> <span class="hljs-keyword">COMMENT</span> <span class="hljs-string">'If non zero, this means the trace uses 128 bit traceIds instead of 64 bit'</span>,</span><br><span class="line">  <span class="hljs-string">`trace_id`</span> <span class="hljs-built_in">BIGINT</span> <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,</span><br><span class="line">  <span class="hljs-string">`id`</span> <span class="hljs-built_in">BIGINT</span> <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,</span><br><span class="line">  <span class="hljs-string">`name`</span> <span class="hljs-built_in">VARCHAR</span>(<span class="hljs-number">255</span>) <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,</span><br><span class="line">  <span class="hljs-string">`parent_id`</span> <span class="hljs-built_in">BIGINT</span>,</span><br><span class="line">  <span class="hljs-string">`debug`</span> <span class="hljs-built_in">BIT</span>(<span class="hljs-number">1</span>),</span><br><span class="line">  <span class="hljs-string">`start_ts`</span> <span class="hljs-built_in">BIGINT</span> <span class="hljs-keyword">COMMENT</span> <span class="hljs-string">'Span.timestamp(): epoch micros used for endTs query and to implement TTL'</span>,</span><br><span class="line">  <span class="hljs-string">`duration`</span> <span class="hljs-built_in">BIGINT</span> <span class="hljs-keyword">COMMENT</span> <span class="hljs-string">'Span.duration(): micros used for minDuration and maxDuration query'</span>,</span><br><span class="line">  PRIMARY <span class="hljs-keyword">KEY</span> (<span class="hljs-string">`trace_id_high`</span>, <span class="hljs-string">`trace_id`</span>, <span class="hljs-string">`id`</span>)</span><br><span class="line">) <span class="hljs-keyword">ENGINE</span>=<span class="hljs-keyword">InnoDB</span> ROW_FORMAT=COMPRESSED <span class="hljs-built_in">CHARACTER</span> <span class="hljs-keyword">SET</span>=utf8 <span class="hljs-keyword">COLLATE</span> utf8_general_ci;</span><br><span class="line"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> zipkin_spans <span class="hljs-keyword">ADD</span> <span class="hljs-keyword">INDEX</span>(<span class="hljs-string">`trace_id_high`</span>, <span class="hljs-string">`trace_id`</span>) <span class="hljs-keyword">COMMENT</span> <span class="hljs-string">'for getTracesByIds'</span>;</span><br><span class="line"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> zipkin_spans <span class="hljs-keyword">ADD</span> <span class="hljs-keyword">INDEX</span>(<span class="hljs-string">`name`</span>) <span class="hljs-keyword">COMMENT</span> <span class="hljs-string">'for getTraces and getSpanNames'</span>;</span><br><span class="line"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> zipkin_spans <span class="hljs-keyword">ADD</span> <span class="hljs-keyword">INDEX</span>(<span class="hljs-string">`start_ts`</span>) <span class="hljs-keyword">COMMENT</span> <span class="hljs-string">'for getTraces ordering and range'</span>;</span><br><span class="line"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> <span class="hljs-keyword">IF</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">EXISTS</span> zipkin_annotations (</span><br><span class="line">  <span class="hljs-string">`trace_id_high`</span> <span class="hljs-built_in">BIGINT</span> <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span> <span class="hljs-keyword">DEFAULT</span> <span class="hljs-number">0</span> <span class="hljs-keyword">COMMENT</span> <span class="hljs-string">'If non zero, this means the trace uses 128 bit traceIds instead of 64 bit'</span>,</span><br><span class="line">  <span class="hljs-string">`trace_id`</span> <span class="hljs-built_in">BIGINT</span> <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span> <span class="hljs-keyword">COMMENT</span> <span class="hljs-string">'coincides with zipkin_spans.trace_id'</span>,</span><br><span class="line">  <span class="hljs-string">`span_id`</span> <span class="hljs-built_in">BIGINT</span> <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span> <span class="hljs-keyword">COMMENT</span> <span class="hljs-string">'coincides with zipkin_spans.id'</span>,</span><br><span class="line">  <span class="hljs-string">`a_key`</span> <span class="hljs-built_in">VARCHAR</span>(<span class="hljs-number">255</span>) <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span> <span class="hljs-keyword">COMMENT</span> <span class="hljs-string">'BinaryAnnotation.key or Annotation.value if type == -1'</span>,</span><br><span class="line">  <span class="hljs-string">`a_value`</span> <span class="hljs-built_in">BLOB</span> <span class="hljs-keyword">COMMENT</span> <span class="hljs-string">'BinaryAnnotation.value(), which must be smaller than 64KB'</span>,</span><br><span class="line">  <span class="hljs-string">`a_type`</span> <span class="hljs-built_in">INT</span> <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span> <span class="hljs-keyword">COMMENT</span> <span class="hljs-string">'BinaryAnnotation.type() or -1 if Annotation'</span>,</span><br><span class="line">  <span class="hljs-string">`a_timestamp`</span> <span class="hljs-built_in">BIGINT</span> <span class="hljs-keyword">COMMENT</span> <span class="hljs-string">'Used to implement TTL; Annotation.timestamp or zipkin_spans.timestamp'</span>,</span><br><span class="line">  <span class="hljs-string">`endpoint_ipv4`</span> <span class="hljs-built_in">INT</span> <span class="hljs-keyword">COMMENT</span> <span class="hljs-string">'Null when Binary/Annotation.endpoint is null'</span>,</span><br><span class="line">  <span class="hljs-string">`endpoint_ipv6`</span> <span class="hljs-built_in">BINARY</span>(<span class="hljs-number">16</span>) <span class="hljs-keyword">COMMENT</span> <span class="hljs-string">'Null when Binary/Annotation.endpoint is null, or no IPv6 address'</span>,</span><br><span class="line">  <span class="hljs-string">`endpoint_port`</span> <span class="hljs-built_in">SMALLINT</span> <span class="hljs-keyword">COMMENT</span> <span class="hljs-string">'Null when Binary/Annotation.endpoint is null'</span>,</span><br><span class="line">  <span class="hljs-string">`endpoint_service_name`</span> <span class="hljs-built_in">VARCHAR</span>(<span class="hljs-number">255</span>) <span class="hljs-keyword">COMMENT</span> <span class="hljs-string">'Null when Binary/Annotation.endpoint is null'</span></span><br><span class="line">) <span class="hljs-keyword">ENGINE</span>=<span class="hljs-keyword">InnoDB</span> ROW_FORMAT=COMPRESSED <span class="hljs-built_in">CHARACTER</span> <span class="hljs-keyword">SET</span>=utf8 <span class="hljs-keyword">COLLATE</span> utf8_general_ci;</span><br><span class="line"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> zipkin_annotations <span class="hljs-keyword">ADD</span> <span class="hljs-keyword">UNIQUE</span> <span class="hljs-keyword">KEY</span>(<span class="hljs-string">`trace_id_high`</span>, <span class="hljs-string">`trace_id`</span>, <span class="hljs-string">`span_id`</span>, <span class="hljs-string">`a_key`</span>, <span class="hljs-string">`a_timestamp`</span>) <span class="hljs-keyword">COMMENT</span> <span class="hljs-string">'Ignore insert on duplicate'</span>;</span><br><span class="line"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> zipkin_annotations <span class="hljs-keyword">ADD</span> <span class="hljs-keyword">INDEX</span>(<span class="hljs-string">`trace_id_high`</span>, <span class="hljs-string">`trace_id`</span>, <span class="hljs-string">`span_id`</span>) <span class="hljs-keyword">COMMENT</span> <span class="hljs-string">'for joining with zipkin_spans'</span>;</span><br><span class="line"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> zipkin_annotations <span class="hljs-keyword">ADD</span> <span class="hljs-keyword">INDEX</span>(<span class="hljs-string">`trace_id_high`</span>, <span class="hljs-string">`trace_id`</span>) <span class="hljs-keyword">COMMENT</span> <span class="hljs-string">'for getTraces/ByIds'</span>;</span><br><span class="line"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> zipkin_annotations <span class="hljs-keyword">ADD</span> <span class="hljs-keyword">INDEX</span>(<span class="hljs-string">`endpoint_service_name`</span>) <span class="hljs-keyword">COMMENT</span> <span class="hljs-string">'for getTraces and getServiceNames'</span>;</span><br><span class="line"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> zipkin_annotations <span class="hljs-keyword">ADD</span> <span class="hljs-keyword">INDEX</span>(<span class="hljs-string">`a_type`</span>) <span class="hljs-keyword">COMMENT</span> <span class="hljs-string">'for getTraces and autocomplete values'</span>;</span><br><span class="line"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> zipkin_annotations <span class="hljs-keyword">ADD</span> <span class="hljs-keyword">INDEX</span>(<span class="hljs-string">`a_key`</span>) <span class="hljs-keyword">COMMENT</span> <span class="hljs-string">'for getTraces and autocomplete values'</span>;</span><br><span class="line"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> zipkin_annotations <span class="hljs-keyword">ADD</span> <span class="hljs-keyword">INDEX</span>(<span class="hljs-string">`trace_id`</span>, <span class="hljs-string">`span_id`</span>, <span class="hljs-string">`a_key`</span>) <span class="hljs-keyword">COMMENT</span> <span class="hljs-string">'for dependencies job'</span>;</span><br><span class="line"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> <span class="hljs-keyword">IF</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">EXISTS</span> zipkin_dependencies (</span><br><span class="line">  <span class="hljs-string">`day`</span> <span class="hljs-built_in">DATE</span> <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,</span><br><span class="line">  <span class="hljs-string">`parent`</span> <span class="hljs-built_in">VARCHAR</span>(<span class="hljs-number">255</span>) <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,</span><br><span class="line">  <span class="hljs-string">`child`</span> <span class="hljs-built_in">VARCHAR</span>(<span class="hljs-number">255</span>) <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,</span><br><span class="line">  <span class="hljs-string">`call_count`</span> <span class="hljs-built_in">BIGINT</span>,</span><br><span class="line">  <span class="hljs-string">`error_count`</span> <span class="hljs-built_in">BIGINT</span>,</span><br><span class="line">  PRIMARY <span class="hljs-keyword">KEY</span> (<span class="hljs-string">`day`</span>, <span class="hljs-string">`parent`</span>, <span class="hljs-string">`child`</span>)</span><br><span class="line">) <span class="hljs-keyword">ENGINE</span>=<span class="hljs-keyword">InnoDB</span> ROW_FORMAT=COMPRESSED <span class="hljs-built_in">CHARACTER</span> <span class="hljs-keyword">SET</span>=utf8 <span class="hljs-keyword">COLLATE</span> utf8_general_ci;</span><br></pre></td></tr></table></figure></p>
+<p>Run:<br><figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ docker run -d \</span><br><span class="line">  --name c-zipkin \</span><br><span class="line">  -p 9411:9411 \</span><br><span class="line">  -e STORAGE_TYPE=mysql \</span><br><span class="line">  -e MYSQL_HOST=10.122.163.77 \</span><br><span class="line">  -e MYSQL_TCP_PORT=3306 \</span><br><span class="line">  -e MYSQL_DB=zipkin \</span><br><span class="line">  -e MYSQL_USER=hanzo \</span><br><span class="line">  -e MYSQL_PASS=hanzo70 \</span><br><span class="line">  openzipkin/zipkin:latest</span><br></pre></td></tr></table></figure></p>
+
+    
+    </div>
+    
+    
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop  article-nav-prev">
+            
+            <a href="/documents/others/deploy-test.html">Deploy Test</a>
+            
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
+            
+            <a href="/documents/others/three-js.html">Three.js</a>
+            
+        </span>
+    </div>
+    
+</article>
+
+
+
+
+
+    </div>
+</section>
+    <footer class="footer">
+    <div class="container">
+        <div class="columns content">
+            <div class="column is-narrow has-text-centered">
+                Copyright &copy; 2019 鬼王&nbsp;
+                <!-- Powered by <a href="https://github.com/O70" target="_blank">O70</a> -->
+            </div>
+            <div class="column is-hidden-mobile"></div>
+
+            
+            <div class="column is-narrow">
+                <div class="columns is-mobile is-multiline is-centered">
+                
+                    
+                <a class="column is-narrow has-text-black" title="京ICP备19029828号" href="http://www.miitbeian.gov.cn">
+                    
+                    京ICP备19029828号
+                    
+                </a>
+                
+                    
+                <a class="column is-narrow has-text-black" title="GitHub" href="https://github.com/O70">
+                    
+                    GitHub
+                    
+                </a>
+                
+                </div>
+            </div>
+            
+            
+
+        </div>
+    </div>
+</footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+
+<!-- test if the browser is outdated -->
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // plugin function, place inside DOM ready function
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        })
+    });
+</script>
+
+<script>
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
+    }
+    moment.locale("en-AU");
+</script>
+
+
+
+<script src="/js/script.js"></script>
+
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-mask"></div>
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js"></script>
+    
+</body>
+</html>

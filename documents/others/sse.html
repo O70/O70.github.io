@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>SSE - HANZO</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+
+
+<meta name="description" content="鬼王, HANZO, THRAEX">
+
+
+
+<meta name="keywords" content="鬼王, O70, HANZO, THRAEX">
+
+
+
+    <meta name="description" content="Lucene Terms 信息检索(Information Retrieval) 信息检索库 搜索引擎 全文索引 索引链 基线要求(Baseline Requirements)  Lucene、solr以及elasticsearch之间的区别和联系首先分别说明三者的概念：Lucene是一套信息检索工具包，并不包含搜索引擎系统，它包含了索引结构、读写索引工具、相关性工具、排序等功能，因此在使用Luc">
+<meta name="keywords" content="鬼王, O70, HANZO, THRAEX">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SSE">
+<meta property="og:url" content="http://yoursite.com/documents/others/sse.html">
+<meta property="og:site_name" content="HANZO">
+<meta property="og:description" content="Lucene Terms 信息检索(Information Retrieval) 信息检索库 搜索引擎 全文索引 索引链 基线要求(Baseline Requirements)  Lucene、solr以及elasticsearch之间的区别和联系首先分别说明三者的概念：Lucene是一套信息检索工具包，并不包含搜索引擎系统，它包含了索引结构、读写索引工具、相关性工具、排序等功能，因此在使用Luc">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://images2015.cnblogs.com/blog/38465/201703/38465-20170313220046213-1161805781.png">
+<meta property="og:updated_time" content="2019-07-26T04:02:09.414Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SSE">
+<meta name="twitter:description" content="Lucene Terms 信息检索(Information Retrieval) 信息检索库 搜索引擎 全文索引 索引链 基线要求(Baseline Requirements)  Lucene、solr以及elasticsearch之间的区别和联系首先分别说明三者的概念：Lucene是一套信息检索工具包，并不包含搜索引擎系统，它包含了索引结构、读写索引工具、相关性工具、排序等功能，因此在使用Luc">
+<meta name="twitter:image" content="https://images2015.cnblogs.com/blog/38465/201703/38465-20170313220046213-1161805781.png">
+
+
+
+
+
+<link rel="icon" href="/images/favicon.ico">
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
+
+<link rel="stylesheet" href="/css/style.css">
+
+<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+
+</head>
+<body>
+    
+<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item navbar-logo" href="/">
+                
+                    
+                    HANZO
+                    
+                
+            </a>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="navbar-menu navbar-start">
+            
+            <a class="navbar-item " href="/categories/Technology">Technology</a>
+            
+            <a class="navbar-item " href="/categories/Life">Life</a>
+            
+            <a class="navbar-item " href="/archives">Archives</a>
+            
+            <a class="navbar-item " href="/about">About</a>
+            
+            <a class="navbar-item " href="/main">Main</a>
+            
+        </div>
+        
+        <div class="navbar-menu navbar-end">
+            
+            <a class="navbar-item search" title="Search" href="javascript:;">
+                <i class="fas fa-search"></i>
+            </a>
+            
+            
+            
+            <a class="navbar-item" title="GitHub" href="https://github.com/O70">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+               
+            
+        </div>
+    </div>
+</nav>
+
+    <section class="section">
+    <div class="container">
+    <article class="article content gallery" itemscope="" itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            SSE
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-06-02T07:40:00.000Z" itemprop="datePublished">Jun 2 2019</time>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            22 minutes read (About 3372 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h2 id="Lucene-Terms"><a href="#Lucene-Terms" class="headerlink" title="Lucene Terms"></a>Lucene Terms</h2><ul>
+<li>信息检索(Information Retrieval)</li>
+<li>信息检索库</li>
+<li>搜索引擎</li>
+<li>全文索引</li>
+<li>索引链</li>
+<li>基线要求(Baseline Requirements)</li>
+</ul>
+<h2 id="Lucene、solr以及elasticsearch之间的区别和联系"><a href="#Lucene、solr以及elasticsearch之间的区别和联系" class="headerlink" title="Lucene、solr以及elasticsearch之间的区别和联系"></a>Lucene、solr以及elasticsearch之间的区别和联系</h2><p>首先分别说明三者的概念：<br>Lucene是一套<strong>信息检索工具包</strong>，并不包含搜索引擎系统，它包含了<strong>索引结构、读写索引工具、相关性工具、排序等功能</strong>，因此在使用Lucene时仍需要关注搜索引擎系统，例如数据获取、解析、分词等方面的东西。而solr和elasticsearch都是基于该工具包做的一些封装。</p>
+<p>Solr是一个有HTTP接口的基于Lucene的查询服务器，封装了很多Lucene细节，自己的应用可以直接利用诸如 …/solr?q=abc 这样的HTTP GET/POST请求去查询，维护修改索引。</p>
+<p>Elasticsearch也是一个建立在全文搜索引擎 Apache Lucene基础上的搜索引擎。采用的策略是分布式实时文件存储，并将每一个字段都编入索引，使其可以被搜索。</p>
+<p><strong>Lucene使用上更加灵活，但是你需要自己处理搜素引擎系统架构，以及其他附加附加功能的实现。而Solr帮你做了更多，但是是一个处于高层的框架，Lucene很多新特性不能及时向上透传，所以有时候可能发现需要一个功能，Lucene是支持的，但是Solr上已经看不到相关接口。</strong></p>
+<p>然后说明三者之间的区别<br>首先说明三者之间的一个联系：<strong>solr和elasticsearch都是基于Lucene实现的！</strong></p>
+<p>其次:</p>
+<ul>
+<li>solr利用zookpper进行分布式管理，而elasticsearch自身带有分布式协调管理功能；</li>
+<li>solr比elasticsearch实现更加全面，solr官方提供的工恩能够更多，而elasticsearch本身更注    重于核心功能，高级功能多由第三方插件提供；</li>
+<li>solr在传统的搜索应用中表现好于elasticsearch，而elasticsearch在实时搜索应用方面比solr表现好！</li>
+</ul>
+<p>最后有必要说明一下传统搜索和实时搜索：<br><strong>传统搜索是从静态数据库中筛选出符合条件的结果，这种结果往往是不可变得、静态的。而实时搜索则是说用户对于搜索的结果是实时变化的</strong></p>
+<h2 id="Lucene-和solr的区别"><a href="#Lucene-和solr的区别" class="headerlink" title="Lucene 和solr的区别"></a>Lucene 和solr的区别</h2><p>Lucene是一个开放源代码的<strong>全文检索</strong>引擎工具包，即它不是一个完整的全文检索引擎，而是一个全文检索引擎的架构，提供了完整的查询引擎和索引引擎，部分文本分析引擎（英文与德文两种西方语言）。Lucene的目的是为软件开发人员提供一个简单易用的工具包，以方便的在目标系统中实现全文检索的功能，或者是以此为基础建立起完整的全文检索引擎.</p>
+<p>Solr是一个高性能，采用Java5开发，基于Lucene的全文搜索服务器。同时对其进行了扩展，提供了比Lucene更为丰富的查询语言，同时实现了可配置、可扩展并对查询性能进行了优化，并且提供了一个完善的功能管理界面，是一款非常优秀的全文搜索引擎。它对外提供类似于Web-service的API接口。用户可以通过http请求，向搜索引擎服务器提交一定格式的XML文件，生成索引；也可以通过Http Solr Get操作提出查找请求，并得到XML格式的返回结果；</p>
+<p>Solr和Lucene的本质区别有以下三点：搜索服务器，企业级和管理。Lucene本质上是搜索库，不是独立的应用程序，而Solr是。Lucene专注于搜索底层的建设，而Solr专注于企业应用。Lucene不负责支撑搜索服务所必须的管理，而Solr负责。所以说，一句话概括Solr: Solr是Lucene面向企业搜索应用的扩展。</p>
+<h2 id="Solr-vs-Elasticsearch谁是开源搜索引擎王者"><a href="#Solr-vs-Elasticsearch谁是开源搜索引擎王者" class="headerlink" title="Solr vs. Elasticsearch谁是开源搜索引擎王者"></a>Solr vs. Elasticsearch谁是开源搜索引擎王者</h2><p>当前是云计算和数据快速增长的时代,今天的应用程序正以PB级和ZB级的速度生产数据，但人们依然在不停的追求更高更快的性能需求。随着数据的堆积，如何快速有效的搜索这些数据，成为对后端服务的挑战。本文，我们将比较业界两个最流行的开源搜索引擎，Solr和ElasticSearch。两者都建立在Apache Lucene开源平台之上，它们的主要功能非常相似，但是在部署的易用性，可扩展性和其他功能方面也存在巨大差异。</p>
+<h3 id="关于Apache-Solr"><a href="#关于Apache-Solr" class="headerlink" title="关于Apache Solr"></a>关于Apache Solr</h3><p>Apache Solr基于业界大名鼎鼎的java开源搜索引擎Lucene，Lucene更多的是一个软件包，还不能称之为搜索引擎，而solr则完成对lucene的封装，是一个真正意义上的搜索引擎框架。在过去的十年里，solr发展壮大，拥有广泛的用户群体。solr提供分布式索引、分片、副本集、负载均衡和自动故障转移和恢复功能。如果正确部署，良好管理，solr就能够成为一个高可靠、可扩展和高容错的搜索引擎。不少互联网巨头，如Netflix，eBay，Instagram和Amazon（CloudSearch）均使用Solr。</p>
+<p>solr的主要特点：</p>
+<ul>
+<li>全文索引</li>
+<li>高亮</li>
+<li>分面搜索</li>
+<li>实时索引</li>
+<li>动态聚类</li>
+<li>数据库集成</li>
+<li>NoSQL特性和丰富的文档处理（例如Word和PDF文件）</li>
+</ul>
+<h3 id="关于Elasticsearch"><a href="#关于Elasticsearch" class="headerlink" title="关于Elasticsearch"></a>关于Elasticsearch</h3><p>与solr一样，Elasticsearch构建在Apache Lucene库之上，同是开源搜索引擎。Elasticsearch在Solr推出几年后才面世的，通过REST和schema-free（不需要预先定义 Schema，solr是需要预先定义的）的JSON文档提供分布式、多租户全文搜索引擎。并且官方提供Java，Groovy，PHP，Ruby，Perl，Python，.NET和Javascript客户端。</p>
+<p>分布式搜索引擎包含可以华为为分片（shard）的索引，每一个分片可以有多个副本（replicas）。每个Elasticsearch节点可以有一个或多个分片，其引擎既同时作为协调器（coordinator ），将操作转发给正确的分片。</p>
+<p>Elasticsearch可扩展为准实时搜索引擎。其中一个关键特性是多租户功能，可根据不同的用途分索引，可以同时操作多个索引。</p>
+<p>Elasticsearch主要特性：</p>
+<ul>
+<li>分布式搜索</li>
+<li>多租户</li>
+<li>查询统计分析</li>
+<li>分组和聚合</li>
+</ul>
+<h3 id="安装与配置"><a href="#安装与配置" class="headerlink" title="安装与配置"></a>安装与配置</h3><p>相对来说，Elasticsearch更易于安装，与Solr相比非常轻量级。 Solr的分发软件包大小的当前版本（6.4.2）大约为150 MB，而Elasticsearch分发软件包大小的当前版本（5.2.2）仅为32.2MB。</p>
+<p>但是，如果Elasticsearch管理不好，这种易于部署和使用可能会成为一个问题。基于JSON的配置很容易，但如果你想为文件中的每个配置指定注释，那么它不适合你。Solr也提供了Rest API，可以通过集合API创建自定义分片集合，记录聚类算法和执行自定义分片。</p>
+<p>总的来说，如果你的应用程序使用JSON，那么Elasticsearch是一个更好的选择。否则，使用Solr，因为它的schema.xml和solrconfig.xml有很好的文档。</p>
+<h3 id="索引和搜索"><a href="#索引和搜索" class="headerlink" title="索引和搜索"></a>索引和搜索</h3><h4 id="数据源"><a href="#数据源" class="headerlink" title="数据源"></a>数据源</h4><p>Solr接受来自不同来源的数据，包括XML文件，逗号分隔符（CSV）文件和从数据库中的表提取的数据以及常见的文件格式（如Microsoft Word和PDF）。</p>
+<p>Elasticsearch还支持其他来源的数据，例如ActiveMQ，AWS SQS，DynamoDB（Amazon NoSQL），FileSystem，Git，JDBC，JMS，Kafka，LDAP，MongoDB，neo4j，RabbitMQ，Redis，Solr和Twitter。还有各种插件可用。</p>
+<h4 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h4><p>Solr专注于文本搜索，而Elasticsearch则常用于查询、过滤和分组分析统计，Elasticsearch背后的团队也努力让这些查询更为高效。因此当比较两者时，对那些不仅需要文本搜索，同时还需要复杂的时间序列搜索和聚合的应用程序而言，毫无疑问Elasticsearch是最佳选择。</p>
+<h4 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h4><p>两者都支持使用停用词和同义词来匹配文档。</p>
+<p>在Solr中，索引间进行join必须是单个分片和其他节点上的副本集进行关联来搜索文档间关系（例如SQL连接）。而Elasticsearch提供更高效的has_children和top_children查询来检索这样的相关文档。</p>
+<h3 id="可扩展性和分布式"><a href="#可扩展性和分布式" class="headerlink" title="可扩展性和分布式"></a>可扩展性和分布式</h3><p>搜索引擎需要处理数以百万级的文档，基于此搜索引擎应该是可复制的，模块化的和可扩展的，支持集群和分布式架构。</p>
+<h4 id="专为云而设计"><a href="#专为云而设计" class="headerlink" title="专为云而设计"></a>专为云而设计</h4><p>Elasticsearch非常易于扩展，拥有足够多的需要大集群的使用案例。</p>
+<p>Solr 基于Apache ZooKeeper也实现了类似ES的分布式部署模式。ZooKeeper是成熟和广泛使用的独立应用程序。</p>
+<p>相对比，Elasticsearch有一个内置的类似ZooKeeper的名为Zen的组件，通过内部的协调机制来维护集群状态。</p>
+<p>可以说Elasticsearch是转为云而设计，是分布式首选。</p>
+<h4 id="分片拆分和再平衡"><a href="#分片拆分和再平衡" class="headerlink" title="分片拆分和再平衡"></a>分片拆分和再平衡</h4><p>shards是luence索引的分区单元，solr和elasticsearch均使用。你可以通过在集群中的不同计算机上运行shard来分发索引。随着SolrCloud的引入，Solr开始支持shard拆分，这允许您通过拆分现有shard来添加更多shard。相比之下，ElasticSearch仍然不支持这一点，事实上，实际上阻止了这种做法。ES通过向设置中添加更多计算机，可以使用自动碎片平衡功能。相比之下，Solr允许添加分片（使用隐式路由时）或分割（使用复合ID时），但不能删除分片。它允许您增加副本。在Elasticsearch中，默认情况下每个索引具有五个分片。它不允许您更改主分片的数量，但它允许您增加副本的数量。分片再平衡对于水平扩容非常有用。当添加新机器时，它将自动重新平衡不同机器中可用的分片。</p>
+<h3 id="社区"><a href="#社区" class="headerlink" title="社区"></a>社区</h3><p>Solr有一个广泛的开源社区。任何人都可以贡献给Solr，新的Solr开发人员或代码提交者只能根据功能选择。 Elasticsearch在技术上是开源的，但不完全。所有贡献者都可以访问源代码，用户可以进行更改并提供。但最终的变化由Elastic（运行Elasticsearch和其他软件的公司）的员工确认和完成。因此，Elasticsearch更多地由单个公司驱动，而不是整个社区。</p>
+<p>Solr贡献者和提交者跨越多个组织，而Elasticsearch提交者仅来自Elastic。还有人指出，Solr的强大社区有一个健康的项目管道和许多知名公司参与。这些成员还通过在整个开发和工程过程中做出贡献来投资该平台。</p>
+<p>两者都有很好的用户群和丰富的开发人员社区，但ElasticSearch相较于Solr更新。 Solr已经存在了更长的时间，所以它的生态系统是发达的，拥有更大的用户群。</p>
+<h3 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h3><p>Solr在这里得分很高。它是一个非常有据可查的产品，具有清晰的示例和API用例场景。 Elasticsearch的文档组织良好，但它缺乏好的示例和清晰的配置说明。</p>
+<h3 id="选Solr-还是-Elasticsearch"><a href="#选Solr-还是-Elasticsearch" class="headerlink" title="选Solr 还是 Elasticsearch?"></a>选Solr 还是 Elasticsearch?</h3><p>通过上面的对比，很难确定谁是最终赢家。其实，无论选择Solr还是Elasticsearch，你首先需要了解您的用户场景和未来的需求。我们来总结一下：</p>
+<p><img src="https://images2015.cnblogs.com/blog/38465/201703/38465-20170313220046213-1161805781.png" alt="Alt text"></p>
+<p>请记住：</p>
+<ul>
+<li>Elasticsearch由于其易用性而在较新的开发人员中更受欢迎</li>
+<li>但是如果你已经在使用solr了，请继续使用它，因为迁移到Elasticsearch并不会带来具体的优势</li>
+<li>如果您需要它来处理分析查询以及搜索文本，Elasticsearch是更好的选择，特别是收集日志，做分析处理（参考前面发的ELK 安装使用<a href="http://www.cnblogs.com/xiaoqi/p/elk-part1.html）" target="_blank" rel="noopener">http://www.cnblogs.com/xiaoqi/p/elk-part1.html）</a></li>
+</ul>
+
+    
+    </div>
+    
+    
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop  article-nav-prev">
+            
+            <a href="/documents/others/three-js-samples.html">Three.js Samples</a>
+            
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
+            
+            <a href="/documents/others/docker-hub-for-guiwang-ubuntu-dev.html">Docker Hub for guiwang/ubuntu-dev</a>
+            
+        </span>
+    </div>
+    
+</article>
+
+
+
+
+
+    </div>
+</section>
+    <footer class="footer">
+    <div class="container">
+        <div class="columns content">
+            <div class="column is-narrow has-text-centered">
+                Copyright &copy; 2019 鬼王&nbsp;
+                <!-- Powered by <a href="https://github.com/O70" target="_blank">O70</a> -->
+            </div>
+            <div class="column is-hidden-mobile"></div>
+
+            
+            <div class="column is-narrow">
+                <div class="columns is-mobile is-multiline is-centered">
+                
+                    
+                <a class="column is-narrow has-text-black" title="京ICP备19029828号" href="http://www.miitbeian.gov.cn">
+                    
+                    京ICP备19029828号
+                    
+                </a>
+                
+                    
+                <a class="column is-narrow has-text-black" title="GitHub" href="https://github.com/O70">
+                    
+                    GitHub
+                    
+                </a>
+                
+                </div>
+            </div>
+            
+            
+
+        </div>
+    </div>
+</footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+
+<!-- test if the browser is outdated -->
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // plugin function, place inside DOM ready function
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        })
+    });
+</script>
+
+<script>
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
+    }
+    moment.locale("en-AU");
+</script>
+
+
+
+<script src="/js/script.js"></script>
+
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-mask"></div>
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js"></script>
+    
+</body>
+</html>

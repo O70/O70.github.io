@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>docker-maven-plugin - HANZO</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+
+
+<meta name="description" content="鬼王, HANZO, THRAEX">
+
+
+
+<meta name="keywords" content="鬼王, O70, HANZO, THRAEX">
+
+
+
+    <meta name="description" content="Dockerfile1234567FROM 10.122.163.99:5000/java:8u171VOLUME /tmpADD target/*.jar app.jarRUN sh -c &amp;apos;touch /app.jar&amp;apos; \	&amp;amp;&amp;amp; echo $(date) &amp;gt; /image_built_at \	&amp;amp;&amp;amp; /bin/cp /usr/shar">
+<meta name="keywords" content="鬼王, O70, HANZO, THRAEX">
+<meta property="og:type" content="article">
+<meta property="og:title" content="docker-maven-plugin">
+<meta property="og:url" content="http://yoursite.com/documents/others/docker-maven-plugin.html">
+<meta property="og:site_name" content="HANZO">
+<meta property="og:description" content="Dockerfile1234567FROM 10.122.163.99:5000/java:8u171VOLUME /tmpADD target/*.jar app.jarRUN sh -c &amp;apos;touch /app.jar&amp;apos; \	&amp;amp;&amp;amp; echo $(date) &amp;gt; /image_built_at \	&amp;amp;&amp;amp; /bin/cp /usr/shar">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-07-26T04:02:09.396Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="docker-maven-plugin">
+<meta name="twitter:description" content="Dockerfile1234567FROM 10.122.163.99:5000/java:8u171VOLUME /tmpADD target/*.jar app.jarRUN sh -c &amp;apos;touch /app.jar&amp;apos; \	&amp;amp;&amp;amp; echo $(date) &amp;gt; /image_built_at \	&amp;amp;&amp;amp; /bin/cp /usr/shar">
+
+
+
+
+
+<link rel="icon" href="/images/favicon.ico">
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
+
+<link rel="stylesheet" href="/css/style.css">
+
+<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+
+</head>
+<body>
+    
+<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item navbar-logo" href="/">
+                
+                    
+                    HANZO
+                    
+                
+            </a>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="navbar-menu navbar-start">
+            
+            <a class="navbar-item " href="/categories/Technology">Technology</a>
+            
+            <a class="navbar-item " href="/categories/Life">Life</a>
+            
+            <a class="navbar-item " href="/archives">Archives</a>
+            
+            <a class="navbar-item " href="/about">About</a>
+            
+            <a class="navbar-item " href="/main">Main</a>
+            
+        </div>
+        
+        <div class="navbar-menu navbar-end">
+            
+            <a class="navbar-item search" title="Search" href="javascript:;">
+                <i class="fas fa-search"></i>
+            </a>
+            
+            
+            
+            <a class="navbar-item" title="GitHub" href="https://github.com/O70">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+               
+            
+        </div>
+    </div>
+</nav>
+
+    <section class="section">
+    <div class="container">
+    <article class="article content gallery" itemscope="" itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            docker-maven-plugin
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-05-31T10:00:00.000Z" itemprop="datePublished">May 31 2019</time>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            a minute read (About 191 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h2 id="Dockerfile"><a href="#Dockerfile" class="headerlink" title="Dockerfile"></a>Dockerfile</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">FROM 10.122.163.99:5000/java:8u171</span><br><span class="line">VOLUME /tmp</span><br><span class="line">ADD target/*.jar app.jar</span><br><span class="line">RUN sh -c &apos;touch /app.jar&apos; \</span><br><span class="line">	&amp;&amp; echo $(date) &gt; /image_built_at \</span><br><span class="line">	&amp;&amp; /bin/cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime &amp;&amp; echo &apos;Asia/Shanghai&apos; &gt;/etc/timezone</span><br><span class="line">ENTRYPOINT [&quot;java&quot;,&quot;-Djava.security.egd=file:/dev/./urandom&quot;,&quot;-jar&quot;,&quot;/app.jar&quot;]</span><br></pre></td></tr></table></figure>
+<h2 id="pom-xml"><a href="#pom-xml" class="headerlink" title="pom.xml"></a>pom.xml</h2><figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">plugins</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">plugin</span>&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>com.spotify<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>docker-maven-plugin<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>1.0.0<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;<span class="hljs-name">configuration</span>&gt;</span></span><br><span class="line">          <span class="hljs-tag">&lt;<span class="hljs-name">imageName</span>&gt;</span>$&#123;docker.image.prefix&#125;/$&#123;project.artifactId&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">imageName</span>&gt;</span></span><br><span class="line">          <span class="hljs-tag">&lt;<span class="hljs-name">dockerDirectory</span>&gt;</span>$&#123;project.basedir&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">dockerDirectory</span>&gt;</span></span><br><span class="line">          <span class="hljs-tag">&lt;<span class="hljs-name">resources</span>&gt;</span></span><br><span class="line">              <span class="hljs-tag">&lt;<span class="hljs-name">resource</span>&gt;</span></span><br><span class="line">                  <span class="hljs-tag">&lt;<span class="hljs-name">targetPath</span>&gt;</span>/<span class="hljs-tag">&lt;/<span class="hljs-name">targetPath</span>&gt;</span></span><br><span class="line">                  <span class="hljs-tag">&lt;<span class="hljs-name">directory</span>&gt;</span>$&#123;project.build.directory&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">directory</span>&gt;</span></span><br><span class="line">                  <span class="hljs-tag">&lt;<span class="hljs-name">include</span>&gt;</span>$&#123;project.build.finalName&#125;.jar<span class="hljs-tag">&lt;/<span class="hljs-name">include</span>&gt;</span></span><br><span class="line">              <span class="hljs-tag">&lt;/<span class="hljs-name">resource</span>&gt;</span></span><br><span class="line">          <span class="hljs-tag">&lt;/<span class="hljs-name">resources</span>&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;/<span class="hljs-name">configuration</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;/<span class="hljs-name">plugin</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">plugins</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="Command-Usage"><a href="#Command-Usage" class="headerlink" title="Command Usage"></a>Command Usage</h2><ul>
+<li><p>You can build an image with the above configurations by running this command.</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn clean package -Dmaven.test.skip=true docker:build</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To push the image you just buit to the registry, specify the <code>pushImageTag</code> flag.</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn clean package -Dmaven.test.skip=true docker:build -DpushImageTag</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Local-Deploy"><a href="#Local-Deploy" class="headerlink" title="Local Deploy"></a>Local Deploy</h2><p>因网络问题，未用到<code>docker-maven-plugin</code>。</p>
+<p>在本地执行以下命令：<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd ../&lt;PROJECT_DIR&gt;</span><br><span class="line">docker login -u docker --password &lt;pwd&gt; 10.122.163.216:5000</span><br><span class="line">docker build -t 10.122.163.216:5000/prod-esp-sms:1.0 .</span><br><span class="line">docker push 10.122.163.216:5000/prod-esp-sms:1.0</span><br></pre></td></tr></table></figure></p>
+<p>进入服务部署应用：<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ssh root@10.27.213.85</span><br><span class="line">docker login -u docker --password &lt;pwd&gt; 10.122.163.216:5000</span><br><span class="line">docker pull 10.122.163.216:5000/prod-esp-sms:1.0</span><br><span class="line">docker run -d --name prod-esp-sms -p 8087:8087 10.122.163.216:5000/prod-esp-sms:1.0</span><br></pre></td></tr></table></figure></p>
+
+    
+    </div>
+    
+    
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop  article-nav-prev">
+            
+            <a href="/documents/others/docker-hub-for-guiwang-ubuntu-dev.html">Docker Hub for guiwang/ubuntu-dev</a>
+            
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
+            
+            <a href="/documents/others/tomcat-configure-ssl.html">Tomcat Configure SSL</a>
+            
+        </span>
+    </div>
+    
+</article>
+
+
+
+
+
+    </div>
+</section>
+    <footer class="footer">
+    <div class="container">
+        <div class="columns content">
+            <div class="column is-narrow has-text-centered">
+                Copyright &copy; 2019 鬼王&nbsp;
+                <!-- Powered by <a href="https://github.com/O70" target="_blank">O70</a> -->
+            </div>
+            <div class="column is-hidden-mobile"></div>
+
+            
+            <div class="column is-narrow">
+                <div class="columns is-mobile is-multiline is-centered">
+                
+                    
+                <a class="column is-narrow has-text-black" title="京ICP备19029828号" href="http://www.miitbeian.gov.cn">
+                    
+                    京ICP备19029828号
+                    
+                </a>
+                
+                    
+                <a class="column is-narrow has-text-black" title="GitHub" href="https://github.com/O70">
+                    
+                    GitHub
+                    
+                </a>
+                
+                </div>
+            </div>
+            
+            
+
+        </div>
+    </div>
+</footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+
+<!-- test if the browser is outdated -->
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // plugin function, place inside DOM ready function
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        })
+    });
+</script>
+
+<script>
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
+    }
+    moment.locale("en-AU");
+</script>
+
+
+
+<script src="/js/script.js"></script>
+
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-mask"></div>
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js"></script>
+    
+</body>
+</html>

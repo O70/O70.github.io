@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>Nginx Test - HANZO</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+
+
+<meta name="description" content="鬼王, HANZO, THRAEX">
+
+
+
+<meta name="keywords" content="鬼王, O70, HANZO, THRAEX">
+
+
+
+    <meta name="description" content="Nginx Deploy Test">
+<meta name="keywords" content="Nginx">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Nginx Test">
+<meta property="og:url" content="http://yoursite.com/documents/Technology/Nginx/nginx-test.html">
+<meta property="og:site_name" content="HANZO">
+<meta property="og:description" content="Nginx Deploy Test">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://www.nginx.com/wp-content/uploads/2019/05/NGINX-Conf-2019-nginx.com-hero-1054x644-1-min.png">
+<meta property="og:updated_time" content="2019-07-26T05:31:23.512Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Nginx Test">
+<meta name="twitter:description" content="Nginx Deploy Test">
+<meta name="twitter:image" content="https://www.nginx.com/wp-content/uploads/2019/05/NGINX-Conf-2019-nginx.com-hero-1054x644-1-min.png">
+
+
+
+
+
+<link rel="icon" href="/images/favicon.ico">
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
+
+<link rel="stylesheet" href="/css/style.css">
+
+<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+
+</head>
+<body>
+    
+<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item navbar-logo" href="/">
+                
+                    
+                    HANZO
+                    
+                
+            </a>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="navbar-menu navbar-start">
+            
+            <a class="navbar-item " href="/categories/Technology">Technology</a>
+            
+            <a class="navbar-item " href="/categories/Life">Life</a>
+            
+            <a class="navbar-item " href="/archives">Archives</a>
+            
+            <a class="navbar-item " href="/about">About</a>
+            
+        </div>
+        
+        <div class="navbar-menu navbar-end">
+            
+            <a class="navbar-item search" title="Search" href="javascript:;">
+                <i class="fas fa-search"></i>
+            </a>
+            
+            
+            <div class="navbar-item is-hoverable has-dropdown is-hidden-mobile is-hidden-tablet-only toc">
+                <a class="navbar-item" title="Table of Contents">
+                    <i class="fa fa-list"></i>
+                </a>
+                <div class="navbar-dropdown is-right">
+                
+                
+                    
+                    
+                    <a class="navbar-item" href="#Download">1&nbsp;&nbsp;<b>Download</b></a>
+                
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#Install">2&nbsp;&nbsp;<b>Install</b></a>
+                
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#Run">3&nbsp;&nbsp;<b>Run</b></a>
+                
+                    
+                    
+                    <a class="navbar-item" href="#Tomcat7">3.1&nbsp;&nbsp;Tomcat7</a>
+                
+                    
+                    
+                    <a class="navbar-item" href="#Nginx">3.2&nbsp;&nbsp;Nginx</a>
+                
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#Domain">4&nbsp;&nbsp;<b>Domain</b></a>
+                
+                </div>
+            </div>
+            
+            
+            <a class="navbar-item" title="GitHub" href="https://github.com/O70/note-paper">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+               
+            
+        </div>
+    </div>
+</nav>
+
+    <section class="section">
+    <div class="container">
+    <article class="article content gallery" itemscope="" itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            Nginx Test
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-06-18T08:00:00.000Z" itemprop="datePublished">Jun 18 2019</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/Technology/">Technology</a><span>></span><a class="article-category-link" href="/categories/Technology/Nginx/">Nginx</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            6 minutes read (About 908 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <p><img src="https://www.nginx.com/wp-content/uploads/2019/05/NGINX-Conf-2019-nginx.com-hero-1054x644-1-min.png" alt="Nginx Deploy Test"></p>
+<p>Nginx Deploy Test</p>
+<a id="more"></a>
+<blockquote>
+<p>ECS for Aliyun, CentOS 7.2 64Bit</p>
+</blockquote>
+<h2 id="Download"><a href="#Download" class="headerlink" title="Download"></a>Download</h2><ul>
+<li><p>Download</p>
+<figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="hljs-built_in">cd</span> ~/Downloads</span><br><span class="line"></span><br><span class="line">$ wget http://nginx.org/download/nginx-1.16.0.tar.gz</span><br><span class="line">$ wget https://nodejs.org/dist/v10.16.0/node-v10.16.0-linux-x64.tar.xz</span><br><span class="line">$ wget http://mirror.bit.edu.cn/apache/tomcat/tomcat-7/v7.0.94/bin/apache-tomcat-7.0.94.tar.gz</span><br><span class="line">$ wget https://dev.tencent.com/u/THRAEX/p/Books/git/raw/master/jdk-8u211-linux-x64.tar.gz</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Extract</p>
+<figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="hljs-built_in">cd</span> ~/Workspace/Kits</span><br><span class="line"></span><br><span class="line">$ tar -xzf ~/Downloads/nginx-1.16.0.tar.gz</span><br><span class="line">$ tar -xJf ~/Downloads/node-v10.16.0-linux-x64.tar.xz</span><br><span class="line">$ tar -xzf ~/Downloads/apache-tomcat-7.0.94.tar.gz</span><br><span class="line">$ tar -xzf ~/Downloads/jdk-8u211-linux-x64.tar.gz</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Rename</p>
+<figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ mv apache-tomcat-7.0.94/ tomcat7</span><br><span class="line">$ mv nginx-1.16.0/ nginx</span><br><span class="line">$ mv node-v10.16.0-linux-x64/ node</span><br><span class="line">$ mv jdk1.8.0_211/ jdk1.8</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h2><ul>
+<li><p>JDK/Tomcat7(Environment Variables)</p>
+<figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">$ vim ~/.bash_profile</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># User specific environment and startup programs</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">#########################</span></span><br><span class="line">PATH=<span class="hljs-variable">$PATH</span>:<span class="hljs-variable">$HOME</span>/bin</span><br><span class="line"></span><br><span class="line">KITS_HOME=~/Workspace/Kits</span><br><span class="line"><span class="hljs-built_in">export</span> JAVA_HOME=<span class="hljs-variable">$KITS_HOME</span>/jdk1.8</span><br><span class="line"><span class="hljs-built_in">export</span> CLASSPATH=.:<span class="hljs-variable">$JAVA_HOME</span>/jre/lib/rt.jar:<span class="hljs-variable">$JAVA_HOME</span>/lib/dt.jar:<span class="hljs-variable">$JAVA_HOME</span>/lib/tools.jar</span><br><span class="line"><span class="hljs-built_in">export</span> CATALINA_BASE=<span class="hljs-variable">$KITS_HOME</span>/tomcat7</span><br><span class="line"><span class="hljs-built_in">export</span> CATALINA_HOME=<span class="hljs-variable">$KITS_HOME</span>/tomcat7</span><br><span class="line">PATH=<span class="hljs-variable">$PATH</span>:<span class="hljs-variable">$JAVA_HOME</span>/bin:<span class="hljs-variable">$CATALINA_HOME</span>/lib:<span class="hljs-variable">$CATALINA_HOME</span>/bin:<span class="hljs-variable">$KITS_HOME</span>/node/bin</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">export</span> PATH</span><br><span class="line"><span class="hljs-comment">#########################</span></span><br><span class="line"></span><br><span class="line">$ . ~/.bash_profile</span><br><span class="line">$ <span class="hljs-built_in">which</span> java startup.sh node</span><br><span class="line">/root/Workspace/Kits/jdk1.8/bin/java</span><br><span class="line">/root/Workspace/Kits/tomcat7/bin/startup.sh</span><br><span class="line">/root/Workspace/Kits/node/bin/node</span><br><span class="line"></span><br><span class="line">$ whereis java startup.sh node</span><br><span class="line">java: /root/Workspace/Kits/jdk1.8/bin/java</span><br><span class="line">startup: /root/Workspace/Kits/tomcat7/bin/startup.bat /root/Workspace/Kits/tomcat7/bin/startup.sh</span><br><span class="line">node: /root/Workspace/Kits/node/bin/node</span><br><span class="line"></span><br><span class="line">$ java -version ; version.sh ; node -v</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Nginx(make), <a href="http://nginx.org/en/docs/configure.html" target="_blank" rel="noopener">http://nginx.org/en/docs/configure.html</a></p>
+<figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="hljs-built_in">cd</span> ~/Workspace/Kits/nginx</span><br><span class="line">$ ./configure</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>Questions:</p>
+<ul>
+<li><p><code>./configure: error: the HTTP rewrite module requires the PCRE library.</code></p>
+<figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ yum -y install pcre-devel</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>./configure: error: the HTTP gzip module requires the zlib library.</code></p>
+<figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ yum install -y zlib-devel</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">$ ./configure</span><br><span class="line">...</span><br><span class="line">Configuration summary</span><br><span class="line">  + using system PCRE library</span><br><span class="line">  + OpenSSL library is not used</span><br><span class="line">  + using system zlib library</span><br><span class="line"></span><br><span class="line">  nginx path prefix: <span class="hljs-string">"/usr/local/nginx"</span></span><br><span class="line">  nginx binary file: <span class="hljs-string">"/usr/local/nginx/sbin/nginx"</span></span><br><span class="line">  nginx modules path: <span class="hljs-string">"/usr/local/nginx/modules"</span></span><br><span class="line">  nginx configuration prefix: <span class="hljs-string">"/usr/local/nginx/conf"</span></span><br><span class="line">  nginx configuration file: <span class="hljs-string">"/usr/local/nginx/conf/nginx.conf"</span></span><br><span class="line">  nginx pid file: <span class="hljs-string">"/usr/local/nginx/logs/nginx.pid"</span></span><br><span class="line">  nginx error <span class="hljs-built_in">log</span> file: <span class="hljs-string">"/usr/local/nginx/logs/error.log"</span></span><br><span class="line">  nginx http access <span class="hljs-built_in">log</span> file: <span class="hljs-string">"/usr/local/nginx/logs/access.log"</span></span><br><span class="line">  nginx http client request body temporary files: <span class="hljs-string">"client_body_temp"</span></span><br><span class="line">  nginx http proxy temporary files: <span class="hljs-string">"proxy_temp"</span></span><br><span class="line">  nginx http fastcgi temporary files: <span class="hljs-string">"fastcgi_temp"</span></span><br><span class="line">  nginx http uwsgi temporary files: <span class="hljs-string">"uwsgi_temp"</span></span><br><span class="line">  nginx http scgi temporary files: <span class="hljs-string">"scgi_temp"</span></span><br><span class="line"></span><br><span class="line">$ make</span><br><span class="line">$ make install</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>Important</strong></p>
+<p>安装完成后添加环境变量<code>/usr/local/nginx/sbin/</code><br><figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ vim ~/.bash_profile</span><br><span class="line">PATH=<span class="hljs-variable">$PATH</span>:<span class="hljs-variable">$JAVA_HOME</span>/bin:<span class="hljs-variable">$CATALINA_HOME</span>/lib:<span class="hljs-variable">$CATALINA_HOME</span>/bin:<span class="hljs-variable">$KITS_HOME</span>/node/bin:/usr/<span class="hljs-built_in">local</span>/nginx/sbin/</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<ul>
+<li><p>Git</p>
+<figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ yum install git</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Nmap</p>
+<figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ yum install nmap</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Run"><a href="#Run" class="headerlink" title="Run"></a>Run</h2><h3 id="Tomcat7"><a href="#Tomcat7" class="headerlink" title="Tomcat7"></a>Tomcat7</h3><ul>
+<li><strong>Start</strong></li>
+</ul>
+<ol>
+<li><p><code>startup.sh</code></p>
+<figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ startup.sh</span><br><span class="line">Using CATALINA_BASE:   /root/Workspace/Kits/tomcat7</span><br><span class="line">Using CATALINA_HOME:   /root/Workspace/Kits/tomcat7</span><br><span class="line">Using CATALINA_TMPDIR: /root/Workspace/Kits/tomcat7/temp</span><br><span class="line">Using JRE_HOME:        /root/Workspace/Kits/jdk1.8</span><br><span class="line">Using CLASSPATH:       /root/Workspace/Kits/tomcat7/bin/bootstrap.jar:/root/Workspace/Kits/tomcat7/bin/tomcat-juli.jar</span><br><span class="line">Tomcat started.</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>catalina.sh run</code>(推荐)</p>
+</li>
+</ol>
+<blockquote>
+<p><strong>Note</strong></p>
+<p>本地自测: <code>curl http://localhost:8080</code></p>
+<p>公网访问去要配置 <strong>安全组规则</strong></p>
+<ol>
+<li>点击 <strong><code>添加安全组规则</code></strong></li>
+<li>端口范围：<code>8080/8080</code></li>
+<li>授权对象：<code>0.0.0.0/0</code></li>
+</ol>
+</blockquote>
+<ul>
+<li><strong>Stop</strong></li>
+</ul>
+<ol>
+<li><p><code>shutdown.sh</code></p>
+<figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ shutdown.sh</span><br><span class="line">Using CATALINA_BASE:   /root/Workspace/Kits/tomcat7</span><br><span class="line">Using CATALINA_HOME:   /root/Workspace/Kits/tomcat7</span><br><span class="line">Using CATALINA_TMPDIR: /root/Workspace/Kits/tomcat7/temp</span><br><span class="line">Using JRE_HOME:        /root/Workspace/Kits/jdk1.8</span><br><span class="line">Using CLASSPATH:       /root/Workspace/Kits/tomcat7/bin/bootstrap.jar:/root/Workspace/Kits/tomcat7/bin/tomcat-juli.jar</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>catalina.sh stop</code></p>
+</li>
+<li><code>kill</code><figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ps -ax | grep tomcat</span><br><span class="line">$ <span class="hljs-built_in">kill</span> &lt;PID&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<blockquote>
+<p><strong>Question</strong><br>启动时卡在“ Deploying web application directory ”很久</p>
+<p><strong>Why</strong><br>linux或者部分unix系统提供随机数设备是/dev/random 和/dev/urandom，其中urandom安全性没有random高，但random需要时间间隔生成随机数，jdk默认调用random，从而生成随机数时间间隔长从而到时Tomcat启动速度慢</p>
+<p><strong>Solution</strong><br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ vim ~/Workspace/Kits/jdk1.8/jre/lib/security/java.security</span><br><span class="line">...</span><br><span class="line"># HANZO ADD</span><br><span class="line"># securerandom.source=file:/dev/random</span><br><span class="line">securerandom.source=file:/dev/./urandom</span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h3><p><strong>需要将<code>/usr/local/nginx/sbin/</code>添加至环境变量</strong></p>
+<ul>
+<li><strong>Start</strong>: <code>$ nginx</code></li>
+</ul>
+<blockquote>
+<p><strong>Note</strong></p>
+<p>本地自测: <code>curl http://localhost</code></p>
+<p>公网访问去要配置 <strong>安全组规则</strong></p>
+<ol>
+<li>点击 <strong><code>添加安全组规则</code></strong></li>
+<li>端口范围：<code>8080/8080</code></li>
+<li>授权对象：<code>0.0.0.0/0</code></li>
+</ol>
+</blockquote>
+<ul>
+<li><code>nginx -s signal</code><ul>
+<li><code>stop</code> — fast shutdown</li>
+<li><code>quit</code> — graceful shutdown</li>
+<li><code>reload</code> — reloading the configuration file</li>
+<li><code>reopen</code> — reopening the log files</li>
+</ul>
+</li>
+</ul>
+<h2 id="Domain"><a href="#Domain" class="headerlink" title="Domain"></a>Domain</h2><p>添加 <strong>解析记录</strong></p>
+<ul>
+<li>记录类型: <code>A</code></li>
+<li>主机记录: <code>@</code> / <code>www</code>分别对应: <a href="http://hanzo.com.cn" target="_blank" rel="noopener">http://hanzo.com.cn</a> / <a href="http://www.hanzo.com.cn" target="_blank" rel="noopener">http://www.hanzo.com.cn</a></li>
+<li>记录值: <strong>公网IP</strong></li>
+</ul>
+<blockquote>
+<p><strong>Note</strong></p>
+<p>因备案原因, 主机记录使用<code>www</code></p>
+</blockquote>
+
+    
+    </div>
+    
+    <div class="columns is-variable is-1 is-multiline is-mobile">
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/Nginx/">#Nginx</a></span>
+    
+    </div>
+    
+    
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop is-hidden-mobile article-nav-prev">
+            
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
+            
+            <a href="/documents/Life/food-menu.html">Food Menu</a>
+            
+        </span>
+    </div>
+    
+</article>
+
+
+
+
+
+    </div>
+</section>
+    <footer class="footer">
+    <div class="container">
+        <div class="columns content">
+            <div class="column is-narrow has-text-centered">
+                Copyright &copy; 2019 鬼王&nbsp;
+                <!-- Powered by <a href="https://github.com/O70" target="_blank">O70</a> -->
+            </div>
+            <div class="column is-hidden-mobile"></div>
+
+            
+            <div class="column is-narrow">
+                <div class="columns is-mobile is-multiline is-centered">
+                
+                    
+                <a class="column is-narrow has-text-black" title="京ICP备19029828号" href="http://www.miitbeian.gov.cn">
+                    
+                    京ICP备19029828号
+                    
+                </a>
+                
+                    
+                <a class="column is-narrow has-text-black" title="GitHub" href="https://github.com/O70/note-paper">
+                    
+                    GitHub
+                    
+                </a>
+                
+                </div>
+            </div>
+            
+            
+
+        </div>
+    </div>
+</footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+
+<!-- test if the browser is outdated -->
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // plugin function, place inside DOM ready function
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        })
+    });
+</script>
+
+<script>
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
+    }
+    moment.locale("en-AU");
+</script>
+
+
+
+<script src="/js/script.js"></script>
+
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-mask"></div>
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js"></script>
+    
+</body>
+</html>

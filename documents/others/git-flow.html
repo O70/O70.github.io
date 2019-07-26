@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>Git Flow - HANZO</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+
+
+<meta name="description" content="鬼王, HANZO, THRAEX">
+
+
+
+<meta name="keywords" content="鬼王, O70, HANZO, THRAEX">
+
+
+
+    <meta name="description" content="Git Flow约定:   任何开发人员只能通过变基提交向master分支推送代码 master分支每个提交必需打上标签(Tag) 测试/产品部署基于dev分支 新功能(模块)分支基于dev分支，命名为feature/MODULE_NAME Bug分支给予dev分支，命名为bug/BUG_NAME   基本范例使用不同的Git命令组合或GitLab操作往往可以达到相同目的。 当前范例从新建项目开始">
+<meta name="keywords" content="鬼王, O70, HANZO, THRAEX">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git Flow">
+<meta property="og:url" content="http://yoursite.com/documents/others/git-flow.html">
+<meta property="og:site_name" content="HANZO">
+<meta property="og:description" content="Git Flow约定:   任何开发人员只能通过变基提交向master分支推送代码 master分支每个提交必需打上标签(Tag) 测试/产品部署基于dev分支 新功能(模块)分支基于dev分支，命名为feature/MODULE_NAME Bug分支给予dev分支，命名为bug/BUG_NAME   基本范例使用不同的Git命令组合或GitLab操作往往可以达到相同目的。 当前范例从新建项目开始">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-07-26T04:02:09.436Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Git Flow">
+<meta name="twitter:description" content="Git Flow约定:   任何开发人员只能通过变基提交向master分支推送代码 master分支每个提交必需打上标签(Tag) 测试/产品部署基于dev分支 新功能(模块)分支基于dev分支，命名为feature/MODULE_NAME Bug分支给予dev分支，命名为bug/BUG_NAME   基本范例使用不同的Git命令组合或GitLab操作往往可以达到相同目的。 当前范例从新建项目开始">
+
+
+
+
+
+<link rel="icon" href="/images/favicon.ico">
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
+
+<link rel="stylesheet" href="/css/style.css">
+
+<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+
+</head>
+<body>
+    
+<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item navbar-logo" href="/">
+                
+                    
+                    HANZO
+                    
+                
+            </a>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="navbar-menu navbar-start">
+            
+            <a class="navbar-item " href="/categories/Technology">Technology</a>
+            
+            <a class="navbar-item " href="/categories/Life">Life</a>
+            
+            <a class="navbar-item " href="/archives">Archives</a>
+            
+            <a class="navbar-item " href="/about">About</a>
+            
+            <a class="navbar-item " href="/main">Main</a>
+            
+        </div>
+        
+        <div class="navbar-menu navbar-end">
+            
+            <a class="navbar-item search" title="Search" href="javascript:;">
+                <i class="fas fa-search"></i>
+            </a>
+            
+            
+            
+            <a class="navbar-item" title="GitHub" href="https://github.com/O70">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+               
+            
+        </div>
+    </div>
+</nav>
+
+    <section class="section">
+    <div class="container">
+    <article class="article content gallery" itemscope="" itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            Git Flow
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2018-01-21T01:00:00.000Z" itemprop="datePublished">Jan 21 2018</time>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            6 minutes read (About 875 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h1 id="Git-Flow"><a href="#Git-Flow" class="headerlink" title="Git Flow"></a>Git Flow</h1><p><strong>约定:</strong></p>
+<blockquote>
+<ul>
+<li>任何开发人员只能通过变基提交向<code>master</code>分支推送代码</li>
+<li><code>master</code>分支每个提交必需打上标签(<code>Tag</code>)</li>
+<li>测试/产品部署基于<code>dev</code>分支</li>
+<li>新功能(模块)分支基于<code>dev</code>分支，命名为<code>feature/MODULE_NAME</code></li>
+<li>Bug分支给予<code>dev</code>分支，命名为<code>bug/BUG_NAME</code></li>
+</ul>
+</blockquote>
+<h3 id="基本范例"><a href="#基本范例" class="headerlink" title="基本范例"></a>基本范例</h3><p><strong>使用不同的<code>Git</code>命令组合或<code>GitLab</code>操作往往可以达到相同目的。</strong></p>
+<p>当前范例从新建项目开始，已存在的项目相关操作也在其中。</p>
+<h4 id="1-创建项目并建立dev分支"><a href="#1-创建项目并建立dev分支" class="headerlink" title="1.  创建项目并建立dev分支"></a>1.  创建项目并建立<code>dev</code>分支</h4><p>在<code>GitLab</code>上创建项目(<code>git-notes</code>)。<br>直接在<code>GitLab</code>上添加<code>README.md</code>文件，创建<code>master</code>分支的第一个提交<code>Initial commit</code>。</p>
+<p>创建<code>dev</code>分支：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git clone REPO_URL/git-notes</span><br><span class="line">git checkout -b dev #^创建并检出dev分支</span><br><span class="line">git branch -a #^查看所有分支</span><br><span class="line">git push -u origin dev #^新建远程追踪分支，保持本地与远程可同步</span><br></pre></td></tr></table></figure>
+<p>当然可以直接在<code>GitLab</code>上新建<code>dev</code>分支，简单而直接。在之后的克隆可以如下操作：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git clone REPO_URL/git-notes</span><br><span class="line">git checkout -b dev origin/dev #^建立并启动本地分支dev，用于追踪远程分支origin/dev</span><br></pre></td></tr></table></figure>
+<h4 id="2-开发新功能"><a href="#2-开发新功能" class="headerlink" title="2. 开发新功能"></a>2. 开发新功能</h4><p>e.g.: A和B开始开发新功能</p>
+<p>A:<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b feature/admin dev</span><br><span class="line">git status</span><br><span class="line">git add .</span><br><span class="line">git commit -m &apos;feat(admin): 添加基本服務&apos;</span><br><span class="line"></span><br><span class="line">git checkout dev</span><br><span class="line">git pull</span><br><span class="line"></span><br><span class="line">git merge feature/admin #^合并本地功能分支feature/admin至本地dev分支</span><br><span class="line">git push</span><br></pre></td></tr></table></figure></p>
+<p>B:<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b feature/admin_ui dev</span><br><span class="line">git status</span><br><span class="line">git add .</span><br><span class="line">git commit -m &apos;feat(Admin-UI): 添加後台管理UI&apos;</span><br><span class="line"></span><br><span class="line">git checkout dev</span><br><span class="line">git pull</span><br><span class="line"></span><br><span class="line">git merge feature/admin_ui</span><br><span class="line">git push</span><br></pre></td></tr></table></figure></p>
+<p><strong>关于提交消息请阅读<a href="http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html" target="_blank" rel="noopener">Commit message 和 Change log 编写指南</a></strong></p>
+<p>操作到现在，功能分支仅存在于本地。依据目前规则，测试/产品部署基于<code>dev</code>分支代码，所以不是所有功能分支的代码都能够及时合并到本地<code>dev</code>分支，并推送至远程<code>origin/dev</code>分支上。但本地功能分支代码又不能仅存放于本地，可将本地功能分支推送至<code>GitLab</code>，如下操作，以A为例：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout feature/admin</span><br><span class="line">git push -u origin feature/admin</span><br></pre></td></tr></table></figure>
+<p>远程仓库建立分支<code>feature/admin</code>，与本地分支<code>feature/admin</code>相对应，往后的操作(pull/push)都可以一直基于此分支。<br>当然如果需要合并代码至<code>dev</code>分支，还是和上述操作一样。</p>
+<p>在功能开发完毕之后，所有代码都合并到了<code>dev</code>分支上，需要删除无用的功能分支。</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git push --delete origin feature/admin #^删除远程仓库中的feature/admin分支</span><br><span class="line">git branch --unset-upstream feature/admin #^从.git/config文件中去除相应配置</span><br><span class="line">git branch -d feature/admin #^删除本地feature/admin分支</span><br></pre></td></tr></table></figure>
+<p><strong>修改Bug也需要创建分支(<code>bug/BUG_NAME</code>)，操作与开发新功能类似。</strong></p>
+<h4 id="3-合并代码至master"><a href="#3-合并代码至master" class="headerlink" title="3. 合并代码至master"></a>3. 合并代码至<code>master</code></h4><p>测试/产品部署基于<code>dev</code>分支，完成之后，合并<code>dev</code>分支代码至<code>master</code>，并打上<code>Tag</code>：</p>
+<p>分支开发完成后，很可能有一堆commit，但是合并到主干的时候，往往希望只有一个（或最多两三个）commit，这样不仅清晰，也容易管理。</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br><span class="line">git merge dev</span><br><span class="line">git rebase -i HEAD~2 #^https://git-scm.com/book/zh/v1/Git-工具-重写历史</span><br><span class="line">git tag v0.1</span><br><span class="line">git push</span><br><span class="line">git push origin v0.1</span><br></pre></td></tr></table></figure>
+
+    
+    </div>
+    
+    
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop  article-nav-prev">
+            
+            <a href="/documents/others/git-command.html">Git Command</a>
+            
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
+            
+            <a href="/documents/others/github-gitee-pages-hexo.html">GitHub/Gitee Pages + Hexo</a>
+            
+        </span>
+    </div>
+    
+</article>
+
+
+
+
+
+    </div>
+</section>
+    <footer class="footer">
+    <div class="container">
+        <div class="columns content">
+            <div class="column is-narrow has-text-centered">
+                Copyright &copy; 2019 鬼王&nbsp;
+                <!-- Powered by <a href="https://github.com/O70" target="_blank">O70</a> -->
+            </div>
+            <div class="column is-hidden-mobile"></div>
+
+            
+            <div class="column is-narrow">
+                <div class="columns is-mobile is-multiline is-centered">
+                
+                    
+                <a class="column is-narrow has-text-black" title="京ICP备19029828号" href="http://www.miitbeian.gov.cn">
+                    
+                    京ICP备19029828号
+                    
+                </a>
+                
+                    
+                <a class="column is-narrow has-text-black" title="GitHub" href="https://github.com/O70">
+                    
+                    GitHub
+                    
+                </a>
+                
+                </div>
+            </div>
+            
+            
+
+        </div>
+    </div>
+</footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+
+<!-- test if the browser is outdated -->
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // plugin function, place inside DOM ready function
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        })
+    });
+</script>
+
+<script>
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
+    }
+    moment.locale("en-AU");
+</script>
+
+
+
+<script src="/js/script.js"></script>
+
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-mask"></div>
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js"></script>
+    
+</body>
+</html>

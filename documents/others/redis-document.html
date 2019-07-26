@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>Redis Document - HANZO</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+
+
+<meta name="description" content="鬼王, HANZO, THRAEX">
+
+
+
+<meta name="keywords" content="鬼王, O70, HANZO, THRAEX">
+
+
+
+    <meta name="description" content="Redis for Docker Run Image 12345678$ docker run -d \    --name redis-server \    -p 6379:6379 \    --restart always \    -v $PWD/Dockers/redis/data:/data:Z \    -v $PWD/Dockers/redis/redis.conf:/usr/l">
+<meta name="keywords" content="鬼王, O70, HANZO, THRAEX">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Redis Document">
+<meta property="og:url" content="http://yoursite.com/documents/others/redis-document.html">
+<meta property="og:site_name" content="HANZO">
+<meta property="og:description" content="Redis for Docker Run Image 12345678$ docker run -d \    --name redis-server \    -p 6379:6379 \    --restart always \    -v $PWD/Dockers/redis/data:/data:Z \    -v $PWD/Dockers/redis/redis.conf:/usr/l">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-07-26T04:02:09.404Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Redis Document">
+<meta name="twitter:description" content="Redis for Docker Run Image 12345678$ docker run -d \    --name redis-server \    -p 6379:6379 \    --restart always \    -v $PWD/Dockers/redis/data:/data:Z \    -v $PWD/Dockers/redis/redis.conf:/usr/l">
+
+
+
+
+
+<link rel="icon" href="/images/favicon.ico">
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
+
+<link rel="stylesheet" href="/css/style.css">
+
+<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+
+</head>
+<body>
+    
+<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item navbar-logo" href="/">
+                
+                    
+                    HANZO
+                    
+                
+            </a>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="navbar-menu navbar-start">
+            
+            <a class="navbar-item " href="/categories/Technology">Technology</a>
+            
+            <a class="navbar-item " href="/categories/Life">Life</a>
+            
+            <a class="navbar-item " href="/archives">Archives</a>
+            
+            <a class="navbar-item " href="/about">About</a>
+            
+            <a class="navbar-item " href="/main">Main</a>
+            
+        </div>
+        
+        <div class="navbar-menu navbar-end">
+            
+            <a class="navbar-item search" title="Search" href="javascript:;">
+                <i class="fas fa-search"></i>
+            </a>
+            
+            
+            
+            <a class="navbar-item" title="GitHub" href="https://github.com/O70">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+               
+            
+        </div>
+    </div>
+</nav>
+
+    <section class="section">
+    <div class="container">
+    <article class="article content gallery" itemscope="" itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            Redis Document
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-07-03T10:20:00.000Z" itemprop="datePublished">Jul 3 2019</time>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            3 minutes read (About 382 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h2 id="Redis-for-Docker"><a href="#Redis-for-Docker" class="headerlink" title="Redis for Docker"></a>Redis for Docker</h2><ul>
+<li><p>Run Image</p>
+<figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ docker run -d \</span><br><span class="line">    --name redis-server \</span><br><span class="line">    -p 6379:6379 \</span><br><span class="line">    --restart always \</span><br><span class="line">    -v <span class="hljs-variable">$PWD</span>/Dockers/redis/data:/data:Z \</span><br><span class="line">    -v <span class="hljs-variable">$PWD</span>/Dockers/redis/redis.conf:/usr/<span class="hljs-built_in">local</span>/etc/redis/redis.conf:Z \</span><br><span class="line">    redis:latest \</span><br><span class="line">    redis-server /usr/<span class="hljs-built_in">local</span>/etc/redis/redis.conf</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Connect Remote</p>
+<figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ docker run -it \</span><br><span class="line">    --name redis-cli \</span><br><span class="line">    --rm \</span><br><span class="line">    redis:latest \</span><br><span class="line">    redis-cli -h 10.27.213.67 -p 6379 -a PWD</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Command"><a href="#Command" class="headerlink" title="Command"></a>Command</h2><table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Describe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>KEYS *</code></td>
+<td>列出所有<code>key</code></td>
+</tr>
+<tr>
+<td><code>SET key value</code></td>
+<td>设置指定<code>key</code>的值</td>
+</tr>
+<tr>
+<td><code>GET key</code></td>
+<td>获取指定<code>key</code>的值</td>
+</tr>
+<tr>
+<td><code>DEL key</code></td>
+<td>用于在<code>key</code> 存在时删除<code>key</code></td>
+</tr>
+<tr>
+<td><code>DUMP key</code></td>
+<td>序列化给定<code>key</code> ，并返回被序列化的值</td>
+</tr>
+<tr>
+<td><code>EXISTS key</code></td>
+<td>检查给定<code>key</code> 是否存在</td>
+</tr>
+<tr>
+<td><code>EXPIRE key seconds</code></td>
+<td>为给定<code>key</code> 设置过期时间，以秒计</td>
+</tr>
+<tr>
+<td><code>EXPIREAT key timestamp</code></td>
+<td><code>EXPIREAT</code>的作用和<code>EXPIRE</code>类似，都用于为<code>key</code>设置过期时间。不同在于<code>EXPIREAT</code>命令接受的时间参数是<code>UNIX</code>时间戳(<code>unix timestamp</code>)</td>
+</tr>
+<tr>
+<td><code>PEXPIRE key milliseconds</code></td>
+<td>设置<code>key</code>的过期时间以毫秒计</td>
+</tr>
+<tr>
+<td><code>PEXPIREAT key milliseconds-timestamp</code></td>
+<td>设置<code>key</code>过期时间的时间戳(<code>unix timestamp</code>)以毫秒计</td>
+</tr>
+<tr>
+<td><code>KEYS pattern</code></td>
+<td>查找所有符合给定模式(<code>pattern</code>)的<code>key</code></td>
+</tr>
+<tr>
+<td><code>MOVE key db</code></td>
+<td>将当前数据库的<code>key</code>移动到给定的数据库<code>db</code>当中</td>
+</tr>
+<tr>
+<td><code>PERSIST key</code></td>
+<td>移除<code>key</code>的过期时间，<code>key</code>将持久保持</td>
+</tr>
+<tr>
+<td><code>PTTL key</code></td>
+<td>以毫秒为单位返回<code>key</code>的剩余的过期时间</td>
+</tr>
+<tr>
+<td><code>TTL key</code></td>
+<td>以秒为单位，返回给定<code>key</code>的剩余生存时间(<code>TTL, time to live</code>)</td>
+</tr>
+<tr>
+<td><code>RANDOMKEY</code></td>
+<td>从当前数据库中随机返回一个<code>key</code></td>
+</tr>
+<tr>
+<td><code>RENAME key newkey</code></td>
+<td>修改<code>key</code>的名称</td>
+</tr>
+<tr>
+<td><code>RENAMENX key newkey</code></td>
+<td>仅当<code>newkey</code>不存在时，将<code>key</code>改名为<code>newkey</code></td>
+</tr>
+<tr>
+<td><code>TYPE key</code></td>
+<td>返回<code>key</code>所储存的值的类型</td>
+</tr>
+</tbody>
+</table>
+
+    
+    </div>
+    
+    
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop  article-nav-prev">
+            
+            <a href="/documents/others/printer.html">Printer</a>
+            
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
+            
+            <a href="/documents/others/common-site.html">Common Site</a>
+            
+        </span>
+    </div>
+    
+</article>
+
+
+
+
+
+    </div>
+</section>
+    <footer class="footer">
+    <div class="container">
+        <div class="columns content">
+            <div class="column is-narrow has-text-centered">
+                Copyright &copy; 2019 鬼王&nbsp;
+                <!-- Powered by <a href="https://github.com/O70" target="_blank">O70</a> -->
+            </div>
+            <div class="column is-hidden-mobile"></div>
+
+            
+            <div class="column is-narrow">
+                <div class="columns is-mobile is-multiline is-centered">
+                
+                    
+                <a class="column is-narrow has-text-black" title="京ICP备19029828号" href="http://www.miitbeian.gov.cn">
+                    
+                    京ICP备19029828号
+                    
+                </a>
+                
+                    
+                <a class="column is-narrow has-text-black" title="GitHub" href="https://github.com/O70">
+                    
+                    GitHub
+                    
+                </a>
+                
+                </div>
+            </div>
+            
+            
+
+        </div>
+    </div>
+</footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+
+<!-- test if the browser is outdated -->
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // plugin function, place inside DOM ready function
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        })
+    });
+</script>
+
+<script>
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
+    }
+    moment.locale("en-AU");
+</script>
+
+
+
+<script src="/js/script.js"></script>
+
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-mask"></div>
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>HANZO</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+
+
+<meta name="description" content="鬼王, HANZO, THRAEX">
+
+
+
+<meta name="keywords" content="鬼王, O70, HANZO, THRAEX">
+
+
+
+    <meta name="description" content="鬼王, HANZO, THRAEX">
+<meta name="keywords" content="鬼王, O70, HANZO, THRAEX">
+<meta property="og:type" content="website">
+<meta property="og:title" content="HANZO">
+<meta property="og:url" content="http://yoursite.com/page/4/index.html">
+<meta property="og:site_name" content="HANZO">
+<meta property="og:description" content="鬼王, HANZO, THRAEX">
+<meta property="og:locale" content="en">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HANZO">
+<meta name="twitter:description" content="鬼王, HANZO, THRAEX">
+
+
+
+
+
+<link rel="icon" href="/images/favicon.ico">
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
+
+<link rel="stylesheet" href="/css/style.css">
+
+<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+
+</head>
+<body>
+    
+<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item navbar-logo" href="/">
+                
+                    
+                    HANZO
+                    
+                
+            </a>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="navbar-menu navbar-start">
+            
+            <a class="navbar-item " href="/categories/Technology">Technology</a>
+            
+            <a class="navbar-item " href="/categories/Life">Life</a>
+            
+            <a class="navbar-item " href="/archives">Archives</a>
+            
+            <a class="navbar-item " href="/about">About</a>
+            
+            <a class="navbar-item " href="/main">Main</a>
+            
+        </div>
+        
+        <div class="navbar-menu navbar-end">
+            
+            <a class="navbar-item search" title="Search" href="javascript:;">
+                <i class="fas fa-search"></i>
+            </a>
+            
+            
+            
+            <a class="navbar-item" title="GitHub" href="https://github.com/O70">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+               
+            
+        </div>
+    </div>
+</nav>
+
+    <section class="section">
+    <div class="container">
+    
+        <article class="article content gallery" itemscope="" itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/documents/others/docker-hub-for-guiwang-ubuntu-dev.html" itemprop="url">Docker Hub for guiwang/ubuntu-dev</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-06-02T04:00:00.000Z" itemprop="datePublished">Jun 2 2019</time>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            a minute read (About 116 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h2 id="Run-Image"><a href="#Run-Image" class="headerlink" title="Run Image"></a>Run Image</h2><ul>
+<li>Windows 10</li>
+</ul>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -it --name ubuntu-dev -p 9090:80 -p 9091:8080 -p 9092:8081 -p 9093:8082 -v /c/Workspace:/Workspace guiwang/ubuntu-dev</span><br></pre></td></tr></table></figure>
+<p><strong>Notes</strong>:</p>
+<ul>
+<li>如果要正常退出不关闭容器，请按Ctrl+P+Q进行退出容器</li>
+<li>如果使用exit退出，那么在退出之后会关闭容器，可以使用下面的流程进行恢复<ul>
+<li>使用docker restart命令重启容器</li>
+<li>使用docker attach/exec命令进入容器</li>
+</ul>
+</li>
+</ul>
+<h2 id="Into-the-Container"><a href="#Into-the-Container" class="headerlink" title="Into the Container"></a>Into the Container</h2><p><code>docker exec -it ubuntu-dev bash</code></p>
+<h2 id="Remove-Container"><a href="#Remove-Container" class="headerlink" title="Remove Container"></a>Remove Container</h2><p><code>docker rm -v ubuntu-dev</code></p>
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+
+    
+        <article class="article content gallery" itemscope="" itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/documents/others/docker-maven-plugin.html" itemprop="url">docker-maven-plugin</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-05-31T10:00:00.000Z" itemprop="datePublished">May 31 2019</time>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            a minute read (About 191 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h2 id="Dockerfile"><a href="#Dockerfile" class="headerlink" title="Dockerfile"></a>Dockerfile</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">FROM 10.122.163.99:5000/java:8u171</span><br><span class="line">VOLUME /tmp</span><br><span class="line">ADD target/*.jar app.jar</span><br><span class="line">RUN sh -c &apos;touch /app.jar&apos; \</span><br><span class="line">	&amp;&amp; echo $(date) &gt; /image_built_at \</span><br><span class="line">	&amp;&amp; /bin/cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime &amp;&amp; echo &apos;Asia/Shanghai&apos; &gt;/etc/timezone</span><br><span class="line">ENTRYPOINT [&quot;java&quot;,&quot;-Djava.security.egd=file:/dev/./urandom&quot;,&quot;-jar&quot;,&quot;/app.jar&quot;]</span><br></pre></td></tr></table></figure>
+<h2 id="pom-xml"><a href="#pom-xml" class="headerlink" title="pom.xml"></a>pom.xml</h2><figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">plugins</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">plugin</span>&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>com.spotify<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>docker-maven-plugin<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>1.0.0<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;<span class="hljs-name">configuration</span>&gt;</span></span><br><span class="line">          <span class="hljs-tag">&lt;<span class="hljs-name">imageName</span>&gt;</span>$&#123;docker.image.prefix&#125;/$&#123;project.artifactId&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">imageName</span>&gt;</span></span><br><span class="line">          <span class="hljs-tag">&lt;<span class="hljs-name">dockerDirectory</span>&gt;</span>$&#123;project.basedir&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">dockerDirectory</span>&gt;</span></span><br><span class="line">          <span class="hljs-tag">&lt;<span class="hljs-name">resources</span>&gt;</span></span><br><span class="line">              <span class="hljs-tag">&lt;<span class="hljs-name">resource</span>&gt;</span></span><br><span class="line">                  <span class="hljs-tag">&lt;<span class="hljs-name">targetPath</span>&gt;</span>/<span class="hljs-tag">&lt;/<span class="hljs-name">targetPath</span>&gt;</span></span><br><span class="line">                  <span class="hljs-tag">&lt;<span class="hljs-name">directory</span>&gt;</span>$&#123;project.build.directory&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">directory</span>&gt;</span></span><br><span class="line">                  <span class="hljs-tag">&lt;<span class="hljs-name">include</span>&gt;</span>$&#123;project.build.finalName&#125;.jar<span class="hljs-tag">&lt;/<span class="hljs-name">include</span>&gt;</span></span><br><span class="line">              <span class="hljs-tag">&lt;/<span class="hljs-name">resource</span>&gt;</span></span><br><span class="line">          <span class="hljs-tag">&lt;/<span class="hljs-name">resources</span>&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;/<span class="hljs-name">configuration</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;/<span class="hljs-name">plugin</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">plugins</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="Command-Usage"><a href="#Command-Usage" class="headerlink" title="Command Usage"></a>Command Usage</h2><ul>
+<li><p>You can build an image with the above configurations by running this command.</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn clean package -Dmaven.test.skip=true docker:build</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To push the image you just buit to the registry, specify the <code>pushImageTag</code> flag.</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn clean package -Dmaven.test.skip=true docker:build -DpushImageTag</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Local-Deploy"><a href="#Local-Deploy" class="headerlink" title="Local Deploy"></a>Local Deploy</h2><p>因网络问题，未用到<code>docker-maven-plugin</code>。</p>
+<p>在本地执行以下命令：<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd ../&lt;PROJECT_DIR&gt;</span><br><span class="line">docker login -u docker --password &lt;pwd&gt; 10.122.163.216:5000</span><br><span class="line">docker build -t 10.122.163.216:5000/prod-esp-sms:1.0 .</span><br><span class="line">docker push 10.122.163.216:5000/prod-esp-sms:1.0</span><br></pre></td></tr></table></figure></p>
+<p>进入服务部署应用：<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ssh root@10.27.213.85</span><br><span class="line">docker login -u docker --password &lt;pwd&gt; 10.122.163.216:5000</span><br><span class="line">docker pull 10.122.163.216:5000/prod-esp-sms:1.0</span><br><span class="line">docker run -d --name prod-esp-sms -p 8087:8087 10.122.163.216:5000/prod-esp-sms:1.0</span><br></pre></td></tr></table></figure></p>
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+
+    
+        <article class="article content gallery" itemscope="" itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/documents/others/tomcat-configure-ssl.html" itemprop="url">Tomcat Configure SSL</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-05-29T09:09:00.000Z" itemprop="datePublished">May 29 2019</time>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            a minute read (About 172 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <p><a href="../Java/java-keytool.html"></a></p>
+<h2 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h2><figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">Connector</span> <span class="hljs-attr">port</span>=<span class="hljs-string">"8443"</span></span></span><br><span class="line"><span class="hljs-tag">      <span class="hljs-attr">protocol</span>=<span class="hljs-string">"org.apache.coyote.http11.Http11Protocol"</span></span></span><br><span class="line"><span class="hljs-tag">      <span class="hljs-attr">SSLEnabled</span>=<span class="hljs-string">"true"</span></span></span><br><span class="line"><span class="hljs-tag">      <span class="hljs-attr">maxThreads</span>=<span class="hljs-string">"150"</span></span></span><br><span class="line"><span class="hljs-tag">      <span class="hljs-attr">scheme</span>=<span class="hljs-string">"https"</span></span></span><br><span class="line"><span class="hljs-tag">      <span class="hljs-attr">secure</span>=<span class="hljs-string">"true"</span></span></span><br><span class="line"><span class="hljs-tag">      <span class="hljs-attr">clientAuth</span>=<span class="hljs-string">"false"</span></span></span><br><span class="line"><span class="hljs-tag">      <span class="hljs-attr">sslProtocol</span>=<span class="hljs-string">"TLS"</span></span></span><br><span class="line"><span class="hljs-tag">      <span class="hljs-attr">keystoreFile</span>=<span class="hljs-string">".\ca\tomcat.keystore"</span></span></span><br><span class="line"><span class="hljs-tag">      <span class="hljs-attr">keystorePass</span>=<span class="hljs-string">"123456"</span></span></span><br><span class="line"><span class="hljs-tag">      <span class="hljs-attr">truststoreFile</span>=<span class="hljs-string">".\ca\tomcat.keystore"</span></span></span><br><span class="line"><span class="hljs-tag">      <span class="hljs-attr">truststorePass</span>=<span class="hljs-string">"123456"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<p><code>clientAuth</code>指定是否需要验证客户端证书:</p>
+<ul>
+<li><code>false</code>: 单向SSL验证，SSL配置可到此结束</li>
+<li><code>true</code>: 强制双向SSL验证，<strong>必须验证客户端证书</strong></li>
+<li><code>want</code>: 可以验证客户端证书，但如果客户端没有有效证书，也不强制验证</li>
+</ul>
+<p>若为<strong>Tomcat6</strong>,则需要将<code>protocol</code>设置为<code>HTTP/1.1</code>。</p>
+<h2 id="Test"><a href="#Test" class="headerlink" title="Test"></a>Test</h2><p>在<strong>本地(客户端)</strong> <code>host</code>文件中添加以下内容:<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># tomcat服务器IP 生成证书时编造的域名</span><br><span class="line">10.122.163.75 hanzo.com.cn</span><br></pre></td></tr></table></figure></p>
+<p>然后访问<code>https://hanzo.com.cn:8443</code>。若出现tomcat主页面，则配置无误。</p>
+<p>然后将<code>clientAuth</code>设置为<code>true</code>, 启用强制双向SSL验证。</p>
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+
+    
+        <article class="article content gallery" itemscope="" itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/documents/others/keytool.html" itemprop="url">keytool</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-05-29T08:00:00.000Z" itemprop="datePublished">May 29 2019</time>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            a minute read (About 124 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h2 id="生成keystore文件"><a href="#生成keystore文件" class="headerlink" title="生成keystore文件"></a>生成<strong>keystore</strong>文件</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">keytool -genkey -alias tomcat -keyalg RSA -keysize 1024 -keypass 123456 -validity 3650 -keystore C:\Workspace\Kits\apache-tomcat\conf\ca\tomcat.keystore -storepass 123456</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">keytool -genkey -alias tomcat -keyalg RSA -keysize 1024 -dname &quot;CN=hanzo.com.cn,OU=bj,S=bj,C=CN&quot; -keypass 123456 -validity 3650 -keystore C:\Workspace\Kits\apache-tomcat\conf\ca\tomcat.keystore -storepass 123456</span><br></pre></td></tr></table></figure>
+<h2 id="生成pem文件"><a href="#生成pem文件" class="headerlink" title="生成pem文件"></a>生成<strong>pem</strong>文件</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">keytool -certreq -alias tomcat -file C:\Workspace\Kits\apache-tomcat\conf\ca\cert_req.pem -keypass 123456 -storepass 123456 -keystore C:\Workspace\Kits\apache-tomcat\conf\ca\tomcat.keystore</span><br></pre></td></tr></table></figure>
+<h2 id="import"><a href="#import" class="headerlink" title="import"></a>import</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">keytool -import -alias WIN-DSS3B9RGCMP -keystore cacerts -file C:\ca\WIN-DSS3B9RGCMP.crt</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">keytool -list -keystore cacerts -alias WIN-DSS3B9RGCMP</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">keytool -delete -alias WIN-DSS3B9RGCMP -keystore cacerts</span><br></pre></td></tr></table></figure>
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+
+    
+        <article class="article content gallery" itemscope="" itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/documents/others/git-commit-message.html" itemprop="url">Git Commit Message</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-05-29T07:53:00.000Z" itemprop="datePublished">May 29 2019</time>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            a minute read (About 222 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h2 id="Message-Type"><a href="#Message-Type" class="headerlink" title="Message Type"></a>Message Type</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">- init：项目初始化（用于项目初始化或其他某种行为的开始描述，不影响代码）</span><br><span class="line">- feat：新功能（feature）</span><br><span class="line">- fix：修补bug</span><br><span class="line">- docs：文档（documentation）</span><br><span class="line">- opt：优化和改善，比如弹窗进行确认提示等相关的，不会改动逻辑和具体功能等</span><br><span class="line">- style： 格式（不影响代码运行的变动）</span><br><span class="line">- refactor：重构（即不是新增功能，也不是修改bug的代码变动）</span><br><span class="line">- test：增加测试</span><br><span class="line">- save：单纯地保存记录</span><br><span class="line">- chore：构建过程或辅助工具的变动</span><br><span class="line">- other：用于难以分类的类别（不建议使用，但一些如删除不必要的文件，更新.ignore之类的可以使用）</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><a href="http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html" target="_blank" rel="noopener">Commit message 和 Change log 编写指南</a></p>
+</blockquote>
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+
+    
+        <article class="article content gallery" itemscope="" itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/documents/others/tomcat-configuration-files.html" itemprop="url">Tomcat Configuration Files</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-05-29T07:28:00.000Z" itemprop="datePublished">May 29 2019</time>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            5 minutes read (About 795 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <p>Tomcat version: <strong>Apache Tomcat/7.0.94</strong></p>
+<h2 id="server-xml"><a href="#server-xml" class="headerlink" title="server.xml"></a><code>server.xml</code></h2><figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">&lt;?xml version='1.0' encoding='utf-8'?&gt;</span></span><br><span class="line"><span class="hljs-comment">&lt;!--</span></span><br><span class="line"><span class="hljs-comment">  Licensed to the Apache Software Foundation (ASF) under one or more</span></span><br><span class="line"><span class="hljs-comment">  contributor license agreements.  See the NOTICE file distributed with</span></span><br><span class="line"><span class="hljs-comment">  this work for additional information regarding copyright ownership.</span></span><br><span class="line"><span class="hljs-comment">  The ASF licenses this file to You under the Apache License, Version 2.0</span></span><br><span class="line"><span class="hljs-comment">  (the "License"); you may not use this file except in compliance with</span></span><br><span class="line"><span class="hljs-comment">  the License.  You may obtain a copy of the License at</span></span><br><span class="line"><span class="hljs-comment"></span></span><br><span class="line"><span class="hljs-comment">      http://www.apache.org/licenses/LICENSE-2.0</span></span><br><span class="line"><span class="hljs-comment"></span></span><br><span class="line"><span class="hljs-comment">  Unless required by applicable law or agreed to in writing, software</span></span><br><span class="line"><span class="hljs-comment">  distributed under the License is distributed on an "AS IS" BASIS,</span></span><br><span class="line"><span class="hljs-comment">  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span></span><br><span class="line"><span class="hljs-comment">  See the License for the specific language governing permissions and</span></span><br><span class="line"><span class="hljs-comment">  limitations under the License.</span></span><br><span class="line"><span class="hljs-comment">--&gt;</span></span><br><span class="line"><span class="hljs-comment">&lt;!-- <span class="hljs-doctag">Note:</span>  A "Server" is not itself a "Container", so you may not</span></span><br><span class="line"><span class="hljs-comment">     define subcomponents such as "Valves" at this level.</span></span><br><span class="line"><span class="hljs-comment">     Documentation at /docs/config/server.html</span></span><br><span class="line"><span class="hljs-comment"> --&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">Server</span> <span class="hljs-attr">port</span>=<span class="hljs-string">"8005"</span> <span class="hljs-attr">shutdown</span>=<span class="hljs-string">"SHUTDOWN"</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">Listener</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"org.apache.catalina.startup.VersionLoggerListener"</span> /&gt;</span></span><br><span class="line">  <span class="hljs-comment">&lt;!-- Security listener. Documentation at /docs/config/listeners.html</span></span><br><span class="line"><span class="hljs-comment">  &lt;Listener className="org.apache.catalina.security.SecurityListener" /&gt;</span></span><br><span class="line"><span class="hljs-comment">  --&gt;</span></span><br><span class="line">  <span class="hljs-comment">&lt;!--APR library loader. Documentation at /docs/apr.html --&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">Listener</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"org.apache.catalina.core.AprLifecycleListener"</span> <span class="hljs-attr">SSLEngine</span>=<span class="hljs-string">"on"</span> /&gt;</span></span><br><span class="line">  <span class="hljs-comment">&lt;!--Initialize Jasper prior to webapps are loaded. Documentation at /docs/jasper-howto.html --&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">Listener</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"org.apache.catalina.core.JasperListener"</span> /&gt;</span></span><br><span class="line">  <span class="hljs-comment">&lt;!-- Prevent memory leaks due to use of particular java/javax APIs--&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">Listener</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"org.apache.catalina.core.JreMemoryLeakPreventionListener"</span> /&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">Listener</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"org.apache.catalina.mbeans.GlobalResourcesLifecycleListener"</span> /&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">Listener</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"org.apache.catalina.core.ThreadLocalLeakPreventionListener"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="hljs-comment">&lt;!-- Global JNDI resources</span></span><br><span class="line"><span class="hljs-comment">       Documentation at /docs/jndi-resources-howto.html</span></span><br><span class="line"><span class="hljs-comment">  --&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">GlobalNamingResources</span>&gt;</span></span><br><span class="line">    <span class="hljs-comment">&lt;!-- Editable user database that can also be used by</span></span><br><span class="line"><span class="hljs-comment">         UserDatabaseRealm to authenticate users</span></span><br><span class="line"><span class="hljs-comment">    --&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">Resource</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"UserDatabase"</span> <span class="hljs-attr">auth</span>=<span class="hljs-string">"Container"</span></span></span><br><span class="line"><span class="hljs-tag">              <span class="hljs-attr">type</span>=<span class="hljs-string">"org.apache.catalina.UserDatabase"</span></span></span><br><span class="line"><span class="hljs-tag">              <span class="hljs-attr">description</span>=<span class="hljs-string">"User database that can be updated and saved"</span></span></span><br><span class="line"><span class="hljs-tag">              <span class="hljs-attr">factory</span>=<span class="hljs-string">"org.apache.catalina.users.MemoryUserDatabaseFactory"</span></span></span><br><span class="line"><span class="hljs-tag">              <span class="hljs-attr">pathname</span>=<span class="hljs-string">"conf/tomcat-users.xml"</span> /&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;/<span class="hljs-name">GlobalNamingResources</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="hljs-comment">&lt;!-- A "Service" is a collection of one or more "Connectors" that share</span></span><br><span class="line"><span class="hljs-comment">       a single "Container" <span class="hljs-doctag">Note:</span>  A "Service" is not itself a "Container",</span></span><br><span class="line"><span class="hljs-comment">       so you may not define subcomponents such as "Valves" at this level.</span></span><br><span class="line"><span class="hljs-comment">       Documentation at /docs/config/service.html</span></span><br><span class="line"><span class="hljs-comment">   --&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">Service</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"Catalina"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">&lt;!--The connectors can use a shared executor, you can define one or more named thread pools--&gt;</span></span><br><span class="line">    <span class="hljs-comment">&lt;!--</span></span><br><span class="line"><span class="hljs-comment">    &lt;Executor name="tomcatThreadPool" namePrefix="catalina-exec-"</span></span><br><span class="line"><span class="hljs-comment">        maxThreads="150" minSpareThreads="4"/&gt;</span></span><br><span class="line"><span class="hljs-comment">    --&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">&lt;!-- A "Connector" represents an endpoint by which requests are received</span></span><br><span class="line"><span class="hljs-comment">         and responses are returned. Documentation at :</span></span><br><span class="line"><span class="hljs-comment">         Java HTTP Connector: /docs/config/http.html (blocking &amp; non-blocking)</span></span><br><span class="line"><span class="hljs-comment">         Java AJP  Connector: /docs/config/ajp.html</span></span><br><span class="line"><span class="hljs-comment">         APR (HTTP/AJP) Connector: /docs/apr.html</span></span><br><span class="line"><span class="hljs-comment">         Define a non-SSL HTTP/1.1 Connector on port 8080</span></span><br><span class="line"><span class="hljs-comment">    --&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">Connector</span> <span class="hljs-attr">port</span>=<span class="hljs-string">"8080"</span> <span class="hljs-attr">protocol</span>=<span class="hljs-string">"HTTP/1.1"</span></span></span><br><span class="line"><span class="hljs-tag">               <span class="hljs-attr">connectionTimeout</span>=<span class="hljs-string">"20000"</span></span></span><br><span class="line"><span class="hljs-tag">               <span class="hljs-attr">redirectPort</span>=<span class="hljs-string">"8443"</span> /&gt;</span></span><br><span class="line">    <span class="hljs-comment">&lt;!-- A "Connector" using the shared thread pool--&gt;</span></span><br><span class="line">    <span class="hljs-comment">&lt;!--</span></span><br><span class="line"><span class="hljs-comment">    &lt;Connector executor="tomcatThreadPool"</span></span><br><span class="line"><span class="hljs-comment">               port="8080" protocol="HTTP/1.1"</span></span><br><span class="line"><span class="hljs-comment">               connectionTimeout="20000"</span></span><br><span class="line"><span class="hljs-comment">               redirectPort="8443" /&gt;</span></span><br><span class="line"><span class="hljs-comment">    --&gt;</span></span><br><span class="line">    <span class="hljs-comment">&lt;!-- Define a SSL HTTP/1.1 Connector on port 8443</span></span><br><span class="line"><span class="hljs-comment">         This connector uses the BIO implementation that requires the JSSE</span></span><br><span class="line"><span class="hljs-comment">         style configuration. When using the APR/native implementation, the</span></span><br><span class="line"><span class="hljs-comment">         OpenSSL style configuration is required as described in the APR/native</span></span><br><span class="line"><span class="hljs-comment">         documentation --&gt;</span></span><br><span class="line">    <span class="hljs-comment">&lt;!--</span></span><br><span class="line"><span class="hljs-comment">    &lt;Connector port="8443" protocol="org.apache.coyote.http11.Http11Protocol"</span></span><br><span class="line"><span class="hljs-comment">               maxThreads="150" SSLEnabled="true" scheme="https" secure="true"</span></span><br><span class="line"><span class="hljs-comment">               clientAuth="false" sslProtocol="TLS" /&gt;</span></span><br><span class="line"><span class="hljs-comment">    --&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">&lt;!-- Define an AJP 1.3 Connector on port 8009 --&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">Connector</span> <span class="hljs-attr">port</span>=<span class="hljs-string">"8009"</span> <span class="hljs-attr">protocol</span>=<span class="hljs-string">"AJP/1.3"</span> <span class="hljs-attr">redirectPort</span>=<span class="hljs-string">"8443"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">&lt;!-- An Engine represents the entry point (within Catalina) that processes</span></span><br><span class="line"><span class="hljs-comment">         every request.  The Engine implementation for Tomcat stand alone</span></span><br><span class="line"><span class="hljs-comment">         analyzes the HTTP headers included with the request, and passes them</span></span><br><span class="line"><span class="hljs-comment">         on to the appropriate Host (virtual host).</span></span><br><span class="line"><span class="hljs-comment">         Documentation at /docs/config/engine.html --&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">&lt;!-- You should set jvmRoute to support load-balancing via AJP ie :</span></span><br><span class="line"><span class="hljs-comment">    &lt;Engine name="Catalina" defaultHost="localhost" jvmRoute="jvm1"&gt;</span></span><br><span class="line"><span class="hljs-comment">    --&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">Engine</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"Catalina"</span> <span class="hljs-attr">defaultHost</span>=<span class="hljs-string">"localhost"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">      <span class="hljs-comment">&lt;!--For clustering, please take a look at documentation at:</span></span><br><span class="line"><span class="hljs-comment">          /docs/cluster-howto.html  (simple how to)</span></span><br><span class="line"><span class="hljs-comment">          /docs/config/cluster.html (reference documentation) --&gt;</span></span><br><span class="line">      <span class="hljs-comment">&lt;!--</span></span><br><span class="line"><span class="hljs-comment">      &lt;Cluster className="org.apache.catalina.ha.tcp.SimpleTcpCluster"/&gt;</span></span><br><span class="line"><span class="hljs-comment">      --&gt;</span></span><br><span class="line"></span><br><span class="line">      <span class="hljs-comment">&lt;!-- Use the LockOutRealm to prevent attempts to guess user passwords</span></span><br><span class="line"><span class="hljs-comment">           via a brute-force attack --&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;<span class="hljs-name">Realm</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"org.apache.catalina.realm.LockOutRealm"</span>&gt;</span></span><br><span class="line">        <span class="hljs-comment">&lt;!-- This Realm uses the UserDatabase configured in the global JNDI</span></span><br><span class="line"><span class="hljs-comment">             resources under the key "UserDatabase".  Any edits</span></span><br><span class="line"><span class="hljs-comment">             that are performed against this UserDatabase are immediately</span></span><br><span class="line"><span class="hljs-comment">             available for use by the Realm.  --&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">Realm</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"org.apache.catalina.realm.UserDatabaseRealm"</span></span></span><br><span class="line"><span class="hljs-tag">               <span class="hljs-attr">resourceName</span>=<span class="hljs-string">"UserDatabase"</span>/&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;/<span class="hljs-name">Realm</span>&gt;</span></span><br><span class="line"></span><br><span class="line">      <span class="hljs-tag">&lt;<span class="hljs-name">Host</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"localhost"</span>  <span class="hljs-attr">appBase</span>=<span class="hljs-string">"webapps"</span></span></span><br><span class="line"><span class="hljs-tag">            <span class="hljs-attr">unpackWARs</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">autoDeploy</span>=<span class="hljs-string">"true"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="hljs-comment">&lt;!-- SingleSignOn valve, share authentication between web applications</span></span><br><span class="line"><span class="hljs-comment">             Documentation at: /docs/config/valve.html --&gt;</span></span><br><span class="line">        <span class="hljs-comment">&lt;!--</span></span><br><span class="line"><span class="hljs-comment">        &lt;Valve className="org.apache.catalina.authenticator.SingleSignOn" /&gt;</span></span><br><span class="line"><span class="hljs-comment">        --&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="hljs-comment">&lt;!-- Access log processes all example.</span></span><br><span class="line"><span class="hljs-comment">             Documentation at: /docs/config/valve.html</span></span><br><span class="line"><span class="hljs-comment">             <span class="hljs-doctag">Note:</span> The pattern used is equivalent to using pattern="common" --&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">Valve</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"org.apache.catalina.valves.AccessLogValve"</span> <span class="hljs-attr">directory</span>=<span class="hljs-string">"logs"</span></span></span><br><span class="line"><span class="hljs-tag">               <span class="hljs-attr">prefix</span>=<span class="hljs-string">"localhost_access_log."</span> <span class="hljs-attr">suffix</span>=<span class="hljs-string">".txt"</span></span></span><br><span class="line"><span class="hljs-tag">               <span class="hljs-attr">pattern</span>=<span class="hljs-string">"%h %l %u %t &amp;quot;%r&amp;quot; %s %b"</span> /&gt;</span></span><br><span class="line">        <span class="hljs-comment">&lt;!-- HANZO ADD --&gt;</span>       </span><br><span class="line">        <span class="hljs-comment">&lt;!-- &lt;Context path="" docBase="HRMIS" debug="0" reloadable="true"/&gt;        --&gt;</span></span><br><span class="line"></span><br><span class="line">      <span class="hljs-tag">&lt;/<span class="hljs-name">Host</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">Engine</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;/<span class="hljs-name">Service</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">Server</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="tomcat-users-xml"><a href="#tomcat-users-xml" class="headerlink" title="tomcat-users.xml"></a><code>tomcat-users.xml</code></h2><figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">&lt;?xml version='1.0' encoding='utf-8'?&gt;</span></span><br><span class="line"><span class="hljs-comment">&lt;!--</span></span><br><span class="line"><span class="hljs-comment">  Licensed to the Apache Software Foundation (ASF) under one or more</span></span><br><span class="line"><span class="hljs-comment">  contributor license agreements.  See the NOTICE file distributed with</span></span><br><span class="line"><span class="hljs-comment">  this work for additional information regarding copyright ownership.</span></span><br><span class="line"><span class="hljs-comment">  The ASF licenses this file to You under the Apache License, Version 2.0</span></span><br><span class="line"><span class="hljs-comment">  (the "License"); you may not use this file except in compliance with</span></span><br><span class="line"><span class="hljs-comment">  the License.  You may obtain a copy of the License at</span></span><br><span class="line"><span class="hljs-comment"></span></span><br><span class="line"><span class="hljs-comment">      http://www.apache.org/licenses/LICENSE-2.0</span></span><br><span class="line"><span class="hljs-comment"></span></span><br><span class="line"><span class="hljs-comment">  Unless required by applicable law or agreed to in writing, software</span></span><br><span class="line"><span class="hljs-comment">  distributed under the License is distributed on an "AS IS" BASIS,</span></span><br><span class="line"><span class="hljs-comment">  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span></span><br><span class="line"><span class="hljs-comment">  See the License for the specific language governing permissions and</span></span><br><span class="line"><span class="hljs-comment">  limitations under the License.</span></span><br><span class="line"><span class="hljs-comment">--&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">tomcat-users</span>&gt;</span></span><br><span class="line"><span class="hljs-comment">&lt;!--</span></span><br><span class="line"><span class="hljs-comment">  <span class="hljs-doctag">NOTE:</span>  By default, no user is included in the "manager-gui" role required</span></span><br><span class="line"><span class="hljs-comment">  to operate the "/manager/html" web application.  If you wish to use this app,</span></span><br><span class="line"><span class="hljs-comment">  you must define such a user - the username and password are arbitrary. It is</span></span><br><span class="line"><span class="hljs-comment">  strongly recommended that you do NOT use one of the users in the commented out</span></span><br><span class="line"><span class="hljs-comment">  section below since they are intended for use with the examples web</span></span><br><span class="line"><span class="hljs-comment">  application.</span></span><br><span class="line"><span class="hljs-comment">--&gt;</span></span><br><span class="line"><span class="hljs-comment">&lt;!--</span></span><br><span class="line"><span class="hljs-comment">  <span class="hljs-doctag">NOTE:</span>  The sample user and role entries below are intended for use with the</span></span><br><span class="line"><span class="hljs-comment">  examples web application. They are wrapped in a comment and thus are ignored</span></span><br><span class="line"><span class="hljs-comment">  when reading this file. If you wish to configure these users for use with the</span></span><br><span class="line"><span class="hljs-comment">  examples web application, do not forget to remove the &lt;!.. ..&gt; that surrounds</span></span><br><span class="line"><span class="hljs-comment">  them. You will also need to set the passwords to something appropriate.</span></span><br><span class="line"><span class="hljs-comment">--&gt;</span></span><br><span class="line"><span class="hljs-comment">&lt;!--</span></span><br><span class="line"><span class="hljs-comment">  &lt;role rolename="tomcat"/&gt;</span></span><br><span class="line"><span class="hljs-comment">  &lt;role rolename="role1"/&gt;</span></span><br><span class="line"><span class="hljs-comment">  &lt;user username="tomcat" password="&lt;must-be-changed&gt;" roles="tomcat"/&gt;</span></span><br><span class="line"><span class="hljs-comment">  &lt;user username="both" password="&lt;must-be-changed&gt;" roles="tomcat,role1"/&gt;</span></span><br><span class="line"><span class="hljs-comment">  &lt;user username="role1" password="&lt;must-be-changed&gt;" roles="role1"/&gt;</span></span><br><span class="line"><span class="hljs-comment">--&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">role</span> <span class="hljs-attr">rolename</span>=<span class="hljs-string">"admin-gui"</span>/&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">role</span> <span class="hljs-attr">rolename</span>=<span class="hljs-string">"admin-script"</span>/&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">role</span> <span class="hljs-attr">rolename</span>=<span class="hljs-string">"manager-gui"</span>/&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">role</span> <span class="hljs-attr">rolename</span>=<span class="hljs-string">"manager-script"</span>/&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">role</span> <span class="hljs-attr">rolename</span>=<span class="hljs-string">"manager-jmx"</span>/&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">role</span> <span class="hljs-attr">rolename</span>=<span class="hljs-string">"manager-status"</span>/&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">user</span> <span class="hljs-attr">username</span>=<span class="hljs-string">"admin"</span> <span class="hljs-attr">password</span>=<span class="hljs-string">"admin"</span> <span class="hljs-attr">roles</span>=<span class="hljs-string">"manager-gui,manager-script,manager-jmx,manager-status,admin-script,admin-gui"</span>/&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">tomcat-users</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+
+    
+        <article class="article content gallery" itemscope="" itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/documents/others/front-end-learn.html" itemprop="url">Front End Learn</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-05-25T01:00:00.000Z" itemprop="datePublished">May 25 2019</time>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            a few seconds read (About 46 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h1 id="Front-End-Learn"><a href="#Front-End-Learn" class="headerlink" title="Front End Learn"></a>Front End Learn</h1><ul>
+<li><p>JavaScript</p>
+</li>
+<li><p>css</p>
+</li>
+<li><p>html5</p>
+</li>
+<li><p>ES6</p>
+</li>
+<li><p>Node.js</p>
+</li>
+<li><p>CommonJS amd cmd ES6</p>
+</li>
+<li><p>npm(yarn)</p>
+</li>
+<li><p>spa mpa</p>
+</li>
+<li><p>响应式编程</p>
+</li>
+<li><p>vue(react)</p>
+</li>
+<li><p>webpack</p>
+</li>
+<li><p>element-ui</p>
+</li>
+<li><p>CSS预处理器</p>
+<ul>
+<li>Sass(scss)</li>
+<li>less</li>
+<li>stylus</li>
+</ul>
+</li>
+</ul>
+<p>学习资源:</p>
+<ul>
+<li>官网</li>
+<li>书籍</li>
+<li>博客</li>
+</ul>
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+
+    
+        <article class="article content gallery" itemscope="" itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/documents/others/git-svn.html" itemprop="url">git-svn</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-05-21T01:00:00.000Z" itemprop="datePublished">May 21 2019</time>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            a few seconds read (About 45 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h1 id="git-svn"><a href="#git-svn" class="headerlink" title="git-svn"></a>git-svn</h1><h2 id="clone"><a href="#clone" class="headerlink" title="clone"></a>clone</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git svn clone http://svn.example.com/project/trunk</span><br></pre></td></tr></table></figure>
+<p>e.g.:<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git svn clone svn://&lt;address&gt;/SourceCode/trunk/&lt;project_name&gt;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git stash</span><br><span class="line">git rebase -i HEAD~2</span><br><span class="line">git checkout master</span><br><span class="line">git merge dev</span><br><span class="line">git push # git push origin master</span><br><span class="line">git checkout dev</span><br><span class="line">git stash pop stash@&#123;0&#125;</span><br></pre></td></tr></table></figure>
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+
+    
+        <article class="article content gallery" itemscope="" itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/documents/others/repositories.html" itemprop="url">Repositories</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-05-21T01:00:00.000Z" itemprop="datePublished">May 21 2019</time>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            a few seconds read (About 98 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h1 id="Repositories"><a href="#Repositories" class="headerlink" title="Repositories"></a>Repositories</h1><ul>
+<li><p>Notes</p>
+<figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="hljs-built_in">clone</span> https://github.com/O70/Notes.git</span><br><span class="line">$ git <span class="hljs-built_in">clone</span> https://gitee.com/Guiwang/Notes.git</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>config-hub(对应<strong>Mac</strong>中的<strong>Documents</strong>)</p>
+<figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="hljs-built_in">clone</span> -b notes https://github.com/O70/config-hub.git</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>IDEA-Windows</p>
+<figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="hljs-built_in">clone</span> https://github.com/O70/IDEA-Windows.git</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>IDEA-Mac</p>
+<figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="hljs-built_in">clone</span> https://github.com/O70/IDEA-Mac.git</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Shells</p>
+<figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="hljs-built_in">clone</span> https://gitee.com/Guiwang/Shells.git</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>ST3(Sublime Text 3 Config)</p>
+<figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="hljs-built_in">clone</span> https://gitee.com/Guiwang/ST3.git</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>credit-bill</p>
+<figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ https://git.dev.tencent.com/THRAEX/credit-bill.git</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+
+    
+        <article class="article content gallery" itemscope="" itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/documents/others/windows-security.html" itemprop="url">Windows Security</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-04-24T01:00:00.000Z" itemprop="datePublished">Apr 24 2019</time>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            a few seconds read (About 31 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h1 id="Windows-Security"><a href="#Windows-Security" class="headerlink" title="Windows Security"></a>Windows Security</h1><h2 id="Firewall-amp-network-protection"><a href="#Firewall-amp-network-protection" class="headerlink" title="Firewall &amp; network protection"></a>Firewall &amp; network protection</h2><h3 id="Advanced-settings"><a href="#Advanced-settings" class="headerlink" title="Advanced settings"></a>Advanced settings</h3><p>Inbound Rules:</p>
+<ul>
+<li><ol>
+<li>Select <strong>Port</strong>. Next.</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>Specific local ports: <code>8001-9000</code>. Next.</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>Select <strong>Allow the connection</strong>. Next.</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>Select <strong>Domain</strong>, <strong>Private</strong>, <strong>Public</strong>. Next.</li>
+</ol>
+</li>
+<li><ol start="5">
+<li>Input <strong>Name</strong> and <strong>Description</strong>. Finish.</li>
+</ol>
+</li>
+</ul>
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+
+    
+    
+        
+<nav class="pagination is-centered is-rounded" role="navigation" aria-label="pagination">
+    <div class="pagination-previous">
+        <a href="/page/3/">Prev</a>
+    </div>
+    <div class="pagination-next">
+        <a href="/page/5/">Next</a>
+    </div>
+    <ul class="pagination-list is-hidden-mobile">
+        
+        <li><a class="pagination-link" href="/">1</a></li>
+        
+        <li><a class="pagination-link" href="/page/2/">2</a></li>
+        
+        <li><a class="pagination-link" href="/page/3/">3</a></li>
+        
+        <li><a class="pagination-link is-current" href="/page/4/">4</a></li>
+        
+        <li><a class="pagination-link" href="/page/5/">5</a></li>
+        
+        <li><a class="pagination-link" href="/page/6/">6</a></li>
+        
+    </ul>
+</nav>
+
+    
+    </div>
+</section>
+    <footer class="footer">
+    <div class="container">
+        <div class="columns content">
+            <div class="column is-narrow has-text-centered">
+                Copyright &copy; 2019 鬼王&nbsp;
+                <!-- Powered by <a href="https://github.com/O70" target="_blank">O70</a> -->
+            </div>
+            <div class="column is-hidden-mobile"></div>
+
+            
+            <div class="column is-narrow">
+                <div class="columns is-mobile is-multiline is-centered">
+                
+                    
+                <a class="column is-narrow has-text-black" title="京ICP备19029828号" href="http://www.miitbeian.gov.cn">
+                    
+                    京ICP备19029828号
+                    
+                </a>
+                
+                    
+                <a class="column is-narrow has-text-black" title="GitHub" href="https://github.com/O70">
+                    
+                    GitHub
+                    
+                </a>
+                
+                </div>
+            </div>
+            
+            
+
+        </div>
+    </div>
+</footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+
+<!-- test if the browser is outdated -->
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // plugin function, place inside DOM ready function
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        })
+    });
+</script>
+
+<script>
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
+    }
+    moment.locale("en-AU");
+</script>
+
+
+
+<script src="/js/script.js"></script>
+
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-mask"></div>
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>HANZO</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+
+
+<meta name="description" content="鬼王, HANZO, THRAEX">
+
+
+
+<meta name="keywords" content="鬼王, O70, HANZO, THRAEX">
+
+
+
+    <meta name="description" content="鬼王, HANZO, THRAEX">
+<meta name="keywords" content="鬼王, O70, HANZO, THRAEX">
+<meta property="og:type" content="website">
+<meta property="og:title" content="HANZO">
+<meta property="og:url" content="http://yoursite.com/page/3/index.html">
+<meta property="og:site_name" content="HANZO">
+<meta property="og:description" content="鬼王, HANZO, THRAEX">
+<meta property="og:locale" content="en">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HANZO">
+<meta name="twitter:description" content="鬼王, HANZO, THRAEX">
+
+
+
+
+
+<link rel="icon" href="/images/favicon.ico">
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
+
+<link rel="stylesheet" href="/css/style.css">
+
+<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+
+</head>
+<body>
+    
+<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item navbar-logo" href="/">
+                
+                    
+                    HANZO
+                    
+                
+            </a>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="navbar-menu navbar-start">
+            
+            <a class="navbar-item " href="/categories/Technology">Technology</a>
+            
+            <a class="navbar-item " href="/categories/Life">Life</a>
+            
+            <a class="navbar-item " href="/archives">Archives</a>
+            
+            <a class="navbar-item " href="/about">About</a>
+            
+            <a class="navbar-item " href="/main">Main</a>
+            
+        </div>
+        
+        <div class="navbar-menu navbar-end">
+            
+            <a class="navbar-item search" title="Search" href="javascript:;">
+                <i class="fas fa-search"></i>
+            </a>
+            
+            
+            
+            <a class="navbar-item" title="GitHub" href="https://github.com/O70">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+               
+            
+        </div>
+    </div>
+</nav>
+
+    <section class="section">
+    <div class="container">
+    
+        <article class="article content gallery" itemscope="" itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/documents/others/git-ssh.html" itemprop="url">Git SSH</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-06-10T02:30:00.000Z" itemprop="datePublished">Jun 10 2019</time>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            a few seconds read (About 54 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h2 id="Add-the-SSH-key-to-your-GitHub-Gitee-account"><a href="#Add-the-SSH-key-to-your-GitHub-Gitee-account" class="headerlink" title="Add the SSH key to your GitHub/Gitee account"></a>Add the SSH key to your GitHub/Gitee account</h2><ul>
+<li><p>Generating a new SSH key</p>
+<figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -b 4096 -C <span class="hljs-string">"thraex@aliyun.com"</span></span><br><span class="line"><span class="hljs-comment"># file name is mac-thraex</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Copy the SSH key to your clipboard</p>
+<figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cat id_rsa.pub</span><br><span class="line"><span class="hljs-comment"># ...</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Test</p>
+<figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br><span class="line"><span class="hljs-comment"># or</span></span><br><span class="line">$ ssh -T git@gitee.com</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+
+    
+        <article class="article content gallery" itemscope="" itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/documents/others/git-completion.html" itemprop="url">Git Completion</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-06-09T09:53:00.000Z" itemprop="datePublished">Jun 9 2019</time>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            a few seconds read (About 49 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h2 id="Mac"><a href="#Mac" class="headerlink" title="Mac"></a>Mac</h2><figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ brew list</span><br><span class="line">$ brew install bash-completion</span><br><span class="line">$ brew info bash-completion</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>Download</p>
+<figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Configuration</p>
+<figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ vim .bash_profile</span><br><span class="line">...</span><br><span class="line"><span class="hljs-comment"># add .git-completion.bash</span></span><br><span class="line"><span class="hljs-built_in">source</span> ~/.git-completion.bash</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>source</p>
+<figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="hljs-built_in">source</span> ~/.bash_profile</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+
+    
+        <article class="article content gallery" itemscope="" itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/documents/others/linux-command.html" itemprop="url">Linux Command</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-06-08T06:00:00.000Z" itemprop="datePublished">Jun 8 2019</time>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            a few seconds read (About 26 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h2 id="tar"><a href="#tar" class="headerlink" title="tar"></a><code>tar</code></h2><ul>
+<li><p>Create archive</p>
+<figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ tar -cf &lt;file&gt;.tar &lt;file&gt;...</span><br><span class="line"></span><br><span class="line">$ tar -czf &lt;file&gt;.tar.gz &lt;file&gt;...</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>View detail for archive</p>
+<figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ tar -tvf file.tar.gz</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Extract</p>
+<figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ tar -xf &lt;file&gt;.tar</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+
+    
+        <article class="article content gallery" itemscope="" itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/documents/others/linux-terminal-shortcuts.html" itemprop="url">Linux Terminal Shortcuts</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-06-07T07:00:00.000Z" itemprop="datePublished">Jun 7 2019</time>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            14 minutes read (About 2027 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h2 id="Shortcuts"><a href="#Shortcuts" class="headerlink" title="Shortcuts"></a>Shortcuts</h2><table>
+<thead>
+<tr>
+<th></th>
+<th>Command</th>
+<th>Remark</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🚩</td>
+<td>history</td>
+<td>显示命令历史列表</td>
+</tr>
+<tr>
+<td>🚩</td>
+<td>↑(Ctrl+p)</td>
+<td>显示上一条命令</td>
+</tr>
+<tr>
+<td>🚩</td>
+<td>↓(Ctrl+n)</td>
+<td>显示下一条命令</td>
+</tr>
+<tr>
+<td>🚩</td>
+<td>!num</td>
+<td>执行命令历史列表的第num条命令</td>
+</tr>
+<tr>
+<td>🚩</td>
+<td>!!</td>
+<td>执行上一条命令</td>
+</tr>
+<tr>
+<td>🚩</td>
+<td>!?string?</td>
+<td>执行含有string字符串的最新命令</td>
+</tr>
+<tr>
+<td>🚩</td>
+<td>Ctrl+r</td>
+<td>然后输入若干字符，开始向上搜索包含该字符的命令，继续按Ctrl+r，搜索上一条匹配的命令</td>
+</tr>
+<tr>
+<td>🚩</td>
+<td>Ctrl+s</td>
+<td>与Ctrl+r类似,只是正向检索</td>
+</tr>
+<tr>
+<td>🚩</td>
+<td>Alt+&lt;</td>
+<td>历史列表第一项</td>
+</tr>
+<tr>
+<td>🚩</td>
+<td>Alt+&gt;</td>
+<td>历史列表最后一项</td>
+</tr>
+<tr>
+<td>🚩</td>
+<td>Ctrl+f</td>
+<td>光标向前移动一个字符,相当与-&gt;</td>
+</tr>
+<tr>
+<td>🚩</td>
+<td>Ctrl+b</td>
+<td>光标向后移动一个字符,相当与&lt;-</td>
+</tr>
+<tr>
+<td>🚩</td>
+<td>Alt+f</td>
+<td>光标向前移动一个单词</td>
+</tr>
+<tr>
+<td>🚩</td>
+<td>Alt+b</td>
+<td>光标向后移动一个单词</td>
+</tr>
+<tr>
+<td>🚩</td>
+<td>ls !$</td>
+<td>执行命令ls，并以上一条命令的参数为其参数</td>
+</tr>
+<tr>
+<td>🚩</td>
+<td>Ctrl+a</td>
+<td>移动到当前行的开头</td>
+</tr>
+<tr>
+<td>🚩</td>
+<td>Ctrl+e</td>
+<td>移动到当前行的结尾</td>
+</tr>
+<tr>
+<td>🚩</td>
+<td>Esc+b</td>
+<td>移动到当前单词的开头</td>
+</tr>
+<tr>
+<td>🚩</td>
+<td>Esc+f</td>
+<td>移动到当前单词的结尾</td>
+</tr>
+<tr>
+<td>🚩</td>
+<td>Ctrl+l</td>
+<td>清屏</td>
+</tr>
+<tr>
+<td>🚩</td>
+<td>Ctrl+u</td>
+<td>剪切命令行中光标所在处之前的所有字符（不包括自身）</td>
+</tr>
+<tr>
+<td>🚩</td>
+<td>Ctrl+k</td>
+<td>剪切命令行中光标所在处之后的所有字符（包括自身）</td>
+</tr>
+<tr>
+<td>🚩</td>
+<td>Ctrl+d</td>
+<td>删除光标所在处字符</td>
+</tr>
+<tr>
+<td>🚩</td>
+<td>Ctrl+h</td>
+<td>删除光标所在处前一个字符</td>
+</tr>
+<tr>
+<td>🚩</td>
+<td>Ctrl+y</td>
+<td>粘贴刚才所删除的字符</td>
+</tr>
+<tr>
+<td>🚩</td>
+<td>Ctrl+w</td>
+<td>剪切光标所在处之前的一个词（以空格、标点等为分隔符）</td>
+</tr>
+<tr>
+<td>🚩</td>
+<td>Alt+d</td>
+<td>剪切光标之后的词</td>
+</tr>
+<tr>
+<td>🚩</td>
+<td>Esc+w</td>
+<td>删除光标所在处之前的字符至其单词尾（以空格、标点等为分隔符）</td>
+</tr>
+<tr>
+<td>🚩</td>
+<td>Ctrl+t</td>
+<td>颠倒光标所在处及其之前的字符位置，并将光标移动到下一个字符</td>
+</tr>
+<tr>
+<td>🚩</td>
+<td>Alt+t</td>
+<td>交换当前与以前单词的位置</td>
+</tr>
+<tr>
+<td>🚩</td>
+<td>Alt+u</td>
+<td>把当前词转化为大写</td>
+</tr>
+<tr>
+<td>🚩</td>
+<td>Alt+l</td>
+<td>把当前词转化为小写</td>
+</tr>
+<tr>
+<td>🚩</td>
+<td>Alt+c</td>
+<td>把当前词汇变成首字符大写</td>
+</tr>
+<tr>
+<td>🚩</td>
+<td>Ctrl+v</td>
+<td>插入特殊字符,如Ctrl+v+Tab加入Tab字符键</td>
+</tr>
+<tr>
+<td>🚩</td>
+<td>Esc+t</td>
+<td>颠倒光标所在处及其相邻单词的位置</td>
+</tr>
+<tr>
+<td>🚩</td>
+<td>Ctrl+c</td>
+<td>删除整行</td>
+</tr>
+<tr>
+<td>🚩</td>
+<td>Ctrl+(x,u)</td>
+<td>按住Ctrl的同时再先后按x和u，撤销刚才的操作</td>
+</tr>
+<tr>
+<td>🚩</td>
+<td>Ctrl+s</td>
+<td>挂起当前shell</td>
+</tr>
+<tr>
+<td>🚩</td>
+<td>Ctrl+q</td>
+<td>重新启用挂起的shell</td>
+</tr>
+</tbody>
+</table>
+<!-- [Ctrl] + [Alt] + [Backspace] = 杀死你当前的 X 会话。杀死图形化桌面会话，把你返回到登录屏幕。如果正常退出步骤不起作用，你可以使用这种方法。
+
+[Ctrl] + [Alt] + [Delete] = 关机和重新引导 Red Hat Linux。关闭你当前的会话然后重新引导 OS。只有在正常关机步骤不起作用时才使用这种方法。
+
+[Ctrl] + [Alt] + [Fn] = 切换屏幕。 [Ctrl] + [Alt] + 功能键之一会显示一个新屏幕。根据默认设置，从 [F1] 到 [F6] 是 shell 提示屏幕， [F7] 是图形化屏幕。
+
+[Alt] + [Tab] = 在图形化桌面环境中切换任务。如果你同时打开了不止一个应用程序，你可以使用 [Alt] + [Tab] 来在打开的任务和应用程序间切换。
+
+[Ctrl] + [a] = 把光标移到行首。它在多数文本编辑器和 Mozilla 的 URL 字段内可以使用。
+
+[Ctrl] + [d] = 从 shell 提示中注销（并关闭）。使用该快捷键，你就不必键入 exit 或 logout 。
+
+[Ctrl] + [e] = 把光标移到行尾。它在多数文本编辑器和 Mozilla 的 URL 字段内都可使用。
+
+[Ctrl] + [l] = 清除终端。该快捷操作与在命令行键入 clear 作用相同。
+
+[Ctrl] + = 清除当前行。如果你在终端下工作，使用这一快捷操作可以清除从光标处到行首的字符。
+
+[鼠标中间键] = 粘贴突出显示的文本。使用鼠标左键来突出显示文本。把光标指向你想粘贴文本的地方。点击鼠标中间键来粘贴它。在两键鼠标系统中，如果你把鼠标配置成模拟第三键，你可以同时点击鼠标的左右两键来执行粘贴。
+
+[Tab] =命令行自动补全。使用 shell 提示时可使用这一命令。键入命令或文件名的前几个字符，然后按 [Tab] 键，它会自动补全命令或显示匹配你键入字符的所有命令。
+
+[向上] 和 [向下] 箭头 = 显示命令历史。当你使用 shell 提示时，按 [向上] 或 [向下] 箭头来前后查看你在当前目录下键入的命令历史。当你看到你想使用的命令时，按 [Enter] 键。
+
+clear = 清除 shell 提示屏幕。在命令行下键入它会清除所有这个 shell 提示屏幕中显示的数据。
+
+exit = 注销。在 shell 提示中键入它会注销当前的用户或根用户帐号。
+
+history = 显示命令历史。在 shell 提示中键入它来显示你所键入的被编号的前 1000 个命令。要显示较短的命令历史，键入 history f之后，空一格，在键入一个数字。例如： history 20 。
+
+reset = 刷新 shell 提示屏幕。如果字符不清晰或乱码的话，在 shell 提示下键入这个命令会刷新屏幕。
+
+# Ctrl-U: 擦除一行光标前面的部分。
+
+# Ctrl-H: 擦除光标前面的一个字符。
+
+# Ctrl-D: 终止输入。(退出 shell，如果您正在使用 shell 的话)。
+
+# Ctrl-C: 终止当前正在运行的程序。
+
+# Ctrl-Z: 暂停程序。
+
+&'')
+
+# Ctrl-S: 停止向屏幕输出。
+
+# Ctrl-Q: 重新激活向屏幕输出。
+
+默认的 shell，`bash’， 有历史编辑和 tab 补齐功能。
+
+# up-arrow: 开始历史命令搜索。
+
+# Ctrl-R: 开始增量历史命令搜索，可以按照关键字查查自己用过哪些命令。
+
+# TAB: 完整的把文件名输入到命令行。
+
+# Ctrl-V TAB: 输入 TAB 而不是扩展命令行。
+
+# Ctrl + P - 上一条命令
+
+# Ctrl + N - 下一条命令
+
+# Ctrl-U: 擦除一行光标前面的部分。
+
+# Ctrl + Y - 粘贴前一Ctrl+U类命令删除的字符 ，是粘贴不是撤销啊！
+
+下面的应用可能稍稍高级一点点
+
+# !! - 上一条命令
+
+# !-n - 倒数第N条历史命令
+
+# !-n:p - 打印上一条命令（不执行）
+
+# !?string？- 最新一条含有“string”的命令
+
+# !-n:gs/str1/str2/ - 将倒数第N条命令的str1替换为str2，并执行（若不加g,则仅替换第一个）
+
+其他一些有用的Linux命令行按键组合。
+
+Ctrl-Alt-Del:挂起或者重新启动系统，这三个Linux命令行按键在Linux下可以轻松地修改成关机的操作，这对于单用户的朋友还是很方便的
+
+# Ctrl + l - 清屏
+
+# Ctrl + A - 光标移到行首
+
+# Ctrl + E - 光标移到行尾
+
+# Ctrl + W - 清除光标之前一个单词
+
+# Ctrl + K - 清除光标到行尾的字符
+
+# Ctrl + T - 交换光标前两个字符
+
+# Ctrl + V - 输入控制字符 如Ctrl+v ,会输入^M
+
+# Ctrl + F - 光标后移一个字符
+
+# Ctrl + B - 光标前移一个字符
+
+# Ctrl + H - 删除光标前一个字符
+
+# N++F - 光标后移N个单词，N为1时可省略
+
+# N++B - 光标前移N个单词，N为1时可省略
+
+# Left-click-and-drag mouse: 选择并且拷贝到剪贴板。
+
+# Click middle mouse button: 使用剪贴板的内容粘贴。
+
+# Meta-key (Emacs terminology) 传统的是使用 Left-Alt-key -->
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+
+    
+        <article class="article content gallery" itemscope="" itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/documents/others/蒙學.html" itemprop="url">蒙學</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-06-07T05:00:00.000Z" itemprop="datePublished">Jun 7 2019</time>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            9 minutes read (About 1281 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><p><a href="https://zhidao.baidu.com/question/492214929.html" target="_blank" rel="noopener">https://zhidao.baidu.com/question/492214929.html</a></p>
+<p>古代蒙学读物包括《三字经》、《百家姓》、《千字文》、《弟子规》、《幼学琼林》、《朱子家训》、《千家诗》、《古文观止》、《唐诗三百首》、《声律启蒙》、《文字蒙求》、《增广贤文》等等。</p>
+<p>1、《三字经》</p>
+<p>《三字经》，是中国的传统启蒙教材。在中国古代经典当中，《三字经》是最浅显易懂的读本之一。</p>
+<p>《三字经》取材典范，包括中国传统文化的文学、历史、哲学、天文地理、人伦义理、忠孝节义等等，而核心思想又包括了“仁，义，诚，敬，孝。”背诵《三字经》的同时，就了解了常识、传统国学及历史故事，以及故事内涵中的做人做事道理。</p>
+<p>2、《百家姓》</p>
+<p>《百家姓》，是一篇关于中文姓氏的文章。按文献记载，成文于北宋初。原收集姓氏411个，后增补到568个，其中单姓444个，复姓124个。</p>
+<p>《百家姓》采用四言体例，对姓氏进行了排列，而且句句押韵，虽然它的内容没有文理，但对于中国姓氏文化的传承、中国文字的认识等方面都起了巨大作用，这也是能够流传千百年的一个重要因素。</p>
+<p>3、《千字文》</p>
+<p>千字文，由南北朝时期梁朝散骑侍郎、给事中周兴嗣编纂、一千个汉字组成的韵文（在隋唐之前，不押韵、不对仗的文字，被称为“笔”，而非“文”）。梁武帝（502—549年）命人从王羲之书法作品中选取1000个不重复汉字，命员外散骑侍郎周兴嗣编纂成文。</p>
+<p>全文为四字句，对仗工整，条理清晰，文采斐然。《千字文》语句平白如话，易诵易记，并译有英文版、法文版、拉丁文版、意大利文版，是中国影响很大的儿童启蒙读物。</p>
+<p>4、《声律启蒙》</p>
+<p>《声律启蒙》是训练儿童应对，掌握声韵格律的启蒙读物。按韵分编，包罗天文、地理、花木、鸟兽、人物、器物等的虚实应对。从单字对到双字对，三字对、五字对、七字对到十一字对，声韵协调，琅琅上口，从中得到语音、词汇、修辞的训练。</p>
+<p>从单字到多字的层层属对，读起来，如唱歌般。较之其它全用三言、四言句式更见韵味。这类读物，在启蒙读物中独具一格，经久不衰。明清以来，如《训蒙骈句》、《笠翁对韵》等书，都是采用这种方式编写，并得以广泛流传。</p>
+<p>5、《弟子规》</p>
+<p>《弟子规》是清代教育家李毓秀所作的三言韵文。</p>
+<p>其内容采用《论语》“学而篇”第六条：“弟子入则孝，出则悌，谨而信，泛爱众而亲仁。行有余力，则以学文”的文义，以三字一句、两句一韵编撰而成。全文共360句、1080个字。《弟子规》文笔自然流畅，朴实无华，影响深远，在清代文化中占有重要地位。</p>
+<p>扩展资料：</p>
+<p>蒙学，是对我国传统的幼儿启蒙教育的一个统称。与小学、大学并列，是我国传统教育中的一个重要阶段。</p>
+<p>目前，学术界所称的蒙学有狭义和广义之分，广义上讲，泛指古代启蒙教育，包括其教育体制、教学方法、教材等内容；狭义上讲，专指启蒙教材，即童蒙读本。</p>
+<p>古代，儿童“开蒙”，接受教育的年龄一般在四岁左右，现在也有一种观点认为，四岁恰好是儿童学习汉字的最佳年龄段。</p>
+<p>蒙学教育的基本的目标培养儿童认字和书写的能力，养成良好的日常生活习惯，能够具备基本的道德伦理规范；并且掌握一些中国基本文化的常识及日常生活的一些常识。</p>
+<p>另外蒙学也指蒙馆，启蒙的学塾，相当于现在的幼儿园或小学。吴沃尧《历史小说总序》：“吾曾受而读之，蒙学、中学之书都嫌过简，至于高等大学或且仍用旧册矣。”</p>
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+
+    
+        <article class="article content gallery" itemscope="" itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/documents/others/千字文.html" itemprop="url">千字文</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-06-06T05:00:00.000Z" itemprop="datePublished">Jun 6 2019</time>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            21 minutes read (About 3146 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>《千字文》，由南北朝時期梁朝散騎侍郎、給事中 <strong>周興嗣</strong> 編纂、一千個漢字組成的韻文（在隋唐之前，不押韻、不對仗的文字，被稱為“筆”，而非“文”）。梁武帝（502—549年）命人從王羲之書法作品中選取1000個不重復漢字，命員外散騎侍郎周興嗣編纂成文。</p>
+<p>全文為四字句，對仗工整，條理清晰，文采斐然。《千字文》語句平白如話，易誦易記，並譯有英文版、法文版、拉丁文版、意大利文版，是中國影響很大的兒童啟蒙讀物。</p>
+<p>關於千字文中重複字: <a href="https://www.douban.com/group/topic/107163124/" target="_blank" rel="noopener">https://www.douban.com/group/topic/107163124/</a></p>
+<p>關於避諱: <a href="https://xw.qq.com/ru/20141103029354/RU2014110302935400/" target="_blank" rel="noopener">https://xw.qq.com/ru/20141103029354/RU2014110302935400/</a></p>
+<h2 id="全文"><a href="#全文" class="headerlink" title="全文"></a>全文</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br></pre></td><td class="code"><pre><span class="line">天地玄黃 tiān dì xuán huáng</span><br><span class="line">宇宙洪荒 yǔ zhòu hóng huāng</span><br><span class="line">日月盈昃 rì yuè yíng zè</span><br><span class="line">辰宿列張 chén xiù liè zhāng</span><br><span class="line">寒來暑往 hán lái shǔ wǎng</span><br><span class="line">秋收冬藏 qiū shōu dōng cáng</span><br><span class="line">閏餘成歲 rùn yú chéng suì</span><br><span class="line">律呂調陽 lǜ lǚ tiáo yáng</span><br><span class="line">雲騰致雨 yún téng zhì yǔ</span><br><span class="line">露結為霜 lù jié wéi shuāng</span><br><span class="line">金生麗水 jīn shēng lí shuǐ</span><br><span class="line">玉出崐岡 yù chū kūn gāng</span><br><span class="line">劍號巨闕 jiàn hào jù quē</span><br><span class="line">珠稱夜光 zhū chēng yè guāng</span><br><span class="line">果珍李柰 guǒ zhēn lǐ nài</span><br><span class="line">菜重芥姜 cài zhòng jiè jiāng</span><br><span class="line">海鹹河淡 hǎi xián hé dàn</span><br><span class="line">鱗潛羽翔 lín qián yǔ xiáng</span><br><span class="line">龍師火帝 lóng shī huǒ dì</span><br><span class="line">鳥官人皇 niǎo guān rén huáng</span><br><span class="line">始制文字 shǐ zhì wén zì</span><br><span class="line">乃服衣裳 nǎi fú yī shāng</span><br><span class="line">推位讓國 tuī wèi ràng guó</span><br><span class="line">有虞陶唐 yǒu yú táo táng</span><br><span class="line">吊民伐罪 diào mín fá zuì</span><br><span class="line">周發殷湯 zhōu fā yīn tāng</span><br><span class="line">坐朝問道 zuò cháo wèn dào</span><br><span class="line">垂拱平章 chuí gǒng píng zhāng</span><br><span class="line">愛育黎首 ài yù lí shǒu</span><br><span class="line">臣伏戎羌 chén fú róng qiāng</span><br><span class="line">遐邇壹體 xiá ěr yī tǐ</span><br><span class="line">率賓歸王 shuài bīn guī wáng</span><br><span class="line">鳴鳳在樹 míng fèng zài shù</span><br><span class="line">白駒食場 bái jū shí cháng</span><br><span class="line">化被草木 huà pi cǎo mù</span><br><span class="line">賴及萬方 lài jí wàn fāng</span><br><span class="line">蓋此身髮 gài cǐ shēn fà</span><br><span class="line">四大五常 sì dà wǔ cháng</span><br><span class="line">恭惟鞠養 gōng wéi jū yǎng</span><br><span class="line">豈敢毀傷 qǐ gǎn huǐ shāng</span><br><span class="line">女慕貞絜 nǚ mù zhēn jié</span><br><span class="line">男效才良 nán xiào cái liáng</span><br><span class="line">知過必改 zhī guò bì gǎi</span><br><span class="line">得能莫忘 dé néng mò wàng</span><br><span class="line">罔談彼短 wǎng tán bǐ duǎn</span><br><span class="line">靡恃己長 mǐ shì jǐ cháng</span><br><span class="line">信使可覆 xìn shǐ kě fù</span><br><span class="line">器欲難量 qì yù nán liáng</span><br><span class="line">墨悲絲染 mò bēi sī rǎn</span><br><span class="line">詩贊羔羊 shī zàn gāo yáng</span><br><span class="line">景行維賢 jǐng xíng wéi xián</span><br><span class="line">克念作聖 kè niàn zuò shèng</span><br><span class="line">德建名立 dé jiàn míng lì</span><br><span class="line">形端表正 xíng duān biǎo zhèng</span><br><span class="line">空谷傳聲 kōng gǔ chuán shēng</span><br><span class="line">虛堂習聽 xū táng xí tīng</span><br><span class="line">禍因惡積 huò yīn è jī</span><br><span class="line">福緣善慶 fú yuán shàn qìng</span><br><span class="line">尺璧非寶 chǐ bì fēi bǎo</span><br><span class="line">寸陰是競 cùn yīn shì jìng</span><br><span class="line">資父事君 zī fù shì jūn</span><br><span class="line">曰嚴與敬 yuē yán yǔ jìng</span><br><span class="line">孝當竭力 xiào dāng jié lì</span><br><span class="line">忠則盡命 zhōng zé jìn mìng</span><br><span class="line">臨深履薄 lín shēn lǚ bó</span><br><span class="line">夙興溫凊 sù xīng wēn qìng</span><br><span class="line">似蘭斯馨 sì lán sī xīn</span><br><span class="line">如松之盛 rú sōng zhī shèng</span><br><span class="line">川流不息 chuān liú bù xī</span><br><span class="line">淵澄取映 yuān chéng qǔ yìng</span><br><span class="line">容止若思 róng zhǐ ruò sī</span><br><span class="line">言辭安定 yán cí ān dìng</span><br><span class="line">篤初誠美 dǔ chū chéng měi</span><br><span class="line">慎終宜令 shèn zhōng yí lìng</span><br><span class="line">榮業所基 róng yè suǒ jī</span><br><span class="line">籍甚無竟 jí shèn wú jìng</span><br><span class="line">學優登仕 xué yōu dēng shì</span><br><span class="line">攝職從政 shè zhí cóng zhèng</span><br><span class="line">存以甘棠 cún yǐ gān táng</span><br><span class="line">去而益詠 qù ér yì yǒng</span><br><span class="line">樂殊貴賤 yuè shū guì jiàn</span><br><span class="line">禮別尊卑 lǐ bié zūn bēi</span><br><span class="line">上和下睦 shàng hé xià mù</span><br><span class="line">夫唱婦隨 fū chàng fù suí</span><br><span class="line">外受傅訓 wài shòu fù xùn</span><br><span class="line">入奉母儀 rù fèng mǔ yí</span><br><span class="line">諸姑伯叔 zhū gū bó shū</span><br><span class="line">猶子比兒 yóu zǐ bǐ ér</span><br><span class="line">孔懷兄弟 kǒng huái xiōng dì</span><br><span class="line">同氣連枝 tóng qì lián zhī</span><br><span class="line">交友投分 jiāo yǒu tóu fèn</span><br><span class="line">切磨箴規 qiē mó zhēn guī</span><br><span class="line">仁慈隱惻 rén cí yǐn cè</span><br><span class="line">造次弗離 zào cì fú lí</span><br><span class="line">節義廉退 jié yì lián tuì</span><br><span class="line">顛沛匪虧 diān pèi fēi kuī</span><br><span class="line">性靜情逸 xìng jìng qíng yì</span><br><span class="line">心動神疲 xīn dòng shén pí</span><br><span class="line">守真誌滿 shǒu zhēn zhì mǎn</span><br><span class="line">逐物意移 zhú wù yì yí</span><br><span class="line">堅持雅操 jiān chí yǎ cāo</span><br><span class="line">好爵自縻 hǎo jué zì mí</span><br><span class="line">都邑華夏 dū yì huá xià</span><br><span class="line">東西二京 dōng xī èr jīng</span><br><span class="line">背邙面洛 bèi máng miàn luò</span><br><span class="line">浮渭據涇 fú wèi jù jīng</span><br><span class="line">宮殿盤郁 gōng diàn pán yù</span><br><span class="line">樓觀飛驚 lóu guàn fēi jīng</span><br><span class="line">圖寫禽獸 tú xiě qín shòu</span><br><span class="line">畫彩仙靈 huà cǎi xiān líng</span><br><span class="line">丙舍旁啟 bǐng shè páng qǐ</span><br><span class="line">甲帳對楹 jiǎ zhàng duì yíng</span><br><span class="line">肆筵設席 sì yán shè xí</span><br><span class="line">鼓瑟吹笙 gǔ sè chuī shēng</span><br><span class="line">升階納陛 shēng jiē nà bì</span><br><span class="line">弁轉疑星 biàn zhuàn yí xīng</span><br><span class="line">右通廣內 yòu tōng guǎng nèi</span><br><span class="line">左達承明 zuǒ dá chéng míng</span><br><span class="line">既集墳典 jì jí fén diǎn</span><br><span class="line">亦聚群英 yì jù qún yīng</span><br><span class="line">杜稿鐘隸 dù gǎo zhōng lì</span><br><span class="line">漆書壁經 qī shū bì jīng</span><br><span class="line">府羅將相 fǔ luó jiàng xiàng</span><br><span class="line">路俠槐卿 lù xiá huái qīng</span><br><span class="line">戶封八縣 hù fēng bā xiàn</span><br><span class="line">家給千兵 jiā jǐ qiān bīng</span><br><span class="line">高冠陪輦 gāo guān péi niǎn</span><br><span class="line">驅轂振纓 qū gǔ zhèn yīng</span><br><span class="line">世祿侈富 shì lù chǐ fù</span><br><span class="line">車駕肥輕 chē jià féi qīng</span><br><span class="line">策功茂實 cè gōng mào shí</span><br><span class="line">勒碑刻銘 lè bēi kè míng</span><br><span class="line">磻溪伊尹 pán xī yī yǐn</span><br><span class="line">佐時阿衡 zuǒ shí ā héng</span><br><span class="line">奄宅曲阜 yǎn zhái qū fù</span><br><span class="line">微旦孰營 wēi dàn shú yíng</span><br><span class="line">桓公匡合 huán gōng kuāng hé</span><br><span class="line">濟弱扶傾 jì ruò fú qīng</span><br><span class="line">綺回漢惠 qǐ huí hàn huì</span><br><span class="line">說感武丁 yuè gǎn wǔ dīng</span><br><span class="line">俊乂密勿 jùn yì mì wù</span><br><span class="line">多士寔寧 duō shì shí níng</span><br><span class="line">晉楚更霸 jìn chǔ gēng bà</span><br><span class="line">趙魏困橫 zhào wèi kùn héng</span><br><span class="line">假途滅虢 jiǎ tú miè guó</span><br><span class="line">踐土會盟 jiàn tǔ huì méng</span><br><span class="line">何遵約法 hé zūn yuē fǎ</span><br><span class="line">韓弊煩刑 hán bì fán xíng</span><br><span class="line">起翦頗牧 qǐ jiǎn pō mù</span><br><span class="line">用軍最精 yòng jūn zuì jīng</span><br><span class="line">宣威沙漠 xuān wēi shā mò</span><br><span class="line">馳譽丹青 chí yù dān qīng</span><br><span class="line">九州禹跡 jiǔ zhōu yǔ jì</span><br><span class="line">百郡秦並 bǎi jùn qín bìng</span><br><span class="line">嶽宗恆岱 yuè zōng héng dài</span><br><span class="line">禪主云亭 shàn zhǔ yún tíng</span><br><span class="line">雁門紫塞 yàn mén zǐ sài</span><br><span class="line">雞田赤城 jī tián chì chéng</span><br><span class="line">昆池碣石 kūn chí jié shí</span><br><span class="line">鉅野洞庭 jù yě dòng tíng</span><br><span class="line">曠遠綿邈 kuàng yuǎn mián miǎo</span><br><span class="line">巖岫杳冥 yán xiù yǎo míng</span><br><span class="line">治本於農 zhì běn yú nóng</span><br><span class="line">務茲稼穡 wù zī jià sè</span><br><span class="line">俶載南畝 chù zǎi nán mǔ</span><br><span class="line">我藝黍稷 wǒ yì shǔ jì</span><br><span class="line">稅熟貢新 shuì shú gòng xīn</span><br><span class="line">勸賞黜陟 quàn shǎng chù zhì</span><br><span class="line">孟軻敦素 mèng kē dūn sù</span><br><span class="line">史魚秉直 shǐ yú bǐng zhí</span><br><span class="line">庶幾中庸 shù jī zhōng yōng</span><br><span class="line">勞謙謹敕 láo qiān jǐn chì</span><br><span class="line">聆音察理 líng yīn chá lǐ</span><br><span class="line">鑒貌辨色 jiàn mào biàn sè</span><br><span class="line">貽厥嘉猷 yí jué jiā yóu</span><br><span class="line">勉其祗植 miǎn qí zhī zhí</span><br><span class="line">省躬譏誡 xǐng gōng jī jiè</span><br><span class="line">寵增抗極 chǒng zēng kàng jí</span><br><span class="line">殆辱近恥 dài rǔ jìn chǐ</span><br><span class="line">林臯幸即 lín gāo xìng jí</span><br><span class="line">兩疏見機 liǎng shū jiàn jī</span><br><span class="line">解徂誰逼 jiě cú shuí bī</span><br><span class="line">索居閑處 suǒ jū xián chù</span><br><span class="line">沈默寂寥 chén mò jì liáo</span><br><span class="line">求古尋論 qiú gǔ xún lùn</span><br><span class="line">散慮逍遙 sàn lǜ xiāo yáo</span><br><span class="line">欣奏累遣 xīn zòu lèi qiǎn</span><br><span class="line">慼謝歡招 qī xiè huān zhāo</span><br><span class="line">渠荷的歷 qú hé de lì</span><br><span class="line">園莽抽條 yuán mǎng chōu tiáo</span><br><span class="line">枇杷晚翠 pí pá wǎn cuì</span><br><span class="line">梧桐早雕 wú tóng zǎo diāo</span><br><span class="line">陳根委翳 chén gēn wěi yì</span><br><span class="line">落葉飄搖 luò yè piāo yáo</span><br><span class="line">遊鹍獨運 yóu kūn dú yùn</span><br><span class="line">淩摩絳霄 líng mó jiàng xiāo</span><br><span class="line">耽讀玩市 dān dú wán shì</span><br><span class="line">寓目囊箱 yù mù náng xiāng</span><br><span class="line">易輶攸畏 yì yóu yōu wèi</span><br><span class="line">屬耳垣墻 zhǔ ěr yuán qiáng</span><br><span class="line">具膳餐飯 jù shàn cān fàn</span><br><span class="line">適口充腸 shì kǒu chōng cháng</span><br><span class="line">飽飫烹宰 bǎo yù pēng zǎi</span><br><span class="line">饑厭糟糠 jī yàn zāo kāng</span><br><span class="line">親戚故舊 qīn qī gù jiù</span><br><span class="line">老少異糧 lǎo shào yì liáng</span><br><span class="line">妾禦績紡 qiè yù jì fǎng</span><br><span class="line">侍巾帷房 shì jīn wéi fáng</span><br><span class="line">紈扇圓潔 wán shàn yuán jié</span><br><span class="line">銀燭煒煌 yín zhú wěi huáng</span><br><span class="line">晝眠夕寐 zhòu mián xī mèi</span><br><span class="line">藍筍象床 lán sǔn xiàng chuáng</span><br><span class="line">弦歌酒宴 xián gē jiǔ yàn</span><br><span class="line">接杯舉觴 jiē bēi jǔ shāng</span><br><span class="line">矯手頓足 jiǎo shǒu dùn zú</span><br><span class="line">悅豫且康 yuè yù qiě kāng</span><br><span class="line">嫡後嗣續 dí hòu sì xù</span><br><span class="line">祭祀烝嘗 jì sì zhēng cháng</span><br><span class="line">稽顙再拜 qǐ sǎng zài bài</span><br><span class="line">悚懼恐惶 sǒng jù kǒng huáng</span><br><span class="line">箋牒簡要 jiān dié jiǎn yào</span><br><span class="line">顧答審詳 gù dá shěn xiáng</span><br><span class="line">骸垢想浴 hái gòu xiǎng yù</span><br><span class="line">執熱願涼 zhí rè yuàn liáng</span><br><span class="line">驢騾犢特 lǘ luó dú tè</span><br><span class="line">駭躍超驤 hài yuè chāo xiāng</span><br><span class="line">誅斬賊盜 zhū zhǎn zéi dào</span><br><span class="line">捕獲叛亡 bǔ huò pàn wáng</span><br><span class="line">布射僚丸 bù shè liáo wán</span><br><span class="line">嵇琴阮嘯 jī qín ruǎn xiào</span><br><span class="line">恬筆倫紙 tián bǐ lún zhǐ</span><br><span class="line">鈞巧任釣 jūn qiǎo rén diào</span><br><span class="line">釋紛利俗 shì fēn lì sú</span><br><span class="line">竝皆佳妙 bìng jiē jiā miào</span><br><span class="line">毛施淑姿 máo shī shū zī</span><br><span class="line">工顰妍笑 gōng pín yán xiào</span><br><span class="line">年矢每催 nián shǐ měi cuī</span><br><span class="line">曦暉朗曜 xī huī lǎng yào</span><br><span class="line">璇璣懸斡 xuán jī xuán wò</span><br><span class="line">晦魄環照 huì pò huán zhào</span><br><span class="line">指薪修祜 zhǐ xīn xiū hù</span><br><span class="line">永綏吉劭 yǒng suí jí shào</span><br><span class="line">矩步引領 jǔ bù yǐn lǐng</span><br><span class="line">俯仰廊廟 fǔ yǎng láng miào</span><br><span class="line">束帶矜莊 shù dài jīn zhuāng</span><br><span class="line">徘徊瞻眺 pái huái zhān tiào</span><br><span class="line">孤陋寡聞 gū lòu guǎ wén</span><br><span class="line">愚蒙等誚 yú méng děng qiào</span><br><span class="line">謂語助者 wèi yǔ zhù zhě</span><br><span class="line">焉哉乎也 yān zāi hū yě</span><br></pre></td></tr></table></figure>
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+
+    
+        <article class="article content gallery" itemscope="" itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/documents/others/百家姓.html" itemprop="url">百家姓</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-06-05T09:00:00.000Z" itemprop="datePublished">Jun 5 2019</time>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            23 minutes read (About 3419 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>《百家姓》是一部關於中文姓氏的作品。按文獻記載，成文於 <strong>北宋初</strong> 。原收集姓氏411個，後增補到504個，其中單姓444個，復姓60個。</p>
+<p>《百家姓》采用四言體例，對姓氏進行了排列，而且句句押韻，雖然它的內容沒有文理，但對於中國姓氏文化的傳承、中國文字的認識等方面都起了巨大作用，這也是能夠流傳千百年的一個重要因素。</p>
+<h2 id="數據比對及存疑"><a href="#數據比對及存疑" class="headerlink" title="數據比對及存疑"></a>數據比對及存疑</h2><p><a href="http://wiki.zupulu.com/doc.php?action=view&amp;docid=1016" target="_blank" rel="noopener">族譜錄</a>可查詢姓氏來源及郡望</p>
+<table>
+<thead>
+<tr>
+<th><a href="https://baike.baidu.com/item/百家姓/194637?fr=aladdin" target="_blank" rel="noopener">百度百科</a></th>
+<th><a href="https://www.amazon.cn/dp/B00AA7KIRI/ref=sr_1_1?__mk_zh_CN=%E4%BA%9A%E9%A9%AC%E9%80%8A%E7%BD%91%E7%AB%99&amp;keywords=%E7%99%BE%E5%AE%B6%E5%A7%93&amp;qid=1559799462&amp;s=gateway&amp;sr=8-1" target="_blank" rel="noopener">Amazon</a></th>
+<th>輯錄</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>孟〔平陆〕</td>
+<td>孟〔平陵〕</td>
+<td>孟〔平陆〕</td>
+<td>郡望皆對</td>
+</tr>
+<tr>
+<td>談〔广平〕</td>
+<td>谈〔文平〕</td>
+<td>谈〔广平〕</td>
+<td>文平未能查到</td>
+</tr>
+<tr>
+<td>袭〔渤海〕</td>
+<td>裘〔渤海〕</td>
+<td>裘〔渤海〕</td>
+<td>記錄有誤</td>
+</tr>
+<tr>
+<td>陆〔吴郡〕</td>
+<td>陆〔河南〕</td>
+<td>陆〔吴郡〕</td>
+<td>郡望皆對</td>
+</tr>
+<tr>
+<td>逢〔谯郡〕</td>
+<td>逄〔谯郡〕</td>
+<td>逢〔谯郡〕</td>
+<td>記錄有誤</td>
+</tr>
+<tr>
+<td>谷〔济阳〕璩〔豫章〕桑〔黎阳〕桂〔天水〕</td>
+<td>郤〔济阴〕璩〔豫章〕桑〔黎阳〕桂〔天水〕</td>
+<td>郤〔济阳〕璩〔豫章〕桑〔黎阳〕桂〔天水〕</td>
+<td>記錄有誤,郡望皆對</td>
+</tr>
+<tr>
+<td>盖〔汝南〕后〔冯翊〕桓〔谯郡〕公〔括苍〕</td>
+<td>盖〔汝南〕益〔冯翊〕桓〔谯郡〕公〔括苍〕</td>
+<td>盖〔汝南〕益〔冯翊〕桓〔谯郡〕公〔括苍〕</td>
+<td>記錄有誤</td>
+</tr>
+</tbody>
+</table>
+<h3 id="存疑"><a href="#存疑" class="headerlink" title="存疑"></a>存疑</h3><p><code>于</code>–<code>於</code><br><code>谷</code>–<code>穀</code><br><code>鬱</code>–<code>郁</code> <a href="https://zhidao.baidu.com/question/1513419599752509300.html" target="_blank" rel="noopener">鬱姓与郁姓不同</a></p>
+<h2 id="宋版"><a href="#宋版" class="headerlink" title="宋版"></a>宋版</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line">趙錢孫李，周吳鄭王。</span><br><span class="line">馮陳褚衛，蔣沈韓楊。</span><br><span class="line">朱秦尤許，何呂施張。</span><br><span class="line">孔曹嚴華，金魏陶姜。</span><br><span class="line">戚謝鄒喻，柏水竇章。</span><br><span class="line">雲蘇潘葛，奚範彭郎。</span><br><span class="line">魯韋昌馬，苗鳳花方。</span><br><span class="line">俞任袁柳，酆鮑史唐。</span><br><span class="line">費廉岑薛，雷賀倪湯。</span><br><span class="line">滕殷羅畢，郝鄔安常。</span><br><span class="line">樂于時傅，皮卞齊康。</span><br><span class="line">伍余元蔔，顧孟平黃。</span><br><span class="line">和穆蕭尹，姚邵湛汪。</span><br><span class="line">祁毛禹狄，米貝明臧。</span><br><span class="line">計伏成戴，談宋茅龐。</span><br><span class="line">熊紀舒屈，項祝董梁。</span><br><span class="line">杜阮藍閔，席季麻強。</span><br><span class="line">賈路婁危，江童顏郭。</span><br><span class="line">梅盛林刁，鐘徐邱駱。</span><br><span class="line">高夏蔡田，樊胡淩霍。</span><br><span class="line">虞萬支柯，昝管盧莫。</span><br><span class="line">經房裘繆，幹解應宗。</span><br><span class="line">丁宣賁鄧，郁單杭洪。</span><br><span class="line">包諸左石，崔吉鈕龔。</span><br><span class="line">程嵇邢滑，裴陸榮翁。</span><br><span class="line">荀羊於惠，甄麴家封。</span><br><span class="line">芮羿儲靳，汲邴糜松。</span><br><span class="line">井段富巫，烏焦巴弓。</span><br><span class="line">牧隗山谷，車侯宓蓬。</span><br><span class="line">全郗班仰，秋仲伊宮。</span><br><span class="line">寧仇欒暴，甘鈄厲戎。</span><br><span class="line">祖武符劉，景詹束龍。</span><br><span class="line">葉幸司韶，郜黎薊薄。</span><br><span class="line">印宿白懷，蒲邰從鄂。</span><br><span class="line">索鹹籍賴，卓藺屠蒙。</span><br><span class="line">池喬陰鬱，胥能蒼雙。</span><br><span class="line">聞莘黨翟，譚貢勞逄。</span><br><span class="line">姬申扶堵，冉宰酈雍。</span><br><span class="line">郤璩桑桂，濮牛壽通。</span><br><span class="line">邊扈燕冀，郟浦尚農。</span><br><span class="line">溫別莊晏，柴瞿閻充。</span><br><span class="line">慕連茹習，宦艾魚容。</span><br><span class="line">向古易慎，戈廖庾終。</span><br><span class="line">暨居衡步，都耿滿弘。</span><br><span class="line">匡國文寇，廣祿闕東。</span><br><span class="line">歐殳沃利，蔚越夔隆。</span><br><span class="line">師鞏厙聶，晁勾敖融。</span><br><span class="line">冷訾辛闞，那簡饒空。</span><br><span class="line">曾毋沙乜，養鞠須豐。</span><br><span class="line">巢關蒯相，查后荊紅。</span><br><span class="line">遊竺權逯，蓋益桓公。</span><br><span class="line">萬俟司馬，上官歐陽。</span><br><span class="line">夏侯諸葛，聞人東方。</span><br><span class="line">赫連皇甫，尉遲公羊。</span><br><span class="line">澹台公冶，宗政濮陽。</span><br><span class="line">淳于單于，太叔申屠。</span><br><span class="line">公孫仲孫，軒轅令狐。</span><br><span class="line">鐘離宇文，長孫慕容。</span><br><span class="line">鮮于閭丘，司徒司空。</span><br><span class="line">亓官司寇，仉督子車。</span><br><span class="line">顓孫端木，巫馬公西。</span><br><span class="line">漆雕樂正，壤駟公良。</span><br><span class="line">拓跋夾谷，宰父谷梁。</span><br><span class="line">晉楚閆法，汝鄢塗欽。</span><br><span class="line">段幹百裏，東郭南門。</span><br><span class="line">呼延歸海，羊舌微生。</span><br><span class="line">嶽帥緱亢，況后有琴。</span><br><span class="line">梁丘左丘，東門西門。</span><br><span class="line">商牟佘佴，伯賞南宮。</span><br><span class="line">墨哈譙笪，年愛陽佟。</span><br><span class="line">第五言福，百家姓終。</span><br></pre></td></tr></table></figure>
+<h2 id="郡望"><a href="#郡望" class="headerlink" title="郡望"></a>郡望</h2><p>总计438个姓氏。</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br></pre></td><td class="code"><pre><span class="line">趙〔天水〕錢〔彭城〕孫〔樂安〕李〔隴西〕</span><br><span class="line">周〔汝南〕吳〔延陵〕鄭〔滎陽〕王〔太原〕</span><br><span class="line">馮〔始平〕陳〔潁川〕褚〔河南〕衛〔河東〕</span><br><span class="line">蔣〔樂安〕沈〔吳興〕韓〔南陽〕楊〔弘農〕</span><br><span class="line">朱〔沛郡〕秦〔天水〕尤〔吳興〕許〔高陽〕</span><br><span class="line">何〔廬江〕呂〔河東〕施〔吳興〕張〔清河〕</span><br><span class="line">孔〔魯郡〕曹〔譙郡〕嚴〔天水〕華〔武陵〕</span><br><span class="line">金〔彭城〕魏〔鉅鹿〕陶〔濟陽〕姜〔天水〕</span><br><span class="line">戚〔東海〕謝〔陳留〕鄒〔范陽〕喻〔江夏〕</span><br><span class="line">柏〔魏郡〕水〔吳興〕竇〔挾風〕章〔河間〕</span><br><span class="line">雲〔琅琊〕蘇〔武功〕潘〔滎陽〕葛〔頓丘〕</span><br><span class="line">奚〔北海〕範〔高平〕彭〔隴西〕郎〔中山〕</span><br><span class="line">魯〔扶風〕韋〔京兆〕昌〔汝南〕馬〔扶風〕</span><br><span class="line">苗〔東陽〕鳳〔谷陽〕花〔東平〕方〔河南〕</span><br><span class="line">俞〔河間〕任〔樂安〕袁〔汝南〕柳〔河東〕</span><br><span class="line">酆〔京兆〕鮑〔上黨〕史〔京兆〕唐〔晉昌〕</span><br><span class="line">費〔江夏〕廉〔河東〕岑〔南陽〕薛〔河東〕</span><br><span class="line">雷〔馮翊〕賀〔廣平〕倪〔千乘〕湯〔中山〕</span><br><span class="line">滕〔南陽〕殷〔汝南〕羅〔豫章〕畢〔河南〕</span><br><span class="line">郝〔太原〕鄔〔太原〕安〔武陵〕常〔平原〕</span><br><span class="line">樂〔南陽〕于〔河內〕時〔隴西〕傅〔清河〕</span><br><span class="line">皮〔天水〕卞〔濟陽〕齊〔汝南〕康〔京兆〕</span><br><span class="line">伍〔安定〕余〔下邳〕元〔河南〕卜〔西河〕</span><br><span class="line">顧〔武陵〕孟〔平陸〕平〔河內〕黃〔江夏〕</span><br><span class="line">和〔汝南〕穆〔河南〕蕭〔蘭陵〕尹〔天水〕</span><br><span class="line">姚〔吳興〕邵〔博陵〕湛〔豫章〕汪〔平陽〕</span><br><span class="line">祁〔太原〕毛〔西河〕禹〔隴西〕狄〔天水〕</span><br><span class="line">米〔京兆〕貝〔清河〕明〔吳興〕臧〔東海〕</span><br><span class="line">計〔京兆〕伏〔太原〕成〔上谷〕戴〔譙郡〕</span><br><span class="line">談〔廣平〕宋〔京兆〕茅〔東海〕龐〔始平〕</span><br><span class="line">熊〔江陵〕紀〔平陽〕舒〔京兆〕屈〔臨海〕</span><br><span class="line">項〔遼西〕祝〔太原〕董〔隴西〕梁〔安定〕</span><br><span class="line">杜〔京兆〕阮〔陳留〕藍〔汝南〕閔〔隴西〕</span><br><span class="line">席〔安定〕季〔渤海〕麻〔上谷〕強〔天水〕</span><br><span class="line">賈〔武威〕路〔內黃〕婁〔譙郡〕危〔汝南〕</span><br><span class="line">江〔濟陽〕童〔雁門〕顏〔魯郡〕郭〔太原〕</span><br><span class="line">梅〔汝南〕盛〔汝南〕林〔西河〕刁〔弘農〕</span><br><span class="line">鐘〔潁川〕徐〔東海〕丘〔河南〕駱〔內黃〕</span><br><span class="line">高〔渤海〕夏〔會稽〕蔡〔濟陽〕田〔渤海〕</span><br><span class="line">樊〔上黨〕胡〔安定〕凌〔河間〕霍〔太原〕</span><br><span class="line">虞〔陳留〕萬〔扶風〕支〔邰陽〕柯〔濟陽〕</span><br><span class="line">昝〔太原〕管〔晉陽〕盧〔范陽〕莫〔鉅鹿〕</span><br><span class="line">經〔滎陽〕房〔清河〕裘〔渤海〕繆〔蘭陵〕</span><br><span class="line">乾〔潁川〕解〔平陽〕應〔汝南〕宗〔京兆〕</span><br><span class="line">丁〔濟陽〕宣〔始平〕賁〔宣城〕鄧〔南陽〕</span><br><span class="line">郁〔黎陽〕單〔南安〕杭〔余杭〕洪〔豫章〕</span><br><span class="line">包〔上黨〕諸〔琅琊〕左〔濟陽〕石〔武威〕</span><br><span class="line">崔〔博陵〕吉〔馮翊〕鈕〔吳興〕龔〔武陵〕</span><br><span class="line">程〔安定〕嵇〔譙郡〕邢〔河間〕滑〔下邳〕</span><br><span class="line">裴〔河東〕陸〔吳郡〕榮〔上谷〕翁〔錢塘〕</span><br><span class="line">荀〔河內〕羊〔京兆〕於〔京兆〕惠〔扶風〕</span><br><span class="line">甄〔中山〕麴〔汝南〕家〔京兆〕封〔渤海〕</span><br><span class="line">芮〔平原〕羿〔齊郡〕儲〔河東〕靳〔河西〕</span><br><span class="line">汲〔清河〕邴〔平陽〕糜〔汝南〕松〔東莞〕</span><br><span class="line">井〔扶風〕段〔京兆〕富〔齊郡〕巫〔平陽〕</span><br><span class="line">烏〔潁川〕焦〔中山〕巴〔高平〕弓〔太原〕</span><br><span class="line">牧〔弘農〕隗〔余杭〕山〔河南〕谷〔上谷〕</span><br><span class="line">車〔京兆〕侯〔上谷〕宓〔平昌〕蓬〔長樂〕</span><br><span class="line">全〔京兆〕郗〔山陽〕班〔扶風〕仰〔汝南〕</span><br><span class="line">秋〔天水〕仲〔中山〕伊〔陳留〕宮〔太原〕</span><br><span class="line">寧〔齊郡〕仇〔平陽〕欒〔西河〕暴〔魏郡〕</span><br><span class="line">甘〔渤海〕鈄〔遼西〕厲〔南陽〕戎〔江陵〕</span><br><span class="line">祖〔范陽〕武〔太原〕符〔琅琊〕劉〔彭城〕</span><br><span class="line">景〔晉陽〕詹〔河間〕束〔南陽〕龍〔武陵〕</span><br><span class="line">葉〔南陽〕幸〔雁門〕司〔頓丘〕韶〔太原〕</span><br><span class="line">郜〔京兆〕黎〔京兆〕薊〔內黃〕薄〔雁門〕</span><br><span class="line">印〔馮翊〕宿〔東平〕白〔南陽〕懷〔河內〕</span><br><span class="line">蒲〔河東〕邰〔平盧〕從〔東莞〕鄂〔武昌〕</span><br><span class="line">索〔武威〕咸〔汝南〕籍〔廣平〕賴〔潁川〕</span><br><span class="line">卓〔西河〕藺〔中山〕屠〔陳留〕蒙〔安定〕</span><br><span class="line">池〔河西〕喬〔梁郡〕陰〔始興〕鬱〔太原〕</span><br><span class="line">胥〔琅琊〕能〔太原〕蒼〔武陵〕雙〔天水〕</span><br><span class="line">聞〔吳興〕莘〔天水〕黨〔馮翊〕翟〔南陽〕</span><br><span class="line">譚〔齊郡〕貢〔廣平〕勞〔武陽〕逢〔譙郡〕</span><br><span class="line">姬〔南陽〕申〔琅琊〕扶〔京兆〕堵〔河東〕</span><br><span class="line">冉〔武陵〕宰〔西河〕酈〔新蔡〕雍〔京兆〕</span><br><span class="line">郤〔濟陽〕璩〔豫章〕桑〔黎陽〕桂〔天水〕</span><br><span class="line">濮〔魯郡〕牛〔隴西〕壽〔京兆〕通〔西河〕</span><br><span class="line">邊〔隴西〕扈〔京兆〕燕〔范陽〕冀〔渤海〕</span><br><span class="line">郟〔武陵〕浦〔京兆〕尚〔上黨〕農〔雁門〕</span><br><span class="line">溫〔太原〕別〔京兆〕莊〔天水〕晏〔齊郡〕</span><br><span class="line">柴〔平陽〕瞿〔松陽〕閻〔太原〕充〔太原〕</span><br><span class="line">慕〔敦煌〕連〔上黨〕茹〔河內〕習〔東陽〕</span><br><span class="line">宦〔東陽〕艾〔天水〕魚〔雁門〕容〔敦煌〕</span><br><span class="line">向〔河南〕古〔新安〕易〔太原〕慎〔天水〕</span><br><span class="line">戈〔臨海〕廖〔汝南〕庚〔濟陽〕終〔南陽〕</span><br><span class="line">暨〔渤海〕居〔渤海〕衡〔雁門〕步〔平陽〕</span><br><span class="line">都〔黎陽〕耿〔高陽〕滿〔河東〕弘〔太原〕</span><br><span class="line">匡〔晉陽〕國〔下邳〕文〔雁門〕寇〔上谷〕</span><br><span class="line">廣〔丹陽〕祿〔扶風〕闕〔下邳〕東〔平原〕</span><br><span class="line">歐〔平陽〕殳〔武功〕沃〔太原〕利〔河南〕</span><br><span class="line">蔚〔琅琊〕越〔晉陽〕夔〔京兆〕隆〔南陽〕</span><br><span class="line">師〔太原〕鞏〔山陽〕厙〔河南〕聶〔河東〕</span><br><span class="line">晁〔京兆〕勾〔平陽〕敖〔譙郡〕融〔南康〕</span><br><span class="line">冷〔京兆〕訾〔渤海〕辛〔隴西〕闞〔天水〕</span><br><span class="line">那〔天水〕簡〔范陽〕饒〔平陽〕空〔營邱〕</span><br><span class="line">曾〔魯郡〕毋〔鉅鹿〕沙〔汝南〕乜〔晉昌〕</span><br><span class="line">養〔山陽〕鞠〔汝南〕須〔渤海〕豐〔松陽〕</span><br><span class="line">巢〔彭城〕關〔隴西〕蒯〔襄陽〕相〔西河〕</span><br><span class="line">查〔齊郡〕后〔東海〕荊〔廣陵〕紅〔平昌〕</span><br><span class="line">游〔廣平〕竺〔東海〕權〔天水〕逯〔廣平〕</span><br><span class="line">蓋〔汝南〕益〔馮翊〕桓〔譙郡〕公〔括蒼〕</span><br><span class="line">萬俟〔蘭陵〕司馬〔河內〕上官〔天水〕歐陽〔渤海〕</span><br><span class="line">夏侯〔譙郡〕諸葛〔琅琊〕聞人〔河南〕東方〔濟南〕</span><br><span class="line">赫連〔渤海〕皇甫〔京兆〕尉遲〔太原〕公羊〔頓丘〕</span><br><span class="line">澹台〔太原〕公冶〔魯郡〕宗政〔彭城〕濮陽〔博陵〕</span><br><span class="line">淳于〔河內〕單于〔千乘〕太叔〔東平〕申屠〔京兆〕</span><br><span class="line">公孫〔高陽〕仲孫〔高陽〕軒轅〔邰陽〕令狐〔太原〕</span><br><span class="line">鐘離〔會稽〕宇文〔趙郡〕長孫〔濟陽〕慕容〔敦煌〕</span><br><span class="line">司徒〔趙郡〕司空〔頓丘〕</span><br></pre></td></tr></table></figure>
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+
+    
+        <article class="article content gallery" itemscope="" itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/documents/others/三字經.html" itemprop="url">三字經</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-06-05T05:00:00.000Z" itemprop="datePublished">Jun 5 2019</time>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            26 minutes read (About 3913 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>中國的傳統啟蒙教材，在中國古代經典當中，是最為淺顯易懂的讀本之一。</p>
+<p>其取材典範，包括中國傳統文化的文學、歷史、哲學、天文地理、人倫義理、忠孝節義等等，而核心思想又包括了“仁、義、誠、敬、孝”。背誦《三字經》的同時，就能夠了解常識、傳統國學及歷史故事，以及故事內涵中為人處事的道理。</p>
+<p>《三字經》大體分為 <strong>傳統版</strong> 和 <strong>新版</strong> 兩大類。傳統版比較廣泛，相對正宗。</p>
+<p>傳統《三字經》最初由宋代 <strong>王應麟</strong> 所作，所以最初的本子“史”的部分到宋代結束，因此就是“<strong>十七史，全在茲</strong>”。本次收錄在此的為常見的 <strong>清代版本</strong> 。其中“<strong>十七史，全在茲</strong>”被修改為“<strong>廿一史，全在茲</strong>”。</p>
+<p><strong>關於作者在學術界說法不一，在此新舊版本作者皆為王應麟。</strong></p>
+<h2 id="傳統版"><a href="#傳統版" class="headerlink" title="傳統版"></a>傳統版</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br></pre></td><td class="code"><pre><span class="line">人之初，性本善，性相近，習相遠。</span><br><span class="line">茍不教，性乃遷，教之道，貴以專。</span><br><span class="line">昔孟母，擇鄰處，子不學，斷機杼。</span><br><span class="line">竇燕山，有義方，教五子，名俱揚。</span><br><span class="line">養不教，父之過，教不嚴，師之惰。</span><br><span class="line">子不學，非所宜，幼不學，老何為？</span><br><span class="line">玉不琢，不成器，人不學，不知義。</span><br><span class="line">為人子，方少時，親師友，習禮儀。</span><br><span class="line">香九齡，能溫席，孝於親，所當執。</span><br><span class="line">融四歲，能讓梨，弟於長，宜先知。</span><br><span class="line">首孝弟，次見聞，知某數，識某文。</span><br><span class="line">一而十，十而百，百而千，千而萬。</span><br><span class="line">三才者，天地人，三光者，日月星。</span><br><span class="line">三綱者，君臣義，父子親，夫婦順。</span><br><span class="line">曰春夏，曰秋冬，此四時，運不窮。</span><br><span class="line">曰南北，曰西東，此四方，應乎中。</span><br><span class="line">曰水火，木金土，此五行，本乎數。</span><br><span class="line">曰仁義，禮智信，此五常，不容紊。</span><br><span class="line">稻粱菽，麥黍稷，此六谷，人所食。</span><br><span class="line">馬牛羊，雞犬豕，此六畜，人所飼。</span><br><span class="line">曰喜怒，曰哀懼，愛惡欲，七情具。</span><br><span class="line">匏土革，木石金，絲與竹，乃八音。</span><br><span class="line">高曾祖，父而身，身而子，子而孫。</span><br><span class="line">自子孫，至玄曾，乃九族，人之倫。</span><br><span class="line">父子恩，夫婦從，兄則友，弟則恭。</span><br><span class="line">長幼序，友與朋，君則敬，臣則忠。</span><br><span class="line">此十義，人所同。</span><br><span class="line">凡訓蒙，須講究，祥訓詁，明句讀。</span><br><span class="line">為學者，必有初，小學終，至四書。</span><br><span class="line">論語者，二十篇，群弟子，記善言。</span><br><span class="line">孟子者，七篇止，講道德，說仁義。</span><br><span class="line">作中庸，子思筆，中不偏，庸不易。</span><br><span class="line">作大學，乃曾子，自脩齊，至平治。</span><br><span class="line">孝經通，四書熟，如六經，始可讀。</span><br><span class="line">詩書易，禮春秋，號六經，當講求。</span><br><span class="line">有連山，有歸藏，有周易，三易祥。</span><br><span class="line">有典謨，有訓誥，有誓命，書之奧。</span><br><span class="line">我周公，作周禮，著六官，存治體。</span><br><span class="line">大小戴，註禮記，述聖言，禮樂備。</span><br><span class="line">曰國風，曰雅頌，號四詩，當諷詠。</span><br><span class="line">詩既亡，春秋作，寓褒貶，別善惡。</span><br><span class="line">三傳者，有公羊，有左氏，有谷梁。</span><br><span class="line">經既明，方讀子，撮其要，記其事。</span><br><span class="line">五子者，有荀揚，文中子，及老莊。</span><br><span class="line">經子通，讀諸史，考世系，知終始。</span><br><span class="line">自羲農，至黃帝，號三皇，居上世。</span><br><span class="line">唐有虞，號二帝，相揖遜，稱盛世。</span><br><span class="line">夏有禹，商有湯，周文武，稱三王。</span><br><span class="line">夏傳子，家天下，四百載，遷夏社。</span><br><span class="line">湯伐夏，國號商，六百載，至紂亡。</span><br><span class="line">周武王，始誅紂，八百載，最長久。</span><br><span class="line">周撤東，王綱墜，逞幹戈，尚遊說。</span><br><span class="line">始春秋，終戰國，五霸強，七雄出。</span><br><span class="line">嬴秦氏，始兼並，傳二世，楚漢爭。</span><br><span class="line">高祖興，漢業建，至孝平，王莽篡。</span><br><span class="line">光武興，為東漢，四百年，終於獻。</span><br><span class="line">魏蜀吳，爭漢鼎，號三國，迄兩晉。</span><br><span class="line">宋齊繼，梁陳承，為南朝，都金陵。</span><br><span class="line">北元魏，分東西，宇文周，與高齊。</span><br><span class="line">迨至隋，一土宇，不再傳，失統緒。</span><br><span class="line">唐高祖，起義師，除隋亂，創國基。</span><br><span class="line">二十傳，三百載，梁滅之，國乃改。</span><br><span class="line">梁唐晉，及漢周，稱五代，皆有由。</span><br><span class="line">炎宋興，受周禪，十八傳，南北混。</span><br><span class="line">遼與金，皆稱帝，元滅金，絕宋世。</span><br><span class="line">蒞中國，兼戎狄，九十年，國祚廢。</span><br><span class="line">太祖興，國大明，號洪武，都金陵。</span><br><span class="line">迨成祖，遷燕京，十七世，至崇禎。</span><br><span class="line">權閹肆，寇如林，至李闖，神器焚。</span><br><span class="line">清太祖，膺景命，靖四方，克大定。</span><br><span class="line">廿一史，全在茲，載治亂，知興衰。</span><br><span class="line">讀史者，考實錄，通古今，若親目。</span><br><span class="line">口而誦，心而惟，朝於斯，夕於斯。</span><br><span class="line">昔仲尼，師項橐，古聖賢，尚勤學。</span><br><span class="line">趙中令，讀魯論，彼既仕，學且勤。</span><br><span class="line">披蒲編，削竹簡，彼無書，且知勉。</span><br><span class="line">頭懸梁，錐刺股，彼不教，自勤苦。</span><br><span class="line">如囊螢，如映雪，家雖貧，學不輟。</span><br><span class="line">如負薪，如掛角，身雖勞，猶苦卓。</span><br><span class="line">蘇老泉，二十七，始發奮，讀書籍。</span><br><span class="line">彼既老，猶悔遲，爾小生，宜早思。</span><br><span class="line">若梁灝，八十二，對大廷，魁多士。</span><br><span class="line">彼既成，眾稱異，爾小生，宜立誌。</span><br><span class="line">瑩八歲，能詠詩，泌七歲，能賦碁。</span><br><span class="line">彼穎悟，人稱奇，爾幼學，當效之。</span><br><span class="line">蔡文姬，能辨琴，謝道韞，能詠吟。</span><br><span class="line">彼女子，且聰敏，爾男子，當自警。</span><br><span class="line">唐劉晏，方七歲，舉神童，作正字。</span><br><span class="line">彼雖幼，身已仕，爾幼學，勉而致。</span><br><span class="line">有為者，亦若是。</span><br><span class="line">犬守夜，雞司晨，茍不學，曷為人？</span><br><span class="line">蠶吐絲，蜂釀蜜，人不學，不如物。</span><br><span class="line">幼而學，壯而行，上致君，下澤民。</span><br><span class="line">揚名聲，顯父母，光於前，裕於後。</span><br><span class="line">人遺子，金滿籯，我教子，惟一經。</span><br><span class="line">勤有功，戲無益，戒之哉，宜勉力。</span><br></pre></td></tr></table></figure>
+<h2 id="新版"><a href="#新版" class="headerlink" title="新版"></a>新版</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br></pre></td><td class="code"><pre><span class="line">人之初，性本善，性相近，習相遠。</span><br><span class="line">茍不教，性乃遷，教之道，貴以專。</span><br><span class="line">昔孟母，擇鄰處，子不學，斷機杼。</span><br><span class="line">竇燕山，有義方，教五子，名俱揚。</span><br><span class="line">養不教，父之過，教不嚴，師之惰。</span><br><span class="line">子不學，非所宜，幼不學，老何為？</span><br><span class="line">玉不琢，不成器，人不學，不知義。</span><br><span class="line">為人子，方少時，親師友，習禮儀。</span><br><span class="line">香九齡，能溫席，孝於親，所當執。</span><br><span class="line">融四歲，能讓梨，弟於長，宜先知。</span><br><span class="line">首孝弟，次見聞，知某數，識某文。</span><br><span class="line">一而十，十而百，百而千，千而萬。</span><br><span class="line">三才者，天地人，三光者，日月星。</span><br><span class="line">三綱者，君臣義，父子親，夫婦順。</span><br><span class="line">曰春夏，曰秋冬，此四時，運不窮。</span><br><span class="line">曰南北，曰西東，此四方，應乎中。</span><br><span class="line">曰水火，木金土，此五行，本乎數。</span><br><span class="line">十幹者，甲至癸，十二支，子至亥。</span><br><span class="line">曰黃道，日所躔，曰赤道，當中權。</span><br><span class="line">赤道下，溫暖極，我中華，在東北。</span><br><span class="line">寒燠均，霜露改，右高原，左大海。</span><br><span class="line">曰江河，曰淮濟，此四瀆，水之紀。</span><br><span class="line">曰岱華，嵩恒衡，此五嶽，山之名。</span><br><span class="line">古九州，今改制，稱行省，三十五。</span><br><span class="line">曰士農，曰工商，此四民，國之良。</span><br><span class="line">地所生，有草木，此植物，遍水陸。</span><br><span class="line">有蟲魚，有鳥獸，此動物，能飛走。</span><br><span class="line">稻粱菽，麥黍稷，此六谷，人所食。</span><br><span class="line">馬牛羊，雞犬豕，此六畜，人所飼。</span><br><span class="line">曰喜怒，曰哀懼，愛惡欲，七情具。</span><br><span class="line">曰仁義，禮智信，此五常，不容紊。</span><br><span class="line">青赤黃，及白黑，此五色，目所識。</span><br><span class="line">酸甘甘，及辛鹹，此五味，口所含。</span><br><span class="line">膻焦香，及腥朽，此五臭，鼻所嗅。</span><br><span class="line">宮商角，及徵羽，此五音，耳所取。</span><br><span class="line">匏土革，木石金，與絲竹，乃八音。</span><br><span class="line">曰平上，曰去入，此四聲，宜調葉。</span><br><span class="line">九族者，序宗親，高曾祖，父而身。</span><br><span class="line">身而子，子而孫，自子孫，至曾玄。</span><br><span class="line">五倫者，始夫婦，父子先，君臣後。</span><br><span class="line">次兄弟，及朋友，當順敘，勿違背。</span><br><span class="line">有伯叔，有舅甥，婿婦翁，三黨名。</span><br><span class="line">凡訓蒙，須講究，詳訓故，明句讀。</span><br><span class="line">禮樂射，禦書數，古六藝，今不具。</span><br><span class="line">帷書學，人共遵，既識字，講說文。</span><br><span class="line">有古文，大小篆，隸草繼，不可亂。</span><br><span class="line">若廣學，懼其繁，但略說，能知源。</span><br><span class="line">為學者，必有初，小學終，至四書。</span><br><span class="line">論語者，二十篇，群弟子，記善言。</span><br><span class="line">孟子者，七篇止，辨王載，說仁義。</span><br><span class="line">中庸者，子思筆，中不偏，庸不易。</span><br><span class="line">大學者，乃曾子，自修齊，至治平。</span><br><span class="line">此二篇，在禮記，今單行，至治平。</span><br><span class="line">四書通，孝經熟，如六經，始可讀。</span><br><span class="line">六經者，統儒術，文作周，孔子述。</span><br><span class="line">易詩書，禮春秋，樂經亡，餘可求。</span><br><span class="line">有連山，有歸藏，有周易，三易詳。</span><br><span class="line">有典謨，有訓誥，有誓命，書之奧。</span><br><span class="line">有國風，有雅頌，號四詩，當諷誦。</span><br><span class="line">周禮者，箸六官，儀禮者，十七篇。</span><br><span class="line">大小戴，集禮記，述聖言，禮法備。</span><br><span class="line">王跡息，春秋作，寓褒貶，別善惡。</span><br><span class="line">王傳者，有公羊，有左氏，有谷梁。</span><br><span class="line">爾雅者，善辨言，求經訓，此莫先。</span><br><span class="line">古聖著，先賢傳，註疏備，十三經。</span><br><span class="line">左傳外，有國語，合群經，數十五。</span><br><span class="line">經既明，方讀子，撮其要，記其事。</span><br><span class="line">古九流，多亡佚，取五種，修文質。</span><br><span class="line">五子者，有荀揚，文中子，及老莊。</span><br><span class="line">經子通，讀諸史，考世系，知終始。</span><br><span class="line">自羲農，至黃帝，號三皇，在上世。</span><br><span class="line">堯舜興，禪尊位，號唐虞，為二帝。</span><br><span class="line">夏有禹，商有湯，周文武，稱三王。</span><br><span class="line">夏傳子，家天下，四百載，遷夏社。</span><br><span class="line">湯伐夏，國號商，六百載，至紂亡。</span><br><span class="line">周武王，始誅紂，八百載，最長久。</span><br><span class="line">周共和，始紀年，歷宣幽，遂東遷。</span><br><span class="line">周道衰，王納墜，逞士戈，尚遊說。</span><br><span class="line">始春秋，終戰國，五霸強，七雄出。</span><br><span class="line">蠃秦氏，始兼並，傳二世，楚漢爭。</span><br><span class="line">高祖興，漢業建，至孝平，王莽篡。</span><br><span class="line">先武興，為東漢，四百年，終於獻。</span><br><span class="line">魏蜀吳，爭漢鼎，號三國，迄兩晉。</span><br><span class="line">宋齊繼，梁陳承，為南朝，都金陵。</span><br><span class="line">北元魏，分東西，宇文周，與高齊。</span><br><span class="line">迨至隋，一土宇，不再傳，失統緒。</span><br><span class="line">唐高祖，起義師，除隋亂，創國基。</span><br><span class="line">二十傳，三百載，梁滅之，國乃改。</span><br><span class="line">梁唐晉，及漢周，稱五代，皆有由。</span><br><span class="line">趙宋興，受周祥，十八傳，南北混。</span><br><span class="line">遼興金，皆夷裔，元滅之，絕宋世。</span><br><span class="line">蒞中國，兼戎狄，九十年，返沙磧。</span><br><span class="line">太祖興，稱大明，紀洪武，都金陵。</span><br><span class="line">迨成祖，遷宛平，十六世，至崇禎。</span><br><span class="line">權閹肆，流寇起，自成入，神器毀。</span><br><span class="line">清太祖，興遼東，金之後，受明封。</span><br><span class="line">至世祖，乃大同，十二世，清祚終。</span><br><span class="line">凡正史，廿四部，益以清，成廿五。</span><br><span class="line">史雖繁，讀有次，史記一，漢書二。</span><br><span class="line">後漢三，國誌四，此四史，最精致。</span><br><span class="line">先四史，兼證經，參通鑒，約而精。</span><br><span class="line">歷代事，全在茲，載治亂，知興衰。</span><br><span class="line">讀史者，考實錄，通古今，若親目。</span><br><span class="line">漢賈董，及許鄭，皆經師，能述聖。</span><br><span class="line">宋周程，張朱陸，明王氏，皆道學。</span><br><span class="line">屈原賦，本風人，逮鄒枚，暨卿雲。</span><br><span class="line">韓與柳，並文雄，李若杜，為詩宗。</span><br><span class="line">凡學者，宜兼通，翼聖教，振民風。</span><br><span class="line">口而誦，心而帷，朝於斯，夕於斯。</span><br><span class="line">昔仲尼，師項橐，古聖賢，尚勤學。</span><br><span class="line">趙中令，讀魯論，彼既仕，學且勤。</span><br><span class="line">披薄編，削竹簡，彼無書，且知勉。</span><br><span class="line">頭懸梁，錐刺股，彼不教，自勤苦。</span><br><span class="line">如囊螢，如映雪，家雖貧，學不輟。</span><br><span class="line">如負薪，如掛角，身雖勞，猶苦卓。</span><br><span class="line">蘇明允，二十七，始發憤，讀書籍。</span><br><span class="line">彼既老，猶悔遲，爾小生，宜早思。</span><br><span class="line">若荀卿，年五十，遊稷下，習儒業。</span><br><span class="line">彼既成，眾稱異，爾小生，宜立誌。</span><br><span class="line">瑩八歲，能詠詩，泌七歲，能賦棋。</span><br><span class="line">彼穎悟，人稱奇，爾幼學，當效之。</span><br><span class="line">蔡文姬，能辯琴，謝道韞，能詠吟。</span><br><span class="line">彼女子，且聰敏，爾男子，當自警。</span><br><span class="line">唐劉晏，方七歲，舉神童，作正字。</span><br><span class="line">彼雖幼，身已仕，爾細學，勉而致。</span><br><span class="line">犬守夜，雞司晨，茍不學，曷為人？</span><br><span class="line">蠶吐絲，蜂釀蜜，人不學，不如物。</span><br><span class="line">幼習業，壯致身，上匡國，下利民。</span><br><span class="line">揚名聲，顯父母，光於前，裕於後。</span><br><span class="line">人遺子，金滿籯，我教子，帷一經。</span><br><span class="line">勤有功，戲無益，戒之哉，宜勉力。</span><br></pre></td></tr></table></figure>
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+
+    
+        <article class="article content gallery" itemscope="" itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/documents/others/three-js-samples.html" itemprop="url">Three.js Samples</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-06-02T07:53:00.000Z" itemprop="datePublished">Jun 2 2019</time>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            a few seconds read (About 25 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h2 id="Map-Development"><a href="#Map-Development" class="headerlink" title="Map Development"></a>Map Development</h2><ul>
+<li>geometry / convex</li>
+<li>geometry / extrude / shapes2</li>
+<li>geometry / nurbs</li>
+<li>geometry / shapes</li>
+<li>interactive / voxelpainter</li>
+<li>lines / fat</li>
+<li>materials / lightmap</li>
+<li>materials / texture / partialupdate</li>
+<li>raycast / sprite</li>
+</ul>
+<p>scheduler language:javascript</p>
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+
+    
+        <article class="article content gallery" itemscope="" itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/documents/others/sse.html" itemprop="url">SSE</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-06-02T07:40:00.000Z" itemprop="datePublished">Jun 2 2019</time>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            22 minutes read (About 3372 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h2 id="Lucene-Terms"><a href="#Lucene-Terms" class="headerlink" title="Lucene Terms"></a>Lucene Terms</h2><ul>
+<li>信息检索(Information Retrieval)</li>
+<li>信息检索库</li>
+<li>搜索引擎</li>
+<li>全文索引</li>
+<li>索引链</li>
+<li>基线要求(Baseline Requirements)</li>
+</ul>
+<h2 id="Lucene、solr以及elasticsearch之间的区别和联系"><a href="#Lucene、solr以及elasticsearch之间的区别和联系" class="headerlink" title="Lucene、solr以及elasticsearch之间的区别和联系"></a>Lucene、solr以及elasticsearch之间的区别和联系</h2><p>首先分别说明三者的概念：<br>Lucene是一套<strong>信息检索工具包</strong>，并不包含搜索引擎系统，它包含了<strong>索引结构、读写索引工具、相关性工具、排序等功能</strong>，因此在使用Lucene时仍需要关注搜索引擎系统，例如数据获取、解析、分词等方面的东西。而solr和elasticsearch都是基于该工具包做的一些封装。</p>
+<p>Solr是一个有HTTP接口的基于Lucene的查询服务器，封装了很多Lucene细节，自己的应用可以直接利用诸如 …/solr?q=abc 这样的HTTP GET/POST请求去查询，维护修改索引。</p>
+<p>Elasticsearch也是一个建立在全文搜索引擎 Apache Lucene基础上的搜索引擎。采用的策略是分布式实时文件存储，并将每一个字段都编入索引，使其可以被搜索。</p>
+<p><strong>Lucene使用上更加灵活，但是你需要自己处理搜素引擎系统架构，以及其他附加附加功能的实现。而Solr帮你做了更多，但是是一个处于高层的框架，Lucene很多新特性不能及时向上透传，所以有时候可能发现需要一个功能，Lucene是支持的，但是Solr上已经看不到相关接口。</strong></p>
+<p>然后说明三者之间的区别<br>首先说明三者之间的一个联系：<strong>solr和elasticsearch都是基于Lucene实现的！</strong></p>
+<p>其次:</p>
+<ul>
+<li>solr利用zookpper进行分布式管理，而elasticsearch自身带有分布式协调管理功能；</li>
+<li>solr比elasticsearch实现更加全面，solr官方提供的工恩能够更多，而elasticsearch本身更注    重于核心功能，高级功能多由第三方插件提供；</li>
+<li>solr在传统的搜索应用中表现好于elasticsearch，而elasticsearch在实时搜索应用方面比solr表现好！</li>
+</ul>
+<p>最后有必要说明一下传统搜索和实时搜索：<br><strong>传统搜索是从静态数据库中筛选出符合条件的结果，这种结果往往是不可变得、静态的。而实时搜索则是说用户对于搜索的结果是实时变化的</strong></p>
+<h2 id="Lucene-和solr的区别"><a href="#Lucene-和solr的区别" class="headerlink" title="Lucene 和solr的区别"></a>Lucene 和solr的区别</h2><p>Lucene是一个开放源代码的<strong>全文检索</strong>引擎工具包，即它不是一个完整的全文检索引擎，而是一个全文检索引擎的架构，提供了完整的查询引擎和索引引擎，部分文本分析引擎（英文与德文两种西方语言）。Lucene的目的是为软件开发人员提供一个简单易用的工具包，以方便的在目标系统中实现全文检索的功能，或者是以此为基础建立起完整的全文检索引擎.</p>
+<p>Solr是一个高性能，采用Java5开发，基于Lucene的全文搜索服务器。同时对其进行了扩展，提供了比Lucene更为丰富的查询语言，同时实现了可配置、可扩展并对查询性能进行了优化，并且提供了一个完善的功能管理界面，是一款非常优秀的全文搜索引擎。它对外提供类似于Web-service的API接口。用户可以通过http请求，向搜索引擎服务器提交一定格式的XML文件，生成索引；也可以通过Http Solr Get操作提出查找请求，并得到XML格式的返回结果；</p>
+<p>Solr和Lucene的本质区别有以下三点：搜索服务器，企业级和管理。Lucene本质上是搜索库，不是独立的应用程序，而Solr是。Lucene专注于搜索底层的建设，而Solr专注于企业应用。Lucene不负责支撑搜索服务所必须的管理，而Solr负责。所以说，一句话概括Solr: Solr是Lucene面向企业搜索应用的扩展。</p>
+<h2 id="Solr-vs-Elasticsearch谁是开源搜索引擎王者"><a href="#Solr-vs-Elasticsearch谁是开源搜索引擎王者" class="headerlink" title="Solr vs. Elasticsearch谁是开源搜索引擎王者"></a>Solr vs. Elasticsearch谁是开源搜索引擎王者</h2><p>当前是云计算和数据快速增长的时代,今天的应用程序正以PB级和ZB级的速度生产数据，但人们依然在不停的追求更高更快的性能需求。随着数据的堆积，如何快速有效的搜索这些数据，成为对后端服务的挑战。本文，我们将比较业界两个最流行的开源搜索引擎，Solr和ElasticSearch。两者都建立在Apache Lucene开源平台之上，它们的主要功能非常相似，但是在部署的易用性，可扩展性和其他功能方面也存在巨大差异。</p>
+<h3 id="关于Apache-Solr"><a href="#关于Apache-Solr" class="headerlink" title="关于Apache Solr"></a>关于Apache Solr</h3><p>Apache Solr基于业界大名鼎鼎的java开源搜索引擎Lucene，Lucene更多的是一个软件包，还不能称之为搜索引擎，而solr则完成对lucene的封装，是一个真正意义上的搜索引擎框架。在过去的十年里，solr发展壮大，拥有广泛的用户群体。solr提供分布式索引、分片、副本集、负载均衡和自动故障转移和恢复功能。如果正确部署，良好管理，solr就能够成为一个高可靠、可扩展和高容错的搜索引擎。不少互联网巨头，如Netflix，eBay，Instagram和Amazon（CloudSearch）均使用Solr。</p>
+<p>solr的主要特点：</p>
+<ul>
+<li>全文索引</li>
+<li>高亮</li>
+<li>分面搜索</li>
+<li>实时索引</li>
+<li>动态聚类</li>
+<li>数据库集成</li>
+<li>NoSQL特性和丰富的文档处理（例如Word和PDF文件）</li>
+</ul>
+<h3 id="关于Elasticsearch"><a href="#关于Elasticsearch" class="headerlink" title="关于Elasticsearch"></a>关于Elasticsearch</h3><p>与solr一样，Elasticsearch构建在Apache Lucene库之上，同是开源搜索引擎。Elasticsearch在Solr推出几年后才面世的，通过REST和schema-free（不需要预先定义 Schema，solr是需要预先定义的）的JSON文档提供分布式、多租户全文搜索引擎。并且官方提供Java，Groovy，PHP，Ruby，Perl，Python，.NET和Javascript客户端。</p>
+<p>分布式搜索引擎包含可以华为为分片（shard）的索引，每一个分片可以有多个副本（replicas）。每个Elasticsearch节点可以有一个或多个分片，其引擎既同时作为协调器（coordinator ），将操作转发给正确的分片。</p>
+<p>Elasticsearch可扩展为准实时搜索引擎。其中一个关键特性是多租户功能，可根据不同的用途分索引，可以同时操作多个索引。</p>
+<p>Elasticsearch主要特性：</p>
+<ul>
+<li>分布式搜索</li>
+<li>多租户</li>
+<li>查询统计分析</li>
+<li>分组和聚合</li>
+</ul>
+<h3 id="安装与配置"><a href="#安装与配置" class="headerlink" title="安装与配置"></a>安装与配置</h3><p>相对来说，Elasticsearch更易于安装，与Solr相比非常轻量级。 Solr的分发软件包大小的当前版本（6.4.2）大约为150 MB，而Elasticsearch分发软件包大小的当前版本（5.2.2）仅为32.2MB。</p>
+<p>但是，如果Elasticsearch管理不好，这种易于部署和使用可能会成为一个问题。基于JSON的配置很容易，但如果你想为文件中的每个配置指定注释，那么它不适合你。Solr也提供了Rest API，可以通过集合API创建自定义分片集合，记录聚类算法和执行自定义分片。</p>
+<p>总的来说，如果你的应用程序使用JSON，那么Elasticsearch是一个更好的选择。否则，使用Solr，因为它的schema.xml和solrconfig.xml有很好的文档。</p>
+<h3 id="索引和搜索"><a href="#索引和搜索" class="headerlink" title="索引和搜索"></a>索引和搜索</h3><h4 id="数据源"><a href="#数据源" class="headerlink" title="数据源"></a>数据源</h4><p>Solr接受来自不同来源的数据，包括XML文件，逗号分隔符（CSV）文件和从数据库中的表提取的数据以及常见的文件格式（如Microsoft Word和PDF）。</p>
+<p>Elasticsearch还支持其他来源的数据，例如ActiveMQ，AWS SQS，DynamoDB（Amazon NoSQL），FileSystem，Git，JDBC，JMS，Kafka，LDAP，MongoDB，neo4j，RabbitMQ，Redis，Solr和Twitter。还有各种插件可用。</p>
+<h4 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h4><p>Solr专注于文本搜索，而Elasticsearch则常用于查询、过滤和分组分析统计，Elasticsearch背后的团队也努力让这些查询更为高效。因此当比较两者时，对那些不仅需要文本搜索，同时还需要复杂的时间序列搜索和聚合的应用程序而言，毫无疑问Elasticsearch是最佳选择。</p>
+<h4 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h4><p>两者都支持使用停用词和同义词来匹配文档。</p>
+<p>在Solr中，索引间进行join必须是单个分片和其他节点上的副本集进行关联来搜索文档间关系（例如SQL连接）。而Elasticsearch提供更高效的has_children和top_children查询来检索这样的相关文档。</p>
+<h3 id="可扩展性和分布式"><a href="#可扩展性和分布式" class="headerlink" title="可扩展性和分布式"></a>可扩展性和分布式</h3><p>搜索引擎需要处理数以百万级的文档，基于此搜索引擎应该是可复制的，模块化的和可扩展的，支持集群和分布式架构。</p>
+<h4 id="专为云而设计"><a href="#专为云而设计" class="headerlink" title="专为云而设计"></a>专为云而设计</h4><p>Elasticsearch非常易于扩展，拥有足够多的需要大集群的使用案例。</p>
+<p>Solr 基于Apache ZooKeeper也实现了类似ES的分布式部署模式。ZooKeeper是成熟和广泛使用的独立应用程序。</p>
+<p>相对比，Elasticsearch有一个内置的类似ZooKeeper的名为Zen的组件，通过内部的协调机制来维护集群状态。</p>
+<p>可以说Elasticsearch是转为云而设计，是分布式首选。</p>
+<h4 id="分片拆分和再平衡"><a href="#分片拆分和再平衡" class="headerlink" title="分片拆分和再平衡"></a>分片拆分和再平衡</h4><p>shards是luence索引的分区单元，solr和elasticsearch均使用。你可以通过在集群中的不同计算机上运行shard来分发索引。随着SolrCloud的引入，Solr开始支持shard拆分，这允许您通过拆分现有shard来添加更多shard。相比之下，ElasticSearch仍然不支持这一点，事实上，实际上阻止了这种做法。ES通过向设置中添加更多计算机，可以使用自动碎片平衡功能。相比之下，Solr允许添加分片（使用隐式路由时）或分割（使用复合ID时），但不能删除分片。它允许您增加副本。在Elasticsearch中，默认情况下每个索引具有五个分片。它不允许您更改主分片的数量，但它允许您增加副本的数量。分片再平衡对于水平扩容非常有用。当添加新机器时，它将自动重新平衡不同机器中可用的分片。</p>
+<h3 id="社区"><a href="#社区" class="headerlink" title="社区"></a>社区</h3><p>Solr有一个广泛的开源社区。任何人都可以贡献给Solr，新的Solr开发人员或代码提交者只能根据功能选择。 Elasticsearch在技术上是开源的，但不完全。所有贡献者都可以访问源代码，用户可以进行更改并提供。但最终的变化由Elastic（运行Elasticsearch和其他软件的公司）的员工确认和完成。因此，Elasticsearch更多地由单个公司驱动，而不是整个社区。</p>
+<p>Solr贡献者和提交者跨越多个组织，而Elasticsearch提交者仅来自Elastic。还有人指出，Solr的强大社区有一个健康的项目管道和许多知名公司参与。这些成员还通过在整个开发和工程过程中做出贡献来投资该平台。</p>
+<p>两者都有很好的用户群和丰富的开发人员社区，但ElasticSearch相较于Solr更新。 Solr已经存在了更长的时间，所以它的生态系统是发达的，拥有更大的用户群。</p>
+<h3 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h3><p>Solr在这里得分很高。它是一个非常有据可查的产品，具有清晰的示例和API用例场景。 Elasticsearch的文档组织良好，但它缺乏好的示例和清晰的配置说明。</p>
+<h3 id="选Solr-还是-Elasticsearch"><a href="#选Solr-还是-Elasticsearch" class="headerlink" title="选Solr 还是 Elasticsearch?"></a>选Solr 还是 Elasticsearch?</h3><p>通过上面的对比，很难确定谁是最终赢家。其实，无论选择Solr还是Elasticsearch，你首先需要了解您的用户场景和未来的需求。我们来总结一下：</p>
+<p><img src="https://images2015.cnblogs.com/blog/38465/201703/38465-20170313220046213-1161805781.png" alt="Alt text"></p>
+<p>请记住：</p>
+<ul>
+<li>Elasticsearch由于其易用性而在较新的开发人员中更受欢迎</li>
+<li>但是如果你已经在使用solr了，请继续使用它，因为迁移到Elasticsearch并不会带来具体的优势</li>
+<li>如果您需要它来处理分析查询以及搜索文本，Elasticsearch是更好的选择，特别是收集日志，做分析处理（参考前面发的ELK 安装使用<a href="http://www.cnblogs.com/xiaoqi/p/elk-part1.html）" target="_blank" rel="noopener">http://www.cnblogs.com/xiaoqi/p/elk-part1.html）</a></li>
+</ul>
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+
+    
+    
+        
+<nav class="pagination is-centered is-rounded" role="navigation" aria-label="pagination">
+    <div class="pagination-previous">
+        <a href="/page/2/">Prev</a>
+    </div>
+    <div class="pagination-next">
+        <a href="/page/4/">Next</a>
+    </div>
+    <ul class="pagination-list is-hidden-mobile">
+        
+        <li><a class="pagination-link" href="/">1</a></li>
+        
+        <li><a class="pagination-link" href="/page/2/">2</a></li>
+        
+        <li><a class="pagination-link is-current" href="/page/3/">3</a></li>
+        
+        <li><a class="pagination-link" href="/page/4/">4</a></li>
+        
+        <li><a class="pagination-link" href="/page/5/">5</a></li>
+        
+        <li><a class="pagination-link" href="/page/6/">6</a></li>
+        
+    </ul>
+</nav>
+
+    
+    </div>
+</section>
+    <footer class="footer">
+    <div class="container">
+        <div class="columns content">
+            <div class="column is-narrow has-text-centered">
+                Copyright &copy; 2019 鬼王&nbsp;
+                <!-- Powered by <a href="https://github.com/O70" target="_blank">O70</a> -->
+            </div>
+            <div class="column is-hidden-mobile"></div>
+
+            
+            <div class="column is-narrow">
+                <div class="columns is-mobile is-multiline is-centered">
+                
+                    
+                <a class="column is-narrow has-text-black" title="京ICP备19029828号" href="http://www.miitbeian.gov.cn">
+                    
+                    京ICP备19029828号
+                    
+                </a>
+                
+                    
+                <a class="column is-narrow has-text-black" title="GitHub" href="https://github.com/O70">
+                    
+                    GitHub
+                    
+                </a>
+                
+                </div>
+            </div>
+            
+            
+
+        </div>
+    </div>
+</footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+
+<!-- test if the browser is outdated -->
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // plugin function, place inside DOM ready function
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        })
+    });
+</script>
+
+<script>
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
+    }
+    moment.locale("en-AU");
+</script>
+
+
+
+<script src="/js/script.js"></script>
+
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-mask"></div>
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js"></script>
+    
+</body>
+</html>
