@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>Spring Cloud Netflix Eureka Client Analysis - HANZO</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+
+
+<meta name="description" content="鬼王, HANZO, THRAEX">
+
+
+
+<meta name="keywords" content="鬼王, O70, HANZO, THRAEX">
+
+
+
+    <meta name="description" content="Spring Cloud Netflix Eureka Client Analysis">
+<meta name="keywords" content="spring-cloud,netflix,eureka">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spring Cloud Netflix Eureka Client Analysis">
+<meta property="og:url" content="http://yoursite.com/documents/Technology/Spring/Spring-Cloud/spring-cloud-netflix-eureka-client-analysis.html">
+<meta property="og:site_name" content="HANZO">
+<meta property="og:description" content="Spring Cloud Netflix Eureka Client Analysis">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://yoursite.com/images/test.jpg">
+<meta property="og:updated_time" content="2019-08-16T11:04:18.581Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Spring Cloud Netflix Eureka Client Analysis">
+<meta name="twitter:description" content="Spring Cloud Netflix Eureka Client Analysis">
+<meta name="twitter:image" content="http://yoursite.com/images/test.jpg">
+
+
+
+
+
+<link rel="icon" href="/images/favicon.ico">
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
+
+<link rel="stylesheet" href="/css/style.css">
+
+<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+
+</head>
+<body>
+    
+<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item navbar-logo" href="/">
+                
+                <img src="/images/logo.png" alt="" height="28">
+                
+            </a>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="navbar-menu navbar-start">
+            
+            <a class="navbar-item " href="/categories/Technology">Technology</a>
+            
+            <a class="navbar-item " href="/categories/Life">Life</a>
+            
+            <a class="navbar-item " href="/archives">Archives</a>
+            
+            <a class="navbar-item " href="/about">About</a>
+            
+        </div>
+        
+        <div class="navbar-menu navbar-end">
+            
+            <a class="navbar-item search" title="Search" href="javascript:;">
+                <i class="fas fa-search"></i>
+            </a>
+            
+            
+            <div class="navbar-item is-hoverable has-dropdown is-hidden-mobile is-hidden-tablet-only toc">
+                <a class="navbar-item" title="Table of Contents">
+                    <i class="fa fa-list"></i>
+                </a>
+                <div class="navbar-dropdown is-right">
+                
+                
+                    
+                    
+                    <a class="navbar-item" href="#1-Dependencies-Version">
+                      
+                      <b>1. Dependencies Version</b>
+                    </a>
+                
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#2-Clone-Source-Code-Optional">
+                      
+                      <b>2. Clone Source Code(Optional)</b>
+                    </a>
+                
+                    
+                    
+                    <a class="navbar-item" href="#2-1-spring-cloud-release">
+                      
+                      2.1 spring-cloud-release
+                    </a>
+                
+                    
+                    
+                    <a class="navbar-item" href="#2-2-spring-cloud-netflix">
+                      
+                      2.2 spring-cloud-netflix
+                    </a>
+                
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#3-Project-Structure">
+                      
+                      <b>3. Project Structure</b>
+                    </a>
+                
+                    
+                    
+                    <a class="navbar-item" href="#3-1-依赖顺序">
+                      
+                      3.1 依赖顺序
+                    </a>
+                
+                </div>
+            </div>
+            
+            
+            <a class="navbar-item" title="GitHub" href="https://github.com/O70/note-paper" target="_blank">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+               
+            
+        </div>
+    </div>
+</nav>
+
+    <section class="section">
+    <div class="container">
+    <article class="article content gallery" itemscope="" itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            Spring Cloud Netflix Eureka Client Analysis
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-08-16T08:00:00.000Z" itemprop="datePublished">Aug 16 2019</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/Technology/">Technology</a><span>></span><a class="article-category-link" href="/categories/Technology/Spring/">Spring</a><span>></span><a class="article-category-link" href="/categories/Technology/Spring/Spring-Cloud/">Spring-Cloud</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            2 minutes read (About 341 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <p><img src="/images/test.jpg" alt="Spring Cloud Netflix Eureka Client Analysis"></p>
+<p>Spring Cloud Netflix Eureka Client Analysis</p>
+<a id="more"></a>
+<h2 id="1-Dependencies-Version"><a href="#1-Dependencies-Version" class="headerlink" title="1. Dependencies Version"></a>1. Dependencies Version</h2><ul>
+<li><p><strong>Spring Boot</strong></p>
+<figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">parent</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-parent<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>2.1.7.RELEASE<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">relativePath</span>/&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">parent</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Spring Cloud</strong></p>
+<figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">dependencyManagement</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">dependencies</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.cloud<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-cloud-dependencies<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>Greenwich.SR2<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">type</span>&gt;</span>pom<span class="hljs-tag">&lt;/<span class="hljs-name">type</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">scope</span>&gt;</span>import<span class="hljs-tag">&lt;/<span class="hljs-name">scope</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">dependencies</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">dependencyManagement</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><a href="#3-1-依赖顺序">依赖顺序</a></p>
+<h2 id="2-Clone-Source-Code-Optional"><a href="#2-Clone-Source-Code-Optional" class="headerlink" title="2. Clone Source Code(Optional)"></a>2. Clone Source Code(Optional)</h2><h3 id="2-1-spring-cloud-release"><a href="#2-1-spring-cloud-release" class="headerlink" title="2.1 spring-cloud-release"></a>2.1 <a href="https://github.com/spring-cloud/spring-cloud-release/tree/vGreenwich.SR2" target="_blank" rel="noopener"><code>spring-cloud-release</code></a></h3><figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="hljs-built_in">clone</span> -b vGreenwich.SR2 git@github.com:spring-cloud/spring-cloud-release.git</span><br><span class="line"><span class="hljs-comment">##! or</span></span><br><span class="line">$ git <span class="hljs-built_in">clone</span> -b vGreenwich.SR2 https://github.com/spring-cloud/spring-cloud-release.git</span><br><span class="line"></span><br><span class="line">$ <span class="hljs-built_in">cd</span> spring-cloud-release ; git checkout -b vGreenwich.SR2</span><br></pre></td></tr></table></figure>
+<h3 id="2-2-spring-cloud-netflix"><a href="#2-2-spring-cloud-netflix" class="headerlink" title="2.2 spring-cloud-netflix"></a>2.2 <a href="https://github.com/spring-cloud/spring-cloud-netflix/tree/v2.1.2.RELEASE" target="_blank" rel="noopener"><code>spring-cloud-netflix</code></a></h3><figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="hljs-built_in">clone</span> -b v2.1.2.RELEASE git@github.com:spring-cloud/spring-cloud-netflix.git</span><br><span class="line"><span class="hljs-comment">##! or</span></span><br><span class="line">$ git <span class="hljs-built_in">clone</span> -b v2.1.2.RELEASE https://github.com/spring-cloud/spring-cloud-netflix.git</span><br><span class="line"></span><br><span class="line">$ <span class="hljs-built_in">cd</span> spring-cloud-netflix ; git checkout -b v2.1.2.RELEASE</span><br></pre></td></tr></table></figure>
+<h2 id="3-Project-Structure"><a href="#3-Project-Structure" class="headerlink" title="3. Project Structure"></a>3. Project Structure</h2><ul>
+<li><p><code>spring-cloud-release</code></p>
+<ul>
+<li><code>docs</code>: Spring Cloud Starter Docs</li>
+<li><strong><code>spring-cloud-dependencies</code></strong>: 管理依赖(<strong><code>*-dependencies</code></strong>)版本号.</li>
+<li><p><code>spring-cloud-starter-parent</code>: 依赖 <strong><code>spring-cloud-dependencies</code></strong></p>
+<p>目标: <strong><code>org.springframework.cloud:spring-cloud-netflix-dependencies:2.1.2.RELEASE</code></strong></p>
+</li>
+</ul>
+</li>
+<li><p><code>spring-cloud-netflix</code></p>
+<ul>
+<li><strong><code>spring-cloud-netflix-dependencies</code></strong></li>
+<li><code>spring-cloud-netflix-archaius</code></li>
+<li><code>spring-cloud-netflix-core</code></li>
+<li><code>spring-cloud-netflix-concurrency-limits</code></li>
+<li><code>spring-cloud-netflix-hystrix-dashboard</code></li>
+<li><code>spring-cloud-netflix-hystrix-stream</code></li>
+<li><strong><code>spring-cloud-netflix-eureka-client</code></strong></li>
+<li><code>spring-cloud-netflix-eureka-server</code></li>
+<li><code>spring-cloud-netflix-turbine</code></li>
+<li><code>spring-cloud-netflix-turbine-stream</code></li>
+<li><code>spring-cloud-netflix-sidecar</code></li>
+<li><code>spring-cloud-netflix-zuul</code></li>
+<li><code>spring-cloud-netflix-ribbon</code></li>
+<li><strong><code>spring-cloud-starter-netflix</code></strong><ul>
+<li><code>spring-cloud-starter-netflix-archaius</code></li>
+<li><strong><code>spring-cloud-starter-netflix-eureka-client</code></strong></li>
+<li><code>spring-cloud-starter-netflix-eureka-server</code></li>
+<li><code>spring-cloud-starter-netflix-hystrix</code></li>
+<li><code>spring-cloud-starter-netflix-hystrix-dashboard</code></li>
+<li><code>spring-cloud-starter-netflix-ribbon</code></li>
+<li><code>spring-cloud-starter-netflix-turbine</code></li>
+<li><code>spring-cloud-starter-netflix-turbine-stream</code></li>
+<li><code>spring-cloud-starter-netflix-zuul</code></li>
+</ul>
+</li>
+<li><code>spring-cloud-netflix-hystrix</code></li>
+<li><code>docs</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="3-1-依赖顺序"><a href="#3-1-依赖顺序" class="headerlink" title="3.1 依赖顺序"></a>3.1 依赖顺序</h3><p><strong><code>spring-cloud-dependencies</code> –&gt; <code>spring-cloud-netflix-dependencies</code> –&gt; <code>spring-cloud-starter-netflix-eureka-client</code> –&gt; <code>spring-cloud-netflix-eureka-client</code></strong></p>
+
+    
+    </div>
+    
+    <div class="columns is-variable is-1 is-multiline is-mobile">
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/spring-cloud/">#spring-cloud</a></span>
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/netflix/">#netflix</a></span>
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/eureka/">#eureka</a></span>
+    
+    </div>
+    
+    
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop is-hidden-mobile article-nav-prev">
+            
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
+            
+            <a href="/documents/Technology/Nginx/nginx-test.html">Nginx Test</a>
+            
+        </span>
+    </div>
+    
+</article>
+
+
+
+
+
+    </div>
+</section>
+    <footer class="footer">
+    <div class="container">
+        <div class="columns content">
+            <div class="column is-narrow has-text-centered">
+                Copyright &copy; 2019 鬼王&nbsp;
+                <!-- Powered by <a href="https://github.com/O70" target="_blank">O70</a> -->
+            </div>
+            <div class="column is-hidden-mobile"></div>
+
+            
+            <div class="column is-narrow">
+                <div class="columns is-mobile is-multiline is-centered">
+                
+                    
+                <a class="column is-narrow has-text-black" title="京ICP备19029828号" href="http://www.miitbeian.gov.cn" target="_blank">
+                    
+                    京ICP备19029828号
+                    
+                </a>
+                
+                    
+                <a class="column is-narrow has-text-black" title="GitHub" href="https://github.com/O70/note-paper" target="_blank">
+                    
+                    GitHub
+                    
+                </a>
+                
+                </div>
+            </div>
+            
+            
+
+        </div>
+    </div>
+</footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+
+<!-- test if the browser is outdated -->
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // plugin function, place inside DOM ready function
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        })
+    });
+</script>
+
+<script>
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
+    }
+    moment.locale("en-AU");
+</script>
+
+
+
+<script src="/js/script.js"></script>
+
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-mask"></div>
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js"></script>
+    
+</body>
+</html>
